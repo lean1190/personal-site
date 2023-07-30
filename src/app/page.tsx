@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -17,7 +18,7 @@ export default function Home() {
                     <h2 className="mb-2 text-2xl font-normal dark:text-slate-300">I help people spark ✨ and drive change</h2>
                     <h3 className="mb-16 text-lg font-thin">Mentor @ADPList | Software engineer</h3>
                     <div className="text-center sm:text-left">
-                        <button type="button" className="button glow">Get in touch</button>
+                        <Link href="https://www.linkedin.com/in/leandro-nicolas-vilas/"><button type="button" className="button glow">Get in touch</button></Link>
                     </div>
                 </div>
             </article>
