@@ -29,7 +29,7 @@ export default function Home() {
                         <p className="font-light dark:text-slate-300">I had troubles making my team independent from me, but I found a way to revert this.</p>
                     </div>
                     <div>
-                        <button type="button" className="button button--small glow">I wanna know more</button>
+                        <Link href="/topic/empowerment"><button type="button" className="button button--small glow">I wanna know more</button></Link>
                     </div>
                 </section>
             </article>
