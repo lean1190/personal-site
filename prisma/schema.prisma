@@ -11,5 +11,6 @@ datasource db {
 model Interest {
   id         String   @id @default(cuid())
   hypothesis String
+  timeSpent  Int?     @db.Integer // in seconds
   createdAt  DateTime @default(now())
 }
