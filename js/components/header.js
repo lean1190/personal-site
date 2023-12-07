@@ -10,7 +10,7 @@ class Header extends HTMLElement {
                     <div class="s-header__block">
                         <div class="s-header__logo">
                             <a class="logo" href="index.html">
-                                <img src="images/logo.svg" alt="Homepage">
+                                <img src="images/logo.png" alt="Homepage">
                             </a>
                         </div>
 
