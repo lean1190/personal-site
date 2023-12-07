@@ -19,14 +19,13 @@ class Header extends HTMLElement {
 
                     <nav class="s-header__nav">
                         <ul class="s-header__menu-links">
-                            <li><a href="about.html">About</a></li>
                             <li><a href="services.html">Services</a></li>
-                            <li><a href="blog.html">Journal</a></li>
+                            <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul> <!-- s-header__menu-links -->
 
                         <div class="s-header__contact">
-                            <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>
+                            <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's work together</a>
                         </div> <!-- s-header__contact -->
                     </nav> <!-- end s-header__nav -->
                 </div> <!-- end s-header__inner -->
