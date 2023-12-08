@@ -1227,6 +1227,11 @@ a:active {
 	outline: 0;
 }
 
+a.link__decorated {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* headings
  */
 h1,
@@ -4022,11 +4027,6 @@ td:last-child {
 
 .s-expertise__content-main {
 	margin-top: var(--vspace-1_5);
-}
-
-.s-expertise__content-main a {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 /* -------------------------------------------------------------------

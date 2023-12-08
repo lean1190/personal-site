@@ -23,6 +23,7 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/service.css">
 
     <!-- favicons
     ================================================== -->
@@ -30,64 +31,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-
-        .columns {
-          float: left;
-          width: 33.3%;
-          padding: 8px;
-        }
-
-        .price {
-          list-style-type: none;
-          border: 1px solid #eee;
-          margin: 0;
-          padding: 0;
-          -webkit-transition: 0.3s;
-          transition: 0.3s;
-        }
-
-        .price:hover {
-          box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-        }
-
-        .price .header {
-          background-color: #111;
-          color: white;
-          font-size: 25px;
-        }
-
-        .price li {
-          border-bottom: 1px solid #eee;
-          padding: 20px;
-          text-align: center;
-        }
-
-        .price .grey {
-          background-color: #eee;
-          font-size: 20px;
-        }
-
-        .button {
-          background-color: #04AA6D;
-          border: none;
-          color: white;
-          padding: 10px 25px;
-          text-align: center;
-          text-decoration: none;
-          font-size: 18px;
-        }
-
-        @media only screen and (max-width: 600px) {
-          .columns {
-            width: 100%;
-          }
-        }
-    </style>
 </head>
 
 
@@ -169,80 +112,15 @@
 
                             <hr/>
 
-                            <div class="table-responsive">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>
-                                                <h6 style="margin-top: 0;">The Spark</h6>
-                                                <h1 style="margin-top: 0;">300€</h1>
-                                            </th>
-                                            <th>
-                                                <h6 style="margin-top: 0;">The Spark</h6>
-                                                <h1 style="margin-top: 0;">300€</h1>
-                                            </th>
-                                            <th>
-                                                <h6 style="margin-top: 0;">The Spark</h6>
-                                                <h1 style="margin-top: 0;">300€</h1>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1 hour of solutions exploration with you</td>
-                                            <td>check</td>
-                                            <td>check</td>
-                                            <td>check</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2 hours of 1:1 coaching for any team member</td>
-                                            <td>check</td>
-                                            <td>check</td>
-                                            <td>check</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-                                <div style="max-width: 270px; text-align: center;">
-                                    <h6 style="margin-top: 0">The Spark</h6>
-                                    <h1 style="margin-top: 0">300€</h1>
-                                    <ul class="disc" style="text-align: left;">
-                                        <li>1 hour of solutions exploration with you</li>
-                                        <li>2 hours of 1:1 coaching for any team member</li>
-                                    </ul>
-                                </div>
-
-                                <div style="max-width: 270px; text-align: center;">
-                                    <h6 style="margin-top: 0">The Spark</h6>
-                                    <h1 style="margin-top: 0">300€</h1>
-                                    <ul class="disc" style="text-align: left;">
-                                        <li>1 hour of solutions exploration with you</li>
-                                        <li>2 hours of 1:1 coaching for any team member</li>
-                                    </ul>
-                                </div>
-
-                                <div style="max-width: 270px; text-align: center;">
-                                    <h6 style="margin-top: 0">The Spark</h6>
-                                    <h1 style="margin-top: 0">300€</h1>
-                                    <ul class="disc" style="text-align: left;">
-                                        <li>1 hour of solutions exploration with you</li>
-                                        <li>2 hours of 1:1 coaching for any team member</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="columns">
+                            <div class="offer">
                                 <ul class="price">
-                                    <li class="header">Basic</li>
-                                    <li class="grey">$ 9.99 / year</li>
-                                    <li>10GB Storage</li>
-                                    <li>10 Emails</li>
-                                    <li>10 Domains</li>
-                                    <li>1GB Bandwidth</li>
-                                    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                                    <li class="header"><h6>The Spark</h6></li>
+                                    <li class="grey cost"><h1>300€</h1></li>
+                                    <li>1 hour of solutions exploration with you</li>
+                                    <li>2 hours of 1:1 coaching for any team member</li>
+                                    <li class="grey cta">
+                                        <a href="./contact.html" class="btn btn--small btn--primary">Let's go!</a>
+                                    </li>
                                 </ul>
                             </div>
 
