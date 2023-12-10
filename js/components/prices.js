@@ -20,7 +20,7 @@ class Prices extends HTMLElement {
                 <li class="grey cost"><h1>1000€</h1></li>
                 <li><strong>1 hour of brainstorming</strong> solutions with you</li>
                 <li><strong>5 hours of 1:1 coaching</strong> for any team member</li>
-                <li><strong>5 hours of 1:1 coaching</strong> for any team member</li>
+                <li><strong>Summary document</strong> of my findings, feedback, and potential improvements</li>
             </ul>
         </div>
 
