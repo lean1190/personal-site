@@ -1,4 +1,4 @@
-class Prices extends HTMLElement {
+class EmPrices extends HTMLElement {
     constructor() {
       super();
     }
@@ -36,4 +36,4 @@ class Prices extends HTMLElement {
     }
 }
 
-customElements.define('l-prices', Prices);
+customElements.define('l-em-prices', EmPrices);
