@@ -2,6 +2,12 @@
     float: left;
     width: 33.3%;
     padding: 8px;
+
+    color: var(--color-2);
+}
+
+.offer:hover {
+    color: var(--color-2);
 }
 
 .price {
