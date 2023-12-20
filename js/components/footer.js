@@ -12,8 +12,8 @@ class Footer extends HTMLElement {
                 <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">
                     <h3>About Lean</h3>
                     <p>
-                        <mark>Software engineer, coach and advisor.</mark> <br/>
-                        I help software development teams to shine, by empowering you with skills and techniques that foster collaboration and maximize effectiveness.
+                        <mark>Lead software engineer, communication advocate, and coach</mark> <br/>
+                        I help you propel your career, by empowering you with skills and techniques to boost your confidence and enhance your communication skills.
                     </p>
                 </div>
                 <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">

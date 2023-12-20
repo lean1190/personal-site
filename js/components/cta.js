@@ -10,14 +10,9 @@ class Cta extends HTMLElement {
                     <div class="column xl-8 lg-12">
                         <div class="s-cta__content">
                             <h2 class="text-display-title">
-                                Ready to shine?
+                                Ready to thrive?
                             </h2>
-                            <p class="lead">
-                            Let's get to know each other and find out how can I help you. <br/>
-
-                            I'm looking forward to meeting you.
-                            </p>
-                            <a href="contact.html" class="btn btn--primary">Let's work together</a>
+                            <a href="contact.html" class="btn btn--primary">Get in touch</a>
                         </div>
                     </div>
                 </div>
