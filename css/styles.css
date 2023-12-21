@@ -2801,7 +2801,7 @@ td:last-child {
 	margin: 0;
 }
 
-.show-ctr .list-items__item-header::before {
+/* .show-ctr .list-items__item-header::before {
 	content          : counter(ctr, decimal-leading-zero) ".";
 	counter-increment: ctr;
 	display          : block;
@@ -2812,7 +2812,7 @@ td:last-child {
 	color            : var(--color-1);
 	margin-right     : var(--vspace-0_25);
 	margin-bottom    : var(--vspace-0_25);
-}
+} */
 
 .list-items__item.u-remove-bottom {
 	margin-bottom: 0;
