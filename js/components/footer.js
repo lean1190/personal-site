@@ -12,7 +12,7 @@ class Footer extends HTMLElement {
                 <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">
                     <h3>About Lean</h3>
                     <p>
-                        <mark>Lead software engineer, communication advocate, and coach</mark> <br/>
+                        <mark>Communication coach for software engineers</mark> <br/>
                         I help you propel your career, by empowering you with skills and techniques to boost your confidence and enhance your communication skills.
                     </p>
                 </div>
