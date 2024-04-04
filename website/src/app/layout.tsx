@@ -20,11 +20,11 @@ const font = Roboto({
 export default function RootLayout({
     children
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={font.className}>
+        <html lang="en" className="min-h-screen h-screen w-full">
+            <body className={`${font.className} w-full h-full bg-gradient-to-b from-slate-500 to-slate-800`}>
                 {children}
                 <Analytics />
             </body>
