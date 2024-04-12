@@ -23,8 +23,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="min-h-screen h-screen w-full">
-            <body className={`${font.className} w-full h-full bg-gradient-to-b from-slate-500 to-slate-800`}>
+        <html lang="en" className={`${font.className} h-screen min-h-screen w-full`}>
+            <body className={`${font.className} size-full`}>
                 {children}
                 <Analytics />
             </body>

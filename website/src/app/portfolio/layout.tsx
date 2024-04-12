@@ -8,7 +8,9 @@ export const metadata: Metadata = {
 export default function PortfolioLayout({
     children
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return children;
+    return (
+        <article className="size-full max-h-full max-w-full overflow-x-hidden bg-[#343D35FF]">{children}</article>
+    );
 }
