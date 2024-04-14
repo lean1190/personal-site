@@ -2,7 +2,8 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+
+import { roboto } from './fonts/fonts';
 
 export const metadata: Metadata = {
     title: 'Mentor & Coach - Lean Vilas',
@@ -10,21 +11,14 @@ export const metadata: Metadata = {
     icons: { icon: '/favicon.ico' }
 };
 
-const font = Roboto({
-    weight: ['100', '300', '400', '500', '700', '900'],
-    style: ['normal'],
-    subsets: ['latin'],
-    display: 'swap'
-});
-
 export default function RootLayout({
     children
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`${font.className} h-screen min-h-screen w-full`}>
-            <body className={`${font.className} size-full`}>
+        <html lang="en" className={`${roboto.className} dark h-screen min-h-screen w-full bg-slate-900`}>
+            <body className="size-full">
                 {children}
                 <Analytics />
             </body>

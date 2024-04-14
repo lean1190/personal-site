@@ -19,32 +19,32 @@ const projects: Project[] = [
     {
         title: 'Should I quit my job?',
         description: 'A tool that helps you make the right decision',
-        preview: '/quit/preview.gif',
-        video: '/quit/video.mp4',
+        preview: '/portfolio/quit/preview.gif',
+        video: '/portfolio/quit/video.mp4',
         githubUrl: 'https://github.com/olivorocksrotated/should-i-quit-my-job',
         classes: 'quit-grid-area'
     },
     {
         title: 'Olivo',
         description: 'An example of a complex full-stack Next.js app for self-management',
-        preview: '/olivo/preview.gif',
-        video: '/olivo/video.mp4',
+        preview: '/portfolio/olivo/preview.gif',
+        video: '/portfolio/olivo/video.mp4',
         githubUrl: 'https://github.com/olivorocksrotated/olivo',
         classes: 'olivo-grid-area'
     },
     {
         title: 'Movies search',
         description: 'An example Angular app that pulls information from movies through a public API',
-        preview: '/movies/preview.gif',
-        video: '/movies/video.mp4',
+        preview: '/portfolio/movies/preview.gif',
+        video: '/portfolio/movies/video.mp4',
         githubUrl: 'https://github.com/lean1190/movies-search',
         classes: 'movies-grid-area'
     },
     {
         title: 'Appreciation',
         description: 'A small Next.js app to show appreciation',
-        preview: '/thank-you/preview.gif',
-        video: '/thank-you/video.mp4',
+        preview: '/portfolio/thank-you/preview.gif',
+        video: '/portfolio/thank-you/video.mp4',
         githubUrl: 'https://github.com/lean1190/thank-you',
         classes: 'thank-you-grid-area'
     }
