@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "ky": "^1.2.3"
+  },
+  "devDependencies": {
+    "tailwindcss-animate": "^1.0.7"
   }
 }

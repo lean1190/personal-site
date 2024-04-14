@@ -5,7 +5,8 @@ export const roboto = Roboto({
     weight: ['100', '300', '400', '500', '700', '900'],
     style: ['normal'],
     subsets: ['latin'],
-    display: 'swap'
+    display: 'swap',
+    variable: '--font-roboto'
 });
 
 export const biroscript = localFont({
@@ -26,7 +27,8 @@ export const biroscript = localFont({
             style: 'normal'
         }
     ],
-    display: 'swap'
+    display: 'swap',
+    variable: '--font-biroscript'
 });
 
 export const pragmatica = localFont({
@@ -57,5 +59,6 @@ export const pragmatica = localFont({
             style: 'normal'
         }
     ],
-    display: 'swap'
+    display: 'swap',
+    variable: '--font-pragmatica'
 });

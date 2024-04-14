@@ -1,6 +1,6 @@
 import { nextui } from '@nextui-org/react';
 import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin';
+import * as animate from 'tailwindcss-animate';
 
 const config: Config = {
     content: [
@@ -11,6 +11,11 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                roboto: ['var(--font-roboto)'],
+                biroscript: ['var(--font-biroscript)'],
+                pragmatica: ['var(--font-pragmatica)']
+            },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -32,30 +37,21 @@ const config: Config = {
                     '0%': { transform: 'scaleX(1)' },
                     '50%': { transform: 'scaleX(.85)' },
                     '100%': { transform: 'scaleX(1)' }
+                },
+                marquee: {
+                    from: { transform: 'translateX(0)' },
+                    to: { transform: 'translateX(calc(-100% - 1rem))' }
                 }
             },
             animation: {
                 rotate: 'rotate 10s linear infinite',
                 up: 'up 3s linear infinite',
-                scale: 'scale 3s linear infinite'
+                scale: 'scale 3s linear infinite',
+                marquee: 'marquee 200s linear infinite'
             }
         }
     },
     darkMode: 'class',
-    plugins: [
-        nextui(),
-        plugin(({ matchUtilities, theme }) => {
-            matchUtilities(
-                {
-                    'animation-delay': (value) => ({
-                        'animation-delay': value
-                    })
-                },
-                {
-                    values: theme('transitionDelay')
-                }
-            );
-        })
-    ]
+    plugins: [nextui(), animate]
 };
 export default config;
