@@ -3,6 +3,9 @@ import clsx from 'clsx';
 import ky from 'ky';
 import Image from 'next/image';
 import { GoPlus } from 'react-icons/go';
+import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
+
+import { shuffle } from '@/lib/arrays';
 
 import { biroscript, pragmatica } from './fonts/fonts';
 
@@ -16,11 +19,49 @@ interface Review {
     }
 }
 
+interface Session {
+    name: string;
+    benefits: string[];
+    isPopular?: boolean;
+}
+
 const learnings = [
     'Get the job you deserve',
     'Overcome impostor syndrome',
     'Master best coding practices',
     'Communicate effectively'
+];
+
+const sessions: Session[] = [
+    {
+        name: 'Code mentoring',
+        benefits: [
+            'Personalized 1:1 mentoring',
+            'Professional code review',
+            'Live pair programming',
+            'Document with best practices'
+        ]
+    },
+    {
+        name: 'Job preparation',
+        benefits: [
+            'Learn the 5 stages of the hiring process',
+            'Learn how to nail each interview stage',
+            'Prepare through interview simulations',
+            'CV and LinkedIn review',
+            'Template to track your applications'
+        ],
+        isPopular: true
+    },
+    {
+        name: 'Speak confidently',
+        benefits: [
+            '1:1 communication coaching',
+            'Contribute to team discussions',
+            'Learn positive speech patterns',
+            'Learn how to express your ideas'
+        ]
+    }
 ];
 
 const indigoGradient = 'bg-gradient-to-r from-indigo-700 to-indigo-900';
@@ -31,9 +72,27 @@ const marqueeContentStyles = clsx(
     'motion-reduce:paused'
 );
 const reviewStyle = clsx(
-    'size-72 overflow-hidden rounded border-l-4 border-solid border-gray-600 p-4',
+    'size-72 overflow-hidden rounded-xl border-l-4 border-solid border-gray-600 p-4 shadow-lg',
     'odd:bg-slate-950 odd:text-slate-100',
     'even:border-y even:border-r even:border-y-slate-300 even:border-r-slate-300 even:bg-white even:text-slate-800'
+);
+
+const ctaButton = (
+    <Link
+        href="https://leanvilas.com"
+        target="_blank"
+        className="w-full"
+    >
+        <Button
+            fullWidth
+            variant="ghost"
+            color="secondary"
+            radius="sm"
+            className="py-8 text-2xl"
+        >
+        Book a FREE 1:1 session
+        </Button>
+    </Link>
 );
 
 const sliceReviewText = (text: string) => (text.length > 227 ? `${text.slice(0, 227)}...` : text);
@@ -59,10 +118,18 @@ const reviewListItem = (review: Review) => (
     </li>
 );
 
+const ribbon = (text: string) => (
+    <div className="absolute right-0 top-0 size-16">
+        <div className="absolute right-[-35px] top-[32px] w-[170px] rotate-45 bg-green-600 py-1 text-center font-semibold text-white">{text}</div>
+    </div>
+);
+
 export default async function Home() {
-    const { results: reviews }: {
+    const { results }: {
         results: Review[]
     } = await ky.get('https://api2.adplist.org/core/review/?user_id=112087&offset=0&limit=14&filter_keywords=').json();
+
+    const reviews: Review[] = shuffle(results);
 
     return (
         <main className="text-white">
@@ -81,21 +148,7 @@ export default async function Home() {
                             </li>
                         ))}
                     </ul>
-                    <Link
-                        href="https://leanvilas.com"
-                        target="_blank"
-                        className="w-full"
-                    >
-                        <Button
-                            fullWidth
-                            variant="ghost"
-                            color="secondary"
-                            radius="sm"
-                            className="py-8 text-2xl"
-                        >
-                            Book a FREE 1:1 call
-                        </Button>
-                    </Link>
+                    {ctaButton}
                 </section>
                 <section className="flex items-start">
                     <div>
@@ -115,19 +168,66 @@ export default async function Home() {
                         <ul className={marqueeContentStyles} aria-hidden="true">{reviews.map(reviewListItem)}</ul>
                     </div>
                 </div>
-                <div className="flex w-full items-center justify-center gap-5   ">
-                    <div className={`${pragmatica.className} text-3xl font-bold`}>Top 1% Mentor</div>
-                    <Image src="/toprated.png" alt="ADPList top rated" width={100} height={100} />
-                    <Image src="/adplist_logo.svg" alt="ADPList logo" width={200} height={500} />
-                </div>
+                <Link
+                    href="https://adplist.org/mentors/leandro-nicolas-vilas"
+                    target="_blank"
+                    className="w-full text-slate-800"
+                >
+                    <div className="flex w-full items-center justify-center gap-5">
+                        <div className={`${pragmatica.className} text-3xl font-bold`}>Top 1% Mentor</div>
+                        <Image src="/toprated.png" alt="ADPList top rated" width={100} height={100} />
+                        <Image src="/adplist_logo.svg" alt="ADPList logo" width={200} height={500} />
+                    </div>
+                </Link>
             </article>
 
-            <article>
-                Most popular packages
-                - Code mentoring
-                - Job preparation - most popular
-                - Improve communication
+            <article className="bg-[#0A0A28] py-32">
+                <div className="mb-6 flex items-center justify-center gap-8 font-bold">
+                    {sessions.map((session) => (
+                        <div
+                            key={session.name}
+                            className={clsx(
+                                'h-[600px] w-full rounded-3xl bg-black p-10 sm:w-96',
+                                { 'border border-indigo-600 relative overflow-hidden': session.isPopular }
+                            )}
+                        >
+                            {session.isPopular ? ribbon('Popular') : null}
+                            <h3 className="mb-8 text-6xl">{session.name}</h3>
+                            <p className="mb-6 text-sm font-light">This is what you get</p>
+                            <ul className="mb-14 font-light">
+                                {session.benefits.map((benefit, index) => (
+                                    <li key={index} className="mb-2 flex items-center gap-2">
+                                        <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
+                                        <span>{benefit}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <Link
+                                href="https://leanvilas.com"
+                                target="_blank"
+                                className="w-full"
+                            >
+                                <Button
+                                    fullWidth
+                                    variant="ghost"
+                                    color="secondary"
+                                    radius="sm"
+                                    className="py-6 text-xl"
+                                >
+                                    Book now
+                                </Button>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </article>
         </main>
     );
 }
+
+/**
+ * Most popular packages
+    - Code mentoring
+    - Job preparation - most popular
+    - Improve communication
+ */
