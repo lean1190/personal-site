@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import { pragmatica } from '../fonts/fonts';
+import { truncate } from '@/lib/strings';
 
 // FIXME: the hover is weird, only one list stops
 const marqueeStyles = 'flex overflow-hidden gap-4 select-none hover:[&_ul]:paused';
@@ -30,8 +31,6 @@ interface Props {
     reviews: Review[]
 }
 
-const sliceReviewText = (text: string) => (text.length > 227 ? `${text.slice(0, 227)}...` : text);
-
 const reviewListItem = (review: Review) => (
     <li key={review.id} className={reviewStyle}>
         <figure className="mb-2 flex w-full items-center gap-2">
@@ -48,7 +47,7 @@ const reviewListItem = (review: Review) => (
             </div>
         </figure>
         <blockquote>
-            <i>&quot; {sliceReviewText(review.review)}</i>
+            <i>&quot; {truncate(review.review, 227)}</i>
         </blockquote>
     </li>
 );
