@@ -3,6 +3,7 @@ import ky from 'ky';
 import { shuffle } from '@/lib/arrays';
 
 import AboutMe from './components/about-me';
+import Footer from './components/footer';
 import Intro from './components/intro';
 import Reviews from './components/reviews/reviews';
 import { Review } from './components/reviews/types';
@@ -27,6 +28,8 @@ export default async function Home() {
             <Sessions />
 
             <AboutMe />
+
+            <Footer />
         </main>
     );
 }

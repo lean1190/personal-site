@@ -12,7 +12,7 @@
     "dependencies:check": "ncu",
     "dependencies:update": "ncu -u && npm install && npm run lint:fix",
     "analyze": "cross-env ANALYZE=true next build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.10",
