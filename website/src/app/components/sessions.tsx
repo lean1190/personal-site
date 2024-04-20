@@ -22,7 +22,7 @@ const sessions: Session[] = [
     {
         name: 'Job preparation',
         benefits: [
-            'Learn the 5 stages of the hiring process',
+            'The 5 stages of the hiring process',
             'Learn how to nail each interview stage',
             'Prepare through interview simulations',
             'CV and LinkedIn review',

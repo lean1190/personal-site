@@ -4,7 +4,8 @@ import { shuffle } from '@/lib/arrays';
 
 import { indigoGradient } from './components/gradients';
 import Intro from './components/intro';
-import Reviews, { Review } from './components/reviews';
+import Reviews from './components/reviews/reviews';
+import { Review } from './components/reviews/types';
 import Sessions from './components/sessions';
 
 export default async function Home() {
