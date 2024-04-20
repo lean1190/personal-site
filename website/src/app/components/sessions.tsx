@@ -49,8 +49,8 @@ const ribbon = (text: string) => (
 
 export default function Sessions() {
     return (
-        <article className="bg-[#0A0A28] py-32">
-            <div className="mb-6 flex items-center justify-center gap-8 font-bold">
+        <article className="bg-[#0A0A28] py-16 sm:px-36 sm:py-32">
+            <div className="mb-6 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
                 {sessions.map((session) => (
                     <div
                         key={session.name}
