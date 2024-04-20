@@ -2,10 +2,11 @@ import ky from 'ky';
 
 import { shuffle } from '@/lib/arrays';
 
-import { indigoGradient } from './components/gradients';
+import AboutMe from './components/about-me';
 import Intro from './components/intro';
 import Reviews from './components/reviews/reviews';
 import { Review } from './components/reviews/types';
+import Separator from './components/separator';
 import Sessions from './components/sessions';
 
 export default async function Home() {
@@ -19,11 +20,13 @@ export default async function Home() {
         <main className="text-white">
             <Intro />
 
-            <div className={`${indigoGradient} h-[2px] w-full`}></div>
+            <Separator />
 
             <Reviews reviews={reviews} />
 
             <Sessions />
+
+            <AboutMe />
         </main>
     );
 }

@@ -1,9 +1,7 @@
 
 import { User } from '@nextui-org/react';
 import clsx from 'clsx';
-import Image from 'next/image';
 
-import { pragmatica } from '@/app/fonts/fonts';
 import { truncate } from '@/lib/strings';
 
 import { Review } from './types';
