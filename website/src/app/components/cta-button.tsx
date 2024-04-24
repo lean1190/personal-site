@@ -14,6 +14,7 @@ export default function CtaButton({ link = contactLink, text = 'Book now', size 
         <Link
             href={link}
             target="_blank"
+            rel="nofollow"
             className="w-full"
         >
             <Button

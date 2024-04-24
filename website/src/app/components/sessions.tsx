@@ -60,7 +60,7 @@ export default function Sessions() {
                         )}
                     >
                         {session.isPopular ? ribbon('Popular') : null}
-                        <h3 className="mb-8 text-6xl">{session.name}</h3>
+                        <h2 className="mb-8 text-6xl">{session.name}</h2>
                         <p className="mb-6 text-sm font-light">This is what you get</p>
                         <ul className="mb-14 font-light">
                             {session.benefits.map((benefit, index) => (

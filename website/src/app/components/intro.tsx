@@ -33,10 +33,25 @@ export default function Intro() {
             </section>
             <section className="flex items-start">
                 <div>
-                    <div className={`${biroscript.className} pr-7 text-5xl`}>Hi, I&apos;m Lean!</div>
-                    <div><Image className="ml-auto" src="/arrow.png" alt="Arrow" width={200} height={100} /></div>
+                    <div className={`${biroscript.className} pr-7 text-5xl`}>
+                        Hi, I&apos;m Lean!
+                    </div>
+                    <Image
+                        className="ml-auto"
+                        src="/arrow.png"
+                        alt="Arrow"
+                        width={200}
+                        height={84}
+                    />
                 </div>
-                <div><Image src="/profile_big.jpg" alt="Lean Vilas" width={450} height={600} className="rounded-full" /></div>
+                <Image
+                    className="rounded-full"
+                    priority
+                    src="/profile_big.jpg"
+                    alt="Lean Vilas"
+                    width={450}
+                    height={450}
+                />
             </section>
         </article>
     );

@@ -6,8 +6,11 @@ import type { Metadata } from 'next';
 import { roboto } from './fonts/fonts';
 
 export const metadata: Metadata = {
-    title: 'Mentor & Coach - Lean Vilas',
-    description: 'Become a CONFIDENT Software Engineer',
+    title: 'Mentor and Coach - Lean Vilas',
+    description: 'Become a CONFIDENT Software Engineer, learn faster, upskill your coding, and get the job you are looking for.',
+    openGraph: {
+        images: ['/profile_big.jpg']
+    },
     icons: { icon: '/favicon.ico' }
 };
 
