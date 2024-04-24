@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
 import CtaButton from './cta-button';
+import SectionHeader from './section-header';
 
 interface Session {
     name: string;
@@ -50,6 +51,7 @@ const ribbon = (text: string) => (
 export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:px-36 sm:py-32">
+            <SectionHeader text="My premium sessions" />
             <div className="mb-6 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
                 {sessions.map((session) => (
                     <div
@@ -60,7 +62,7 @@ export default function Sessions() {
                         )}
                     >
                         {session.isPopular ? ribbon('Popular') : null}
-                        <h2 className="mb-8 text-6xl">{session.name}</h2>
+                        <h3 className="mb-8 text-6xl">{session.name}</h3>
                         <p className="mb-6 text-sm font-light">This is what you get</p>
                         <ul className="mb-14 font-light">
                             {session.benefits.map((benefit, index) => (

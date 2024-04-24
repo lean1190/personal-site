@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import { pragmatica } from '../../fonts/fonts';
+import SectionHeader from '../section-header';
 import ReviewItem from './review-item';
 import styles from './reviews.module.css';
 import { Review } from './types';
@@ -22,7 +23,7 @@ interface Props {
 export default function Reviews({ reviews }: Props) {
     return (
         <article className="bg-white py-12 text-slate-800">
-            <h2 className={`${pragmatica.className} mb-12 text-center text-5xl font-bold`}>What mentees are saying about me 💜</h2>
+            <SectionHeader text="What mentees are saying about me 💜" />
             <div className="mb-12">
                 <div className={`${styles['marquee-wrapper']} ${marqueeWrapperStyles}`}>
                     <ul className={marqueeListStyles}>{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>

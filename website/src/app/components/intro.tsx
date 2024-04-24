@@ -44,14 +44,15 @@ export default function Intro() {
                         height={84}
                     />
                 </div>
-                <Image
-                    className="rounded-full"
-                    priority
-                    src="/profile_big.jpg"
-                    alt="Lean Vilas"
-                    width={450}
-                    height={450}
-                />
+                <div className="relative size-[250px] min-h-[250px] min-w-[250px] sm:size-[450px] sm:min-h-[450px] sm:min-w-[450px]">
+                    <Image
+                        className="rounded-full"
+                        priority
+                        src="/profile_big.jpg"
+                        alt="Lean Vilas"
+                        fill
+                    />
+                </div>
             </section>
         </article>
     );
