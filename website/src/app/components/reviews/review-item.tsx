@@ -1,9 +1,11 @@
 import clsx from 'clsx';
 import Image from 'next/image';
+import { FaQuoteRight } from 'react-icons/fa6';
 
 import { pragmatica } from '@/app/fonts/fonts';
 import { truncate } from '@/lib/strings';
 
+import { indigoGradient } from '../gradients';
 import { Review } from './types';
 
 interface Props {
@@ -11,30 +13,31 @@ interface Props {
 }
 
 const reviewStyle = clsx(
-    'size-72 overflow-hidden rounded-xl border-l-4 border-solid border-gray-600 p-4 shadow-lg',
+    'flex h-44 w-[600px] rounded-xl p-4 shadow-lg',
     'odd:bg-slate-950 odd:text-slate-100',
-    'even:border-y even:border-r even:border-y-slate-300 even:border-r-slate-300 even:bg-white even:text-slate-800'
 );
 
 export default function ReviewItem({ review }: Props) {
     return (
         <li key={review.id} className={reviewStyle}>
-            <figure className="mb-4 flex w-full items-center gap-2">
-                <Image
-                    src={review.reviewed_by.profile_photo_url}
-                    alt={review.reviewed_by.name}
-                    width={48}
-                    height={48}
-                    className="max-h-12 max-w-12 rounded-full"
-                />
+            <figure className="flex w-full items-center gap-8">
+                <div className="relative">
+                    <Image
+                        src={review.reviewed_by.profile_photo_url}
+                        alt={review.reviewed_by.name}
+                        width={128}
+                        height={128}
+                        className="max-h-32 min-h-32 min-w-32 max-w-32 rounded-full"
+                    />
+                    <div className={`absolute right-0 top-0 rounded-full p-2 text-white ${indigoGradient}`}>
+                        <FaQuoteRight size={30} />
+                    </div>
+                </div>
                 <div className={`${pragmatica.className} min-w-0 max-w-full font-light`}>
-                    <figcaption className="truncate font-bold">{review.reviewed_by.name}</figcaption>
-                    <div className="truncate text-sm font-extralight tracking-wide text-slate-400">{review.reviewed_by.title}</div>
+                    <blockquote className="mb-4">{truncate(review.review, 227)}</blockquote>
+                    <figcaption className="truncate font-bold">{review.reviewed_by.name}, {review.reviewed_by.title}</figcaption>
                 </div>
             </figure>
-            <blockquote>
-                <i>{truncate(review.review, 227)}</i>
-            </blockquote>
         </li>
     );
 }

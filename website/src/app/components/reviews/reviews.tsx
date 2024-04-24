@@ -7,10 +7,11 @@ import ReviewItem from './review-item';
 import styles from './reviews.module.css';
 import { Review } from './types';
 
-// FIXME: the hover is weird, only one list stops
 const marqueeWrapperStyles = 'flex overflow-hidden gap-4 select-none';
+// Disabled because the Tailwindcss animate package is not properly recognized
+// eslint-disable-next-line tailwindcss/no-custom-classname
 const marqueeListStyles = clsx(
-    'animate-marquee direction-reverse flex min-w-full shrink-0 justify-around gap-4',
+    'animate-marquee direction-reverse flex min-w-full shrink-0 justify-around gap-4 p-4',
     'motion-reduce:paused'
 );
 
@@ -20,8 +21,9 @@ interface Props {
 
 export default function Reviews({ reviews }: Props) {
     return (
-        <article className="bg-white py-6 text-slate-800">
-            <div className="mb-6">
+        <article className="bg-white py-12 text-slate-800">
+            <h2 className={`${pragmatica.className} mb-12 text-center text-5xl font-bold`}>What mentees are saying about me 💜</h2>
+            <div className="mb-12">
                 <div className={`${styles['marquee-wrapper']} ${marqueeWrapperStyles}`}>
                     <ul className={marqueeListStyles}>{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>
                     <ul className={marqueeListStyles} aria-hidden="true">{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>
