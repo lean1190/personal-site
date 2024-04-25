@@ -22,11 +22,11 @@ export default async function Home() {
             <Intro />
 
             <Separator />
-
             <Reviews reviews={reviews} />
 
             <Sessions />
 
+            <Separator />
             <AboutMe />
 
             <Footer />

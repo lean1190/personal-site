@@ -90,7 +90,7 @@ export default function Sessions() {
             <section className="flex flex-col items-center justify-center gap-12 px-6 sm:flex-row sm:px-0">
                 <div>
                     <p className="mb-4 text-center text-2xl font-bold">Ready to get confident?</p>
-                    <CtaButton text="Book me on ADPList" />
+                    <CtaButton text="Book me on ADPList" link="adplist" />
                 </div>
                 <div>
                     <p className="mb-4 text-center text-2xl font-extralight">Not sure yet?</p>

@@ -17,7 +17,7 @@ export default function SectionHeader({ title, subtitle }: Props) {
     return (
         <>
             <h2 className={titleStyles}>{title}</h2>
-            {subtitle ? <p className="mb-12 px-6 text-center text-xl font-normal leading-tight text-slate-300 sm:px-0">{subtitle}</p> : null}
+            {subtitle ? <p className="mb-12 px-6 text-center text-xl font-normal leading-tight text-slate-400 sm:px-0">{subtitle}</p> : null}
         </>
     );
 }

@@ -23,13 +23,13 @@ export default function Reviews({ reviews }: Props) {
     return (
         <article className="bg-white py-12 text-slate-800">
             <SectionHeader title="What mentees are saying about me 💜" />
-            <div className="mb-12">
+            <section className="mb-12">
                 <div className={`${styles['marquee-wrapper']} ${marqueeWrapperStyles}`}>
                     <ul className={marqueeListStyles}>{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>
                     <ul className={marqueeListStyles} aria-hidden="true">{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>
                 </div>
-            </div>
-            <div className="mx-auto w-fit">
+            </section>
+            <section className="mx-auto w-fit">
                 <Link
                     href="https://adplist.org/mentors/leandro-nicolas-vilas"
                     target="_blank"
@@ -42,7 +42,7 @@ export default function Reviews({ reviews }: Props) {
                         <Image src="/adplist_logo.svg" alt="ADPList logo" width={200} height={51} />
                     </div>
                 </Link>
-            </div>
+            </section>
         </article>
     );
 }
