@@ -28,13 +28,14 @@ export default function AboutMe() {
                 <div className="mb-32 font-light leading-loose sm:mb-0 sm:max-w-[550px]">
                     <div className="mb-20">
                         <h4 className="mb-6 text-6xl">This is me</h4>
-                        <p className="mb-4 font-bold leading-tight">I&apos;m a lead software engineer, communication advocate, mentor, and coach. </p>
+                        <p className="mb-4 font-bold leading-tight">I&apos;m a lead software engineer, mentor, coach, and communication advocate. </p>
                         <p>I consider myself a chilled and approachable person.</p>
+                        <p>I laugh a lot and I don&apos;t mind making fun of myself.</p>
                         <p>I was born in Argentina 🇦🇷 and moved to Germany 🇩🇪 for work.</p>
                     </div>
                     <div>
                         <h4 className="mb-6 text-6xl">Why learn with me</h4>
-                        <p className="mb-4 font-bold leading-tight">I&apos;m driven by helping people overcome difficult and complex situations.</p>
+                        <p className="mb-4 font-bold leading-tight">I&apos;m driven by helping people grow and overcome difficult situations.</p>
                         <ul>
                             {reasons.map((reason, index) => (
                                 <li key={index} className="flex items-center gap-2">

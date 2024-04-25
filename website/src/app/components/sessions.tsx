@@ -1,7 +1,11 @@
 import clsx from 'clsx';
+import { Fragment } from 'react';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
+import { PiCaretDown } from 'react-icons/pi';
 
+import { biroscript } from '../fonts/fonts';
 import CtaButton from './cta-button';
+import { indigoGradient } from './gradients';
 import SectionHeader from './section-header';
 
 interface Session {
@@ -46,6 +50,21 @@ const sessions: Session[] = [
     }
 ];
 
+const faqs: { question: string, answer: string }[] = [
+    { question: 'How many sessions am I booking?', answer: 'Each booking includes 2 personalized sessions.' },
+    { question: 'How long are the sessions?', answer: 'Each session is 45 minutes long.' },
+    { question: 'Are any of the sessions free?', answer: 'The first 30 minutes session is free :)' },
+    { question: 'How can I book a session?', answer: 'I manage my sessions through ADPList. You can sign up for free and get access to a whole mentorship community.' },
+    { question: 'I would prefer not to sign up to ADPList, what can I do?', answer: 'We can arrange the session without ADPList, let\'s talk about this.' },
+    { question: 'How can I pay?', answer: 'ADPList handles secure payments via Stripe. If you prefer not using ADPList, you can pay via Paypal or bank transfer.' }
+];
+
+const expectations: { title: string, description: string[] }[] = [
+    { title: 'We meet each other', description: ['Let\'s have a chat and get to know each other no strings attached.', 'If we click, we continue 😄'] },
+    { title: 'We make a plan', description: ['What do you want to learn?', 'We will make sure we fulfil your expectations.'] },
+    { title: 'You get confident', description: ['You feel more secure of your skills, and ready to face your professional challenges 💪'] }
+];
+
 const ribbon = (text: string) => (
     <div className="absolute right-0 top-0 size-16">
         <div className="absolute right-[-35px] top-[32px] w-[170px] rotate-45 bg-green-600 py-1 text-center font-semibold text-white">{text}</div>
@@ -54,11 +73,12 @@ const ribbon = (text: string) => (
 
 export default function Sessions() {
     return (
-        <article className="bg-[#0A0A28] py-16 sm:px-36 sm:py-32">
+        <article className="bg-[#0A0A28] py-16 sm:py-32">
             <SectionHeader
                 title="90 minutes Power Sessions"
-                subtitle="x2 45 minutes sessions, personalized to your needs"
+                subtitle="1:1 personalized to your needs"
             />
+
             <section className="mb-20 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
                 {sessions.map((session) => (
                     <div
@@ -85,7 +105,56 @@ export default function Sessions() {
                     </div>
                 ))}
             </section>
-            <section className="flex flex-col items-center justify-center gap-12 px-6 sm:flex-row sm:px-0">
+
+            <section className="mx-auto mb-28 p-6 sm:px-0">
+                <h5 className="mb-12 text-center text-6xl font-light">Simple and powerful</h5>
+                <div className="relative w-full">
+                    <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:top-11`}></div>
+                    <ul className="mx-auto flex flex-col items-start gap-6 pt-4 sm:max-w-[805px] sm:flex-row sm:gap-4 sm:pt-0">
+                        {expectations.map(({ title, description }, indexExpectations) => (
+                            <li key={indexExpectations} className="z-10 flex min-w-0 shrink grow basis-0 flex-row items-start justify-center gap-4 sm:flex-col sm:items-center">
+                                <div className={`rounded-full px-4 py-2 text-xl font-bold sm:px-6 sm:py-3 sm:text-6xl ${indigoGradient}`}>{indexExpectations + 1}</div>
+                                <div className="text-left sm:text-center">
+                                    <p className="mb-2 text-2xl font-bold sm:text-xl">{title}</p>
+                                    {description.map((value, indexDescription) => (
+                                        <p key={indexDescription} className="font-extralight sm:text-lg">
+                                            {value}
+                                        </p>
+                                    ))}
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
+
+            <section className="mx-auto mb-20 p-6 sm:max-w-[608px] sm:px-0">
+                <h5 className="mb-12 text-center text-6xl font-light tracking-widest">FAQ&apos;s</h5>
+                <div className="w-full">
+                    {faqs.map(({ question, answer }, index) => (
+                        <Fragment key={index}>
+                            <hr className="w-full" />
+                            <details className="w-full py-4 sm:py-6 [&_i]:open:-rotate-180">
+                                <summary
+                                    className={clsx(
+                                        'flex cursor-pointer items-center justify-between text-xl font-light leading-6 transition-all',
+                                        'marker:content-none',
+                                        'before:content-none'
+                                    )}
+                                >
+                                    <span>{question}</span>
+                                    <i className="transition-all"><PiCaretDown /></i>
+                                </summary>
+                                <div className="py-4 font-thin">{answer}</div>
+                            </details>
+                        </Fragment>
+                    ))}
+                </div>
+            </section>
+
+            <h6 className={`${biroscript.className} mb-28 text-center text-7xl uppercase`}>You got this!</h6>
+
+            <section className="mx-auto flex flex-col items-center justify-center gap-12 px-6 sm:max-w-[608px] sm:flex-row sm:px-0">
                 <div>
                     <p className="mb-4 text-center text-2xl font-bold">Ready to get confident?</p>
                     <CtaButton text="Book me on ADPList" link="adplist" />
