@@ -32,8 +32,8 @@ export default function ReviewItem({ review }: Props) {
                         <FaQuoteRight size={30} />
                     </div>
                 </div>
-                <div className="min-w-0 max-w-full font-light">
-                    <blockquote className="mb-4">{truncate(review.review, 227)}</blockquote>
+                <div className="flex max-h-full min-w-0 max-w-full flex-col justify-between gap-2 font-light">
+                    <blockquote className="text-sm">{truncate(review.review, 312)}</blockquote>
                     <figcaption className="truncate font-bold">{review.reviewed_by.name}, {review.reviewed_by.title}</figcaption>
                 </div>
             </figure>

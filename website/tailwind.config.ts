@@ -47,7 +47,7 @@ const config: Config = {
                 rotate: 'rotate 10s linear infinite',
                 up: 'up 3s linear infinite',
                 scale: 'scale 3s linear infinite',
-                marquee: 'marquee 200s linear infinite'
+                marquee: 'marquee 400s linear infinite'
             }
         }
     },
