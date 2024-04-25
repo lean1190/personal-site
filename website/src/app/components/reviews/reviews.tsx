@@ -2,7 +2,6 @@ import { Link } from '@nextui-org/react';
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import { pragmatica } from '../../fonts/fonts';
 import SectionHeader from '../section-header';
 import ReviewItem from './review-item';
 import styles from './reviews.module.css';
@@ -38,7 +37,7 @@ export default function Reviews({ reviews }: Props) {
                     className="w-full text-slate-800"
                 >
                     <div className="flex w-full items-center justify-center gap-5">
-                        <div className={`${pragmatica.className} hidden text-3xl font-bold sm:block`}>Top 1% Mentor</div>
+                        <div className="hidden text-3xl font-bold sm:block">Top 1% Mentor</div>
                         <Image src="/toprated.png" alt="ADPList top rated" width={100} height={115} />
                         <Image src="/adplist_logo.svg" alt="ADPList logo" width={200} height={51} />
                     </div>

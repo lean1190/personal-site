@@ -8,10 +8,15 @@ import { roboto } from './fonts/fonts';
 export const metadata: Metadata = {
     title: 'Mentor and Coach - Lean Vilas',
     description: 'Become a CONFIDENT Software Engineer, learn faster, upskill your coding, and get the job you are looking for.',
+    icons: { icon: '/favicon.ico' },
+    metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`),
     openGraph: {
-        images: ['/profile_big.jpg']
+        images: ['/profile_big.jpg'],
+        url: 'https://leanvilas.com',
+        locale: 'en_US',
+        type: 'website'
     },
-    icons: { icon: '/favicon.ico' }
+    authors: [{ name: 'Lean Vilas' }]
 };
 
 export default function RootLayout({

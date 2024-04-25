@@ -51,7 +51,7 @@ const ribbon = (text: string) => (
 export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:px-36 sm:py-32">
-            <SectionHeader text="My premium sessions" />
+            <SectionHeader text="Power sessions 💪" />
             <div className="mb-6 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
                 {sessions.map((session) => (
                     <div

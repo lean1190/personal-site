@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { FaQuoteRight } from 'react-icons/fa6';
 
-import { pragmatica } from '@/app/fonts/fonts';
 import { truncate } from '@/lib/strings';
 
 import { indigoGradient } from '../gradients';
@@ -33,7 +32,7 @@ export default function ReviewItem({ review }: Props) {
                         <FaQuoteRight size={30} />
                     </div>
                 </div>
-                <div className={`${pragmatica.className} min-w-0 max-w-full font-light`}>
+                <div className="min-w-0 max-w-full font-light">
                     <blockquote className="mb-4">{truncate(review.review, 227)}</blockquote>
                     <figcaption className="truncate font-bold">{review.reviewed_by.name}, {review.reviewed_by.title}</figcaption>
                 </div>
