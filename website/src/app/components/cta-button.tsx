@@ -1,6 +1,7 @@
 import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
+import { adplistLink, contactLink } from '../constants/links';
 import { indigoGradient } from './gradients';
 
 interface Props {
@@ -10,9 +11,6 @@ interface Props {
     variant?: 'primary' | 'secondary'
     icon?: React.ReactNode
 }
-
-const contactLink = 'https://calendly.com/leanvilas/confidence-session';
-const adplistLink = 'https://adplist.org/mentors/leandro-nicolas-vilas';
 
 export default function CtaButton({
     link = 'contact',

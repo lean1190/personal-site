@@ -2,6 +2,8 @@ import { Link } from '@nextui-org/react';
 import clsx from 'clsx';
 import Image from 'next/image';
 
+import { adplistLink } from '@/app/constants/links';
+
 import SectionHeader from '../section-header';
 import ReviewItem from './review-item';
 import styles from './reviews.module.css';
@@ -31,7 +33,7 @@ export default function Reviews({ reviews }: Props) {
             </section>
             <section className="mx-auto w-fit">
                 <Link
-                    href="https://adplist.org/mentors/leandro-nicolas-vilas"
+                    href={adplistLink}
                     target="_blank"
                     rel="nofollow"
                     className="w-full text-slate-800"

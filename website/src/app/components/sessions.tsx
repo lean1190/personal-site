@@ -1,9 +1,7 @@
 import clsx from 'clsx';
-import Image from 'next/image';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
 import CtaButton from './cta-button';
-import { indigoGradient } from './gradients';
 import SectionHeader from './section-header';
 
 interface Session {
