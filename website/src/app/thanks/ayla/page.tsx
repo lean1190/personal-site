@@ -1,6 +1,6 @@
-import Card from '@/app/components/card';
+import Card from '../components/card';
 
-export default function CharlieMa() {
+export default function Ayla() {
     return <Card
         hi="Hi Ayla!"
         backgroundClasses="bg-gradient-to-b from-purple-100 to-purple-300"
