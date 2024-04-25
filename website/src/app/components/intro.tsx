@@ -29,7 +29,7 @@ export default function Intro() {
                         </li>
                     ))}
                 </ul>
-                <CtaButton text="Book a FREE 1:1 session" size="lg" />
+                <CtaButton text="Book a FREE 1:1 session 💪" size="lg" />
             </section>
             <section className="flex items-start">
                 <div>

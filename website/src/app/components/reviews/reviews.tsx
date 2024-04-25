@@ -22,7 +22,7 @@ interface Props {
 export default function Reviews({ reviews }: Props) {
     return (
         <article className="bg-white py-12 text-slate-800">
-            <SectionHeader text="What mentees are saying about me 💜" />
+            <SectionHeader title="What mentees are saying about me 💜" />
             <div className="mb-12">
                 <div className={`${styles['marquee-wrapper']} ${marqueeWrapperStyles}`}>
                     <ul className={marqueeListStyles}>{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>

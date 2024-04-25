@@ -1,11 +1,14 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
 import CtaButton from './cta-button';
+import { indigoGradient } from './gradients';
 import SectionHeader from './section-header';
 
 interface Session {
     name: string;
+    price: { euros: string, dollars: string };
     benefits: string[];
     isPopular?: boolean;
 }
@@ -13,6 +16,7 @@ interface Session {
 const sessions: Session[] = [
     {
         name: 'Code mentoring',
+        price: { euros: '46', dollars: '50' },
         benefits: [
             'Personalized 1:1 mentoring',
             'Professional code review',
@@ -22,6 +26,7 @@ const sessions: Session[] = [
     },
     {
         name: 'Job preparation',
+        price: { euros: '28', dollars: '30' },
         benefits: [
             'The 5 stages of the hiring process',
             'Learn how to nail each interview stage',
@@ -33,6 +38,7 @@ const sessions: Session[] = [
     },
     {
         name: 'Speak confidently',
+        price: { euros: '38', dollars: '40' },
         benefits: [
             '1:1 communication coaching',
             'Contribute to team discussions',
@@ -51,19 +57,25 @@ const ribbon = (text: string) => (
 export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:px-36 sm:py-32">
-            <SectionHeader text="Power sessions 💪" />
-            <div className="mb-6 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
+            <SectionHeader
+                title="90 minutes Power Sessions"
+                subtitle="x2 45 minutes sessions, personalized to your needs"
+            />
+            <section className="mb-20 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
                 {sessions.map((session) => (
                     <div
                         key={session.name}
                         className={clsx(
-                            'h-[600px] w-full rounded-3xl bg-black p-10 sm:w-96',
+                            'w-full rounded-3xl bg-black p-10 sm:w-96',
                             { 'border border-indigo-600 relative overflow-hidden': session.isPopular }
                         )}
                     >
                         {session.isPopular ? ribbon('Popular') : null}
                         <h3 className="mb-8 text-6xl">{session.name}</h3>
-                        <p className="mb-6 text-sm font-light">This is what you get</p>
+                        <p className="mb-8">
+                            <span className="text-4xl font-bold">€{session.price.euros}</span>
+                            <span className="text-xl font-light text-slate-300"> / ${session.price.dollars}</span>
+                        </p>
                         <ul className="mb-14 font-light">
                             {session.benefits.map((benefit, index) => (
                                 <li key={index} className="mb-2 flex items-center gap-2">
@@ -72,10 +84,19 @@ export default function Sessions() {
                                 </li>
                             ))}
                         </ul>
-                        <CtaButton />
                     </div>
                 ))}
-            </div>
+            </section>
+            <section className="flex flex-col items-center justify-center gap-12 px-6 sm:flex-row sm:px-0">
+                <div>
+                    <p className="mb-4 text-center text-2xl font-bold">Ready to get confident?</p>
+                    <CtaButton text="Book me on ADPList" />
+                </div>
+                <div>
+                    <p className="mb-4 text-center text-2xl font-extralight">Not sure yet?</p>
+                    <CtaButton text="Book a FREE 1:1 intro session" variant="secondary" />
+                </div>
+            </section>
         </article>
     );
 }

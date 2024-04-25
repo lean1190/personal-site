@@ -1,31 +1,48 @@
 import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
+import { indigoGradient } from './gradients';
+
 interface Props {
-    link?: string;
+    link?: 'contact' | 'adplist';
     text?: string;
     size?: 'md' | 'lg';
+    variant?: 'primary' | 'secondary'
+    icon?: React.ReactNode
 }
 
 const contactLink = 'https://calendly.com/leanvilas/confidence-session';
+const adplistLink = 'https://adplist.org/mentors/leandro-nicolas-vilas';
 
-export default function CtaButton({ link = contactLink, text = 'Book now', size = 'md' }: Props) {
+export default function CtaButton({
+    link = 'contact',
+    text = 'Book now',
+    size = 'md',
+    variant = 'primary',
+    icon = null
+}: Props) {
+    const isPrimary = variant === 'primary';
+    const urlLink = link === 'contact' ? contactLink : adplistLink;
+
     return (
         <Link
-            href={link}
+            href={urlLink}
             target="_blank"
             rel="nofollow"
             className="w-full"
         >
             <Button
                 fullWidth
-                variant="ghost"
+                variant={isPrimary ? 'solid' : 'ghost'}
                 color="secondary"
                 radius="sm"
                 className={clsx({
-                    'py-8 text-2xl': size === 'lg',
-                    'py-6 text-xl': size === 'md'
+                    [indigoGradient]: isPrimary,
+                    'hover:text-white': isPrimary,
+                    'h-[64px] text-2xl': size === 'lg',
+                    'h-[52px] text-xl': size === 'md'
                 })}
+                startContent={icon}
             >
                 {text}
             </Button>
