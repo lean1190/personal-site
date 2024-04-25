@@ -29,16 +29,16 @@ export default function AboutMe() {
                     <div className="mb-20">
                         <h4 className="mb-6 text-6xl">This is me</h4>
                         <p className="mb-4 font-bold leading-tight">I&apos;m a lead software engineer, mentor, coach, and communication advocate. </p>
-                        <p>I consider myself a chilled and approachable person.</p>
-                        <p>I laugh a lot and I don&apos;t mind making fun of myself.</p>
-                        <p>I was born in Argentina 🇦🇷 and moved to Germany 🇩🇪 for work.</p>
+                        <p className="mb-2 text-sm sm:text-base">I consider myself a chilled and approachable person.</p>
+                        <p className="mb-2 text-sm sm:text-base">I laugh a lot and I don&apos;t mind making fun of myself.</p>
+                        <p className="text-sm sm:text-base">I was born in Argentina 🇦🇷 and moved to Germany 🇩🇪 for work.</p>
                     </div>
                     <div>
                         <h4 className="mb-6 text-6xl">Why learn with me</h4>
                         <p className="mb-4 font-bold leading-tight">I&apos;m driven by helping people grow and overcome difficult situations.</p>
                         <ul>
                             {reasons.map((reason, index) => (
-                                <li key={index} className="flex items-center gap-2">
+                                <li key={index} className="mb-2 flex items-center gap-2 text-sm sm:mb-0 sm:text-base">
                                     <GoPlus /> {reason}
                                 </li>
                             ))}

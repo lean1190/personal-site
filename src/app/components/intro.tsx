@@ -14,8 +14,8 @@ const learnings = [
 
 export default function Intro() {
     return (
-        <article className="flex flex-col gap-12 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-36">
-            <section className="max-w-[630px]">
+        <article className="flex flex-col gap-12 p-6 pt-12 sm:flex-row sm:items-center sm:justify-between sm:p-36">
+            <section className="mb-8 max-w-[630px] sm:mb-0">
                 <h1 className="mb-8 text-6xl leading-tight sm:mb-6">
                     <span>Become a</span>{' '}
                     <mark className={`${indigoGradient} px-2 font-bold text-white`}>CONFIDENT</mark>{' '}
@@ -25,7 +25,7 @@ export default function Intro() {
                     {learnings.map((learning, index) => (
                         <li key={index} className="mb-2 flex items-center gap-2">
                             <GoPlus size={30} />
-                            <span className="text-2xl">{learning}</span>
+                            <span className="text-xl sm:text-2xl">{learning}</span>
                         </li>
                     ))}
                 </ul>
@@ -44,13 +44,14 @@ export default function Intro() {
                         height={84}
                     />
                 </div>
-                <div className="relative size-[250px] min-h-[250px] min-w-[250px] sm:size-[450px] sm:min-h-[450px] sm:min-w-[450px]">
+                <div className="relative min-h-[180px] min-w-[180px] sm:size-[450px] sm:min-h-[450px] sm:min-w-[450px]">
                     <Image
                         className="rounded-full"
                         priority
                         src="/profile_big.jpg"
                         alt="Lean Vilas"
                         fill
+                        sizes="(max-width: 430px) 180px, (min-width: 640px) 450px"
                     />
                 </div>
             </section>

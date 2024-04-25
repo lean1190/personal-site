@@ -31,7 +31,7 @@ const sessions: Session[] = [
         price: { euros: '28', dollars: '30' },
         benefits: [
             'The 5 stages of the hiring process',
-            'Learn how to nail each interview stage',
+            'Nail each interview stage',
             'Prepare through interview simulations',
             'CV and LinkedIn review',
             'Template to track your applications'
@@ -54,9 +54,10 @@ const faqs: { question: string, answer: string }[] = [
     { question: 'How many sessions am I booking?', answer: 'Each booking includes 2 personalized sessions.' },
     { question: 'How long are the sessions?', answer: 'Each session is 45 minutes long.' },
     { question: 'Are any of the sessions free?', answer: 'The first 30 minutes session is free :)' },
+    { question: 'Can I have the sessions with a colleague?', answer: 'Yes! That way you can also split the cost of the sessions.' },
     { question: 'How can I book a session?', answer: 'I manage my sessions through ADPList. You can sign up for free and get access to a whole mentorship community.' },
     { question: 'I would prefer not to sign up to ADPList, what can I do?', answer: 'We can arrange the session without ADPList, let\'s talk about this.' },
-    { question: 'How can I pay?', answer: 'ADPList handles secure payments via Stripe. If you prefer not using ADPList, you can pay via Paypal or bank transfer.' }
+    { question: 'How can I pay?', answer: 'ADPList handles secure payments via Stripe, and has a refund policy in place. If you prefer not using ADPList, you can pay via Paypal or bank transfer.' }
 ];
 
 const expectations: { title: string, description: string[] }[] = [
@@ -89,7 +90,7 @@ export default function Sessions() {
                         )}
                     >
                         {session.isPopular ? ribbon('Popular') : null}
-                        <h3 className="mb-8 text-6xl">{session.name}</h3>
+                        <h3 className="mb-8 text-5xl sm:text-6xl">{session.name}</h3>
                         <p className="mb-8">
                             <span className="text-4xl font-bold">€{session.price.euros}</span>
                             <span className="text-xl font-light text-slate-300"> / ${session.price.dollars}</span>
@@ -98,7 +99,7 @@ export default function Sessions() {
                             {session.benefits.map((benefit, index) => (
                                 <li key={index} className="mb-2 flex items-center gap-2">
                                     <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
-                                    <span>{benefit}</span>
+                                    <span className="text-sm sm:text-base">{benefit}</span>
                                 </li>
                             ))}
                         </ul>
@@ -106,7 +107,7 @@ export default function Sessions() {
                 ))}
             </section>
 
-            <section className="mx-auto mb-28 p-6 sm:px-0">
+            <section className="mx-auto mb-12 p-6 sm:mb-28 sm:px-0">
                 <h5 className="mb-12 text-center text-6xl font-light">Simple and powerful</h5>
                 <div className="relative w-full">
                     <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:top-11`}></div>
@@ -138,8 +139,8 @@ export default function Sessions() {
                                 <summary
                                     className={clsx(
                                         'flex cursor-pointer items-center justify-between text-xl font-light leading-6 transition-all',
-                                        'marker:content-none',
-                                        'before:content-none'
+                                        'marker:hidden marker:content-none',
+                                        'before:hidden before:content-none'
                                     )}
                                 >
                                     <span>{question}</span>

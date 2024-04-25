@@ -12,7 +12,7 @@ interface Props {
 }
 
 const reviewStyle = clsx(
-    'flex h-44 w-[600px] rounded-xl p-4 shadow-lg',
+    'flex h-44 w-[300px] rounded-xl p-4 shadow-lg sm:h-44 sm:w-[600px]',
     'odd:bg-slate-950 odd:text-slate-100',
 );
 
@@ -26,15 +26,17 @@ export default function ReviewItem({ review }: Props) {
                         alt={review.reviewed_by.name}
                         width={128}
                         height={128}
-                        className="max-h-32 min-h-32 min-w-32 max-w-32 rounded-full"
+                        className="max-h-20 min-h-20 min-w-20 max-w-20 rounded-full sm:max-h-32 sm:min-h-32 sm:min-w-32 sm:max-w-32"
                     />
                     <div className={`absolute right-0 top-0 rounded-full p-2 text-white ${indigoGradient}`}>
-                        <FaQuoteRight size={30} />
+                        <FaQuoteRight size={30} className="hidden sm:block" />
+                        <FaQuoteRight size={15} className="block sm:hidden" />
                     </div>
                 </div>
                 <div className="flex max-h-full min-w-0 max-w-full flex-col justify-between gap-2 font-light">
-                    <blockquote className="text-sm">{truncate(review.review, 312)}</blockquote>
-                    <figcaption className="truncate font-bold">{review.reviewed_by.name}, {review.reviewed_by.title}</figcaption>
+                    <blockquote className="hidden text-sm sm:block">{truncate(review.review, 312)}</blockquote>
+                    <blockquote className="block text-xs sm:hidden">{truncate(review.review, 140)}</blockquote>
+                    <figcaption className="truncate text-xs font-bold sm:text-base">{review.reviewed_by.name}, {review.reviewed_by.title}</figcaption>
                 </div>
             </figure>
         </li>
