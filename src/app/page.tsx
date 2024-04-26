@@ -8,7 +8,7 @@ import Intro from './components/intro';
 import Reviews from './components/reviews/reviews';
 import { Review } from './components/reviews/types';
 import Separator from './components/separator';
-import Sessions from './components/sessions';
+import Sessions from './components/sessions/sessions';
 
 export default async function Home() {
     const { results }: {

@@ -55,7 +55,7 @@ export default function AboutMe() {
                 <ul className="flex flex-col items-start justify-between gap-6 sm:flex-row">
                     {values.map((value, index) => (
                         <li key={index} className="min-w-0 shrink grow basis-0">
-                            <p className="mb-2 text-xl font-bold uppercase">{value.name}</p>
+                            <p className="mb-2 text-xl font-bold uppercase tracking-wider">{value.name}</p>
                             <p>{value.description}</p>
                         </li>
                     ))}

@@ -16,7 +16,7 @@ export default function Intro() {
     return (
         <article className="flex flex-col gap-12 p-6 pt-12 sm:flex-row sm:items-center sm:justify-between sm:p-36">
             <section className="mb-8 max-w-[630px] sm:mb-0">
-                <h1 className="mb-8 text-6xl leading-tight sm:mb-6">
+                <h1 className="mb-8 text-5xl leading-tight sm:mb-6 sm:text-6xl">
                     <span>Become a</span>{' '}
                     <mark className={`${indigoGradient} px-2 font-bold text-white`}>CONFIDENT</mark>{' '}
                     <span className="text-4xl sm:text-6xl">Software Engineer</span>

@@ -3,10 +3,11 @@ import { Fragment } from 'react';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { PiCaretDown } from 'react-icons/pi';
 
-import { biroscript } from '../fonts/fonts';
-import CtaButton from './cta-button';
-import { indigoGradient } from './gradients';
-import SectionHeader from './section-header';
+import { biroscript } from '../../fonts/fonts';
+import CtaButton from '../cta-button';
+import { indigoGradient } from '../gradients';
+import SectionHeader from '../section-header';
+import styles from './sessions.module.css';
 
 interface Session {
     name: string;
@@ -18,7 +19,7 @@ interface Session {
 const sessions: Session[] = [
     {
         name: 'Code mentoring',
-        price: { euros: '46', dollars: '50' },
+        price: { euros: '50', dollars: '53' },
         benefits: [
             'Personalized 1:1 mentoring',
             'Professional code review',
@@ -28,7 +29,7 @@ const sessions: Session[] = [
     },
     {
         name: 'Job preparation',
-        price: { euros: '28', dollars: '30' },
+        price: { euros: '30', dollars: '32' },
         benefits: [
             'The 5 stages of the hiring process',
             'Nail each interview stage',
@@ -40,7 +41,7 @@ const sessions: Session[] = [
     },
     {
         name: 'Speak confidently',
-        price: { euros: '38', dollars: '40' },
+        price: { euros: '40', dollars: '42' },
         benefits: [
             '1:1 communication coaching',
             'Contribute to team discussions',
@@ -135,15 +136,9 @@ export default function Sessions() {
                     {faqs.map(({ question, answer }, index) => (
                         <Fragment key={index}>
                             <hr className="w-full" />
-                            <details className="w-full py-4 sm:py-6 [&_i]:open:-rotate-180">
-                                <summary
-                                    className={clsx(
-                                        'flex cursor-pointer items-center justify-between text-xl font-light leading-6 transition-all',
-                                        'marker:hidden marker:content-none',
-                                        'before:hidden before:content-none'
-                                    )}
-                                >
-                                    <span>{question}</span>
+                            <details className={`${styles['toggle-details']} w-full py-4 sm:py-6 [&_i]:open:-rotate-180`}>
+                                <summary className="flex cursor-pointer items-center justify-between text-xl font-light leading-6 transition-all">
+                                    <span className="text-left">{question}</span>
                                     <i className="transition-all"><PiCaretDown /></i>
                                 </summary>
                                 <div className="py-4 font-thin">{answer}</div>

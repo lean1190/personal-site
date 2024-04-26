@@ -1,0 +1,9 @@
+.toggle-details > summary {
+    list-style: none;
+}
+
+.toggle-details > summary::marker,
+.toggle-details > summary::before, /* Latest Chrome, Edge, Firefox */
+.toggle-details > summary::-webkit-details-marker /* Safari */ {
+    display: none;
+}
