@@ -1,4 +1,4 @@
-import { Roboto } from 'next/font/google';
+import { Dancing_Script, Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const roboto = Roboto({
@@ -7,6 +7,13 @@ export const roboto = Roboto({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-roboto'
+});
+
+export const dancingscript = Dancing_Script({
+    weight: ['400', '500', '600', '700'],
+    style: ['normal'],
+    subsets: ['latin'],
+    display: 'swap'
 });
 
 export const biroscript = localFont({

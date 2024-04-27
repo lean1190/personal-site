@@ -2,7 +2,8 @@
 
 import clsx from 'clsx';
 import { useLottie } from 'lottie-react';
-import { Dancing_Script } from 'next/font/google';
+
+import { dancingscript } from '@/app/fonts/fonts';
 
 import animationData from '../../../../public/confetti.json';
 
@@ -11,13 +12,6 @@ interface Props {
     backgroundClasses?: string;
     paragraphs: string[];
 }
-
-const font = Dancing_Script({
-    weight: ['400', '500', '600', '700'],
-    style: ['normal'],
-    subsets: ['latin'],
-    display: 'swap'
-});
 
 const floatingStyles = clsx(
     'relative top-[50px] z-10 animate-up cursor-pointer',
@@ -53,7 +47,7 @@ export default function Card({ hi = 'Hey there!', backgroundClasses = 'bg-[#fae1
             <div className={floatingStyles} onClick={onFloatingClick}>
                 <div className={envelopeStyles}>
                     <div className={cardStyles} id="card">
-                        <div className={`text-[#003049] ${font.className}`}>
+                        <div className={`text-[#003049] ${dancingscript.className}`}>
                             <h1 className="text-3xl">{hi}</h1>
                             {paragraphs.map((content, index) => <p key={index}>{content}</p>)}
                             <p className="text-right">Lean</p>
