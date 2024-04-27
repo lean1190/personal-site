@@ -2,10 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Thank you for trusting me!',
-    description: 'All my gratitude to you 🙏',
-    icons: {
-        icon: './favicon.ico'
-    }
+    description: 'All my gratitude to you 🙏'
 };
 
 export default function ThanksLayout({
