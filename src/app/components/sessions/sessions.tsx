@@ -21,10 +21,9 @@ const sessions: Session[] = [
         name: 'Code mentoring',
         price: { euros: '50', dollars: '53' },
         benefits: [
-            'Personalized 1:1 mentoring',
             'Professional code review',
-            'Live pair programming',
-            'Document with best practices'
+            'Learn best practices',
+            'Live pair programming'
         ]
     },
     {
@@ -43,10 +42,9 @@ const sessions: Session[] = [
         name: 'Speak confidently',
         price: { euros: '40', dollars: '42' },
         benefits: [
-            '1:1 communication coaching',
-            'Contribute to team discussions',
+            'Learn how to express your ideas',
             'Learn positive speech patterns',
-            'Learn how to express your ideas'
+            'Contribute to team discussions'
         ]
     }
 ];
