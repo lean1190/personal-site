@@ -10,5 +10,5 @@ export default function ThanksLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-    return <article className="grid min-h-screen place-items-center overflow-hidden bg-[#fae1dd]">{children}</article>;
+    return <main className="grid min-h-screen place-items-center overflow-hidden bg-[#fae1dd]">{children}</main>;
 }

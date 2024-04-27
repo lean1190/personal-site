@@ -59,9 +59,9 @@ export default function Home() {
     useTypedWords(appreciationWords, elementRef);
 
     return (
-        <main className="w-full p-4 text-left lg:w-[1000px]">
+        <article className="w-full p-4 text-left lg:w-[1000px]">
             <h1 className="mb-10 w-[335px] bg-[#343D35FF] px-4 text-7xl leading-normal text-white">Hi there!</h1>
             <h2 className="h-12 text-4xl font-bold text-neutral-950" ref={elementRef}></h2>
-        </main>
+        </article>
     );
 }

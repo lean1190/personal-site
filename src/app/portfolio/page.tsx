@@ -60,7 +60,7 @@ export default function Home() {
     };
 
     return (
-        <main className="flex h-full flex-col justify-between gap-20 p-8 tracking-tight">
+        <article className="flex h-full flex-col justify-between gap-20 p-8 tracking-tight">
             <h1 className="text-7xl font-bold sm:text-8xl">Portfolio.</h1>
             <section className="grid w-full grid-cols-12 grid-rows-2 gap-y-8 sm:mx-auto sm:max-h-[600px] sm:max-w-7xl sm:gap-8">
                 {
@@ -119,6 +119,6 @@ export default function Home() {
                     )}
                 </ModalContent>
             </Modal>
-        </main>
+        </article>
     );
 }

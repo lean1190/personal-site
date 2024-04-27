@@ -11,6 +11,6 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }>) {
     return (
-        <article className="size-full max-h-full max-w-full overflow-x-hidden bg-[#343D35FF]">{children}</article>
+        <main className="size-full max-h-full max-w-full overflow-x-hidden bg-[#343D35FF]">{children}</main>
     );
 }
