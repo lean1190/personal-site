@@ -109,7 +109,7 @@ export default function Sessions() {
             <section className="mx-auto mb-12 p-6 sm:mb-28 sm:px-0">
                 <h5 className="mb-12 text-center text-6xl font-light">Simple and powerful</h5>
                 <div className="relative w-full">
-                    <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:top-11`}></div>
+                    <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:left-0 sm:top-11`}></div>
                     <ul className="mx-auto flex flex-col items-start gap-6 pt-4 sm:max-w-[805px] sm:flex-row sm:gap-4 sm:pt-0">
                         {expectations.map(({ title, description }, indexExpectations) => (
                             <li key={indexExpectations} className="z-10 flex min-w-0 shrink grow basis-0 flex-row items-start justify-center gap-4 sm:flex-col sm:items-center">
