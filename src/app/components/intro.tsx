@@ -16,7 +16,7 @@ export default function Intro() {
     return (
         <article className="flex flex-col gap-12 p-6 pt-12 sm:flex-row sm:items-center sm:justify-between sm:p-36">
             <section className="mb-8 max-w-[630px] sm:mb-0">
-                <h1 className="mb-8 text-5xl leading-tight sm:mb-6 sm:text-6xl">
+                <h1 className="mb-8 text-5xl leading-tight sm:mb-6 sm:text-6xl sm:leading-tight">
                     <span>Become a</span>{' '}
                     <mark className={`${indigoGradient} px-2 font-bold text-white`}>CONFIDENT</mark>{' '}
                     <span className="text-4xl sm:text-6xl">Software Engineer</span>
@@ -31,9 +31,9 @@ export default function Intro() {
                 </ul>
                 <CtaButton text="Book a FREE 1:1 session 💪" size="lg" />
             </section>
-            <section className="flex items-start">
+            <section className="flex items-start gap-6">
                 <div>
-                    <div className={`${biroscript.className} pr-7 text-5xl`}>
+                    <div className={`${biroscript.className} pr-7 text-4xl sm:text-5xl sm:leading-tight`}>
                         Hi, I&apos;m Lean!
                     </div>
                     <Image
