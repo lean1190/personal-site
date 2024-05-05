@@ -1,6 +1,7 @@
 import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 
 import { roboto } from './fonts/fonts';
@@ -29,6 +30,7 @@ export default function RootLayout({
             <body className="size-full">
                 {children}
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
