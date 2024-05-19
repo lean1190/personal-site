@@ -4,13 +4,15 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 
+import { getEnvUrl } from '@/lib/environments/is-dev';
+
 import { roboto } from './fonts/fonts';
 
 export const metadata: Metadata = {
     title: 'Mentor and Coach for Software Engineers',
     description: 'Become a CONFIDENT Software Engineer, learn faster, upskill your coding, and get the job you are looking for.',
     icons: { icon: '/favicon.ico' },
-    metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`),
+    metadataBase: new URL(getEnvUrl()),
     openGraph: {
         images: ['/profile_big.jpg'],
         url: 'https://leanvilas.com',

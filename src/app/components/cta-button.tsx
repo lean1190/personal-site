@@ -1,15 +1,16 @@
 import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
-import { adplistLink, contactLink, linkedinLink } from '../constants/links';
+import { adplistLink, contactLink, homeLink, linkedinLink } from '../constants/links';
 import { indigoGradient } from './gradients';
 
 interface Props {
-    link?: 'contact' | 'adplist' | 'linkedin';
+    link?: 'contact' | 'adplist' | 'linkedin' | 'home';
     text?: string;
     size?: 'md' | 'lg';
     variant?: 'primary' | 'secondary'
     icon?: React.ReactNode
+    rel?: 'nofollow' | 'author'
 }
 
 export default function CtaButton({
@@ -17,19 +18,21 @@ export default function CtaButton({
     text = 'Book now',
     size = 'md',
     variant = 'primary',
-    icon = null
+    icon = null,
+    rel = 'nofollow'
 }: Props) {
     const isPrimary = variant === 'primary';
     const urlLink =
         link === 'contact' ? contactLink :
         link === 'adplist' ? adplistLink :
+        link === 'home' ? homeLink :
         linkedinLink;
 
     return (
         <Link
             href={urlLink}
             target="_blank"
-            rel="nofollow"
+            rel={rel}
             className="w-full"
         >
             <Button
