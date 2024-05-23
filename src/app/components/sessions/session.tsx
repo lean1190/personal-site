@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
+import CtaButton from '../cta-button';
 import { Session as SessionModel } from './types';
 
 interface Props {
@@ -35,6 +36,7 @@ export default function Session({ session }: Props) {
                     </li>
                 ))}
             </ul>
+            <CtaButton text="Book now" link={session.link} />
         </div>
     );
 }

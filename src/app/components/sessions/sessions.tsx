@@ -17,11 +17,11 @@ export default function Sessions() {
                 subtitle="1:1 personalized to your needs"
             />
 
-            <section className="mb-20 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
+            <section className="mb-40 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
                 {sessions.map((session) => <Session key={session.name} session={session} />)}
             </section>
 
-            <section className="mx-auto mb-12 p-6 sm:mb-28 sm:px-0">
+            <section className="mx-auto mb-20 p-6 sm:mb-40 sm:px-0">
                 <h5 className="mb-12 text-center text-6xl font-light">Simple and powerful</h5>
                 <div className="relative w-full">
                     <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:left-0 sm:top-11`}></div>

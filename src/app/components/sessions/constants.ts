@@ -4,6 +4,7 @@ export const sessions: Session[] = [
     {
         name: 'Code mentoring',
         price: { euros: '50', dollars: '53' },
+        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=34794-code-mentoring-power-sessions',
         benefits: [
             'Professional code review',
             'Learn best practices',
@@ -13,6 +14,7 @@ export const sessions: Session[] = [
     {
         name: 'Job preparation',
         price: { euros: '30', dollars: '32' },
+        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=36879-job-preparation-power-sessions',
         benefits: [
             'The 5 stages of the hiring process',
             'Nail each interview stage',
@@ -25,6 +27,7 @@ export const sessions: Session[] = [
     {
         name: 'Speak confidently',
         price: { euros: '40', dollars: '42' },
+        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=39278-speak-confidently-power-sessions',
         benefits: [
             'Learn how to express your ideas',
             'Learn positive speech patterns',
