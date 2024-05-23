@@ -1,8 +1,10 @@
 import { Link } from '@nextui-org/react';
 import clsx from 'clsx';
+import ky from 'ky';
 import Image from 'next/image';
 
 import { adplistLink } from '@/app/constants/links';
+import { shuffle } from '@/lib/arrays';
 
 import SectionHeader from '../section-header';
 import ReviewItem from './review-item';
@@ -17,11 +19,13 @@ const marqueeListStyles = clsx(
     'motion-reduce:paused'
 );
 
-interface Props {
-    reviews: Review[]
-}
+export default async function Reviews() {
+    const { results }: {
+        results: Review[]
+    } = await ky.get('https://api2.adplist.org/core/review/?user_id=112087&offset=0&limit=14&filter_keywords=').json();
 
-export default function Reviews({ reviews }: Props) {
+    const reviews: Review[] = shuffle(results);
+
     return (
         <article className="bg-white py-12 text-slate-800">
             <SectionHeader title="What mentees are saying about me 💜" />
