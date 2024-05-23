@@ -20,15 +20,17 @@ const marqueeListStyles = clsx(
 );
 
 const userId = '112087';
+const calendlyMentees = 10;
+const calendlyMinutes = calendlyMentees * 30;
 
 export default async function Reviews() {
     const { results }: {
         results: Review[]
     } = await ky.get(`https://api2.adplist.org/core/review/?user_id=${userId}&offset=0&limit=14&filter_keywords=`).json();
 
-    const statistics: Statistics = await ky.get(`https://api2.adplist.org/core/user-community-statistics/?identity_id=${userId}`).json();
-
     const reviews: Review[] = shuffle(results);
+
+    const statistics: Statistics = await ky.get(`https://api2.adplist.org/core/user-community-statistics/?identity_id=${userId}`).json();
 
     return (
         <article className="bg-white py-12 text-slate-800">
@@ -42,16 +44,16 @@ export default async function Reviews() {
             <section className="mx-auto flex w-fit flex-col items-center gap-12">
                 <div className="flex flex-col items-center justify-between gap-12 sm:flex-row">
                     <div className="text-center">
-                        <p className="text-7xl font-bold">{statistics.sessions_completed}+</p>
+                        <p className="text-7xl font-bold">{statistics.sessions_completed + calendlyMentees}+</p>
                         <p className="text-2xl font-light">Mentees 💜</p>
                     </div>
                     <div className="text-center">
-                        <p className="text-7xl font-bold">{statistics.minutes_learning}+</p>
-                        <p className="text-2xl font-light">Minutes learning</p>
+                        <p className="text-7xl font-bold">{statistics.minutes_learning + calendlyMinutes}+</p>
+                        <p className="text-2xl font-light">Minutes of learning</p>
                     </div>
                     <div className="text-center">
                         <p className="text-7xl font-bold">{statistics.average_attendance}%</p>
-                        <p className="text-2xl font-light">Attendance</p>
+                        <p className="text-2xl font-light">Attendance rate</p>
                     </div>
                 </div>
                 <Link
