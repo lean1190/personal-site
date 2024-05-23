@@ -5,7 +5,7 @@ import { adplistLink, contactLink, homeLink, linkedinLink } from '../constants/l
 import { indigoGradient } from './gradients';
 
 interface Props {
-    link?: 'contact' | 'adplist' | 'linkedin' | 'home';
+    link?: 'contact' | 'adplist' | 'linkedin' | 'home' | string;
     text?: string;
     size?: 'md' | 'lg';
     variant?: 'primary' | 'secondary'
@@ -26,7 +26,8 @@ export default function CtaButton({
         link === 'contact' ? contactLink :
         link === 'adplist' ? adplistLink :
         link === 'home' ? homeLink :
-        linkedinLink;
+        link === 'linkedin' ? linkedinLink :
+        link;
 
     return (
         <Link
