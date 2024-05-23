@@ -9,7 +9,7 @@ import { shuffle } from '@/lib/arrays';
 import SectionHeader from '../section-header';
 import ReviewItem from './review-item';
 import styles from './reviews.module.css';
-import { Review } from './types';
+import { Review, Statistics } from './types';
 
 const marqueeWrapperStyles = 'flex overflow-hidden gap-4 select-none';
 // Disabled because the Tailwindcss animate package is not properly recognized
@@ -19,10 +19,14 @@ const marqueeListStyles = clsx(
     'motion-reduce:paused'
 );
 
+const userId = '112087';
+
 export default async function Reviews() {
     const { results }: {
         results: Review[]
-    } = await ky.get('https://api2.adplist.org/core/review/?user_id=112087&offset=0&limit=14&filter_keywords=').json();
+    } = await ky.get(`https://api2.adplist.org/core/review/?user_id=${userId}&offset=0&limit=14&filter_keywords=`).json();
+
+    const statistics: Statistics = await ky.get(`https://api2.adplist.org/core/user-community-statistics/?identity_id=${userId}`).json();
 
     const reviews: Review[] = shuffle(results);
 
@@ -35,7 +39,21 @@ export default async function Reviews() {
                     <ul className={marqueeListStyles} aria-hidden="true">{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>
                 </div>
             </section>
-            <section className="mx-auto w-fit">
+            <section className="mx-auto flex w-fit flex-col items-center gap-12">
+                <div className="flex flex-col items-center justify-between gap-12 sm:flex-row">
+                    <div className="text-center">
+                        <p className="text-7xl font-bold">{statistics.sessions_completed}+</p>
+                        <p className="text-2xl font-light">Mentees 💜</p>
+                    </div>
+                    <div className="text-center">
+                        <p className="text-7xl font-bold">{statistics.minutes_learning}+</p>
+                        <p className="text-2xl font-light">Minutes learning</p>
+                    </div>
+                    <div className="text-center">
+                        <p className="text-7xl font-bold">{statistics.average_attendance}%</p>
+                        <p className="text-2xl font-light">Attendance</p>
+                    </div>
+                </div>
                 <Link
                     href={adplistLink}
                     target="_blank"

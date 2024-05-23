@@ -7,3 +7,9 @@ export interface Review {
         profile_photo_url: string;
     }
 }
+
+export interface Statistics {
+    minutes_learning: number;
+    sessions_completed: number;
+    average_attendance: number;
+}
