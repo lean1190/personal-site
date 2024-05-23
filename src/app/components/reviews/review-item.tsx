@@ -26,7 +26,7 @@ export default function ReviewItem({ review }: Props) {
                         alt={review.reviewed_by.name}
                         width={128}
                         height={128}
-                        className="max-h-20 min-h-20 min-w-20 max-w-20 rounded-full sm:max-h-32 sm:min-h-32 sm:min-w-32 sm:max-w-32"
+                        className="max-h-20 min-h-20 min-w-20 max-w-20 rounded-full object-cover sm:max-h-32 sm:min-h-32 sm:min-w-32 sm:max-w-32"
                     />
                     <div className={`absolute right-0 top-0 rounded-full p-2 text-white ${indigoGradient}`}>
                         <FaQuoteRight size={30} className="hidden sm:block" />
