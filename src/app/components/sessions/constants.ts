@@ -27,7 +27,7 @@ export const sessions: Session[] = [
     {
         name: 'Strong contributor',
         price: { euros: '40', dollars: '42' },
-        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=39278-speak-confidently-power-sessions',
+        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=39278-strong-contributor-power-sessions',
         benefits: [
             'Learn how to express your ideas',
             'Learn positive speech patterns',
