@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { GoPlus } from 'react-icons/go';
 
+import { indigoGradient } from '../constants/gradients';
 import { biroscript } from '../fonts/fonts';
 import CtaButton from './cta-button';
-import { indigoGradient } from './gradients';
 
 const learnings = [
     'Get the job you deserve',

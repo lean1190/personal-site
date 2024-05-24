@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { PiCaretDown } from 'react-icons/pi';
 
+import { indigoGradient } from '../../constants/gradients';
 import { biroscript } from '../../fonts/fonts';
 import CtaButton from '../cta-button';
-import { indigoGradient } from '../gradients';
 import SectionHeader from '../section-header';
 import { expectations, faqs, sessions } from './constants';
 import Session from './session';

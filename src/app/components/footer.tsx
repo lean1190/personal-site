@@ -1,6 +1,6 @@
+import { indigoGradient } from '../constants/gradients';
 import { biroscript, pragmatica } from '../fonts/fonts';
 import CtaButton from './cta-button';
-import { indigoGradient } from './gradients';
 
 export default function Footer() {
     return (

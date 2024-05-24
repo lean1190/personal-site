@@ -4,7 +4,7 @@ import { FaQuoteRight } from 'react-icons/fa6';
 
 import { truncate } from '@/lib/strings';
 
-import { indigoGradient } from '../gradients';
+import { indigoGradient } from '../../constants/gradients';
 import { Review } from './types';
 
 interface Props {
