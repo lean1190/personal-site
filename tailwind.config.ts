@@ -48,6 +48,10 @@ const config: Config = {
                 up: 'up 3s linear infinite',
                 scale: 'scale 3s linear infinite',
                 marquee: 'marquee 400s linear infinite'
+            },
+            animationDuration: {
+                '150s': '150s',
+                '300s': '300s'
             }
         }
     },

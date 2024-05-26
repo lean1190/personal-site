@@ -15,8 +15,9 @@ const marqueeWrapperStyles = 'flex overflow-hidden gap-4 select-none';
 // Disabled because the Tailwindcss animate package is not properly recognized
 // eslint-disable-next-line tailwindcss/no-custom-classname
 const marqueeListStyles = clsx(
-    'flex min-w-full shrink-0 animate-marquee justify-around gap-4 py-4 direction-reverse',
-    'motion-reduce:paused'
+    'flex min-w-full shrink-0 animate-marquee justify-around gap-4 py-4 duration-150s direction-reverse',
+    'motion-reduce:paused',
+    'sm:duration-300s'
 );
 
 const userId = '112087';
