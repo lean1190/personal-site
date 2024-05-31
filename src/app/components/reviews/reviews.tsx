@@ -23,21 +23,15 @@ const marqueeListStyles = clsx(
 const userId = '112087';
 const calendlyMentees = 10;
 const calendlyMinutes = calendlyMentees * 30;
-const oneDayInSeconds = 86400;
-const revalidateRequestOptions = { next: { revalidate: oneDayInSeconds } };
 
 export default async function Reviews() {
-    const { results }: { results: Review[] } = await ky.get(
-        `https://api2.adplist.org/core/review/?user_id=${userId}&offset=0&limit=14&filter_keywords=`,
-        revalidateRequestOptions
-    ).json();
+    const { results }: {
+        results: Review[]
+    } = await ky.get(`https://api2.adplist.org/core/review/?user_id=${userId}&offset=0&limit=14&filter_keywords=`).json();
 
     const reviews: Review[] = shuffle(results);
 
-    const statistics: Statistics = await ky.get(
-        `https://api2.adplist.org/core/user-community-statistics/?identity_id=${userId}`,
-        revalidateRequestOptions
-    ).json();
+    const statistics: Statistics = await ky.get(`https://api2.adplist.org/core/user-community-statistics/?identity_id=${userId}`).json();
 
     return (
         <article className="bg-white py-12 text-slate-800">
