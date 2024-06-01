@@ -7,6 +7,15 @@ const nextConfig = {
                 hostname: 'adplist-bucket.s3.amazonaws.com'
             }
         ]
+    },
+    async redirects() {
+        return [
+            {
+                source: '/:page*.html',
+                destination: '/',
+                permanent: true
+            }
+        ];
     }
 };
 
