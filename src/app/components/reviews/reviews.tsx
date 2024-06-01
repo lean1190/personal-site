@@ -11,6 +11,8 @@ import ReviewItem from './review-item';
 import styles from './reviews.module.css';
 import { Review, Statistics } from './types';
 
+export const revalidate = 14400; // 4 hours
+
 const marqueeWrapperStyles = 'flex overflow-hidden gap-4 select-none';
 // Disabled because the Tailwindcss animate package is not properly recognized
 // eslint-disable-next-line tailwindcss/no-custom-classname
