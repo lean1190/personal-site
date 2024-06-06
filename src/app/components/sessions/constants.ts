@@ -3,7 +3,7 @@ import { Session } from './types';
 export const sessions: Session[] = [
     {
         name: 'Code mentoring',
-        price: { euros: '40', dollars: '42' },
+        price: { euros: '27', dollars: '29' },
         link: 'https://tidycal.com/leanvilas/code-mentoring-power-hour',
         benefits: [
             'Professional code review',
@@ -13,7 +13,7 @@ export const sessions: Session[] = [
     },
     {
         name: 'Job preparation',
-        price: { euros: '40', dollars: '42' },
+        price: { euros: '27', dollars: '29' },
         link: 'https://tidycal.com/leanvilas/job-preparation-power-hour',
         benefits: [
             'The 5 stages of the hiring process',
@@ -26,7 +26,7 @@ export const sessions: Session[] = [
     },
     {
         name: 'Strong contributor',
-        price: { euros: '40', dollars: '42' },
+        price: { euros: '27', dollars: '29' },
         link: 'https://tidycal.com/leanvilas/strong-contributor-power-hour',
         benefits: [
             'Learn how to express your ideas',
