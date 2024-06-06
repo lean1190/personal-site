@@ -4,7 +4,7 @@ export const sessions: Session[] = [
     {
         name: 'Code mentoring',
         price: { euros: '40', dollars: '42' },
-        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=34794-code-mentoring-power-sessions',
+        link: 'https://tidycal.com/leanvilas/code-mentoring-power-hour',
         benefits: [
             'Professional code review',
             'Learn best practices',
@@ -14,7 +14,7 @@ export const sessions: Session[] = [
     {
         name: 'Job preparation',
         price: { euros: '40', dollars: '42' },
-        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=36879-job-preparation-power-sessions',
+        link: 'https://tidycal.com/leanvilas/job-preparation-power-hour',
         benefits: [
             'The 5 stages of the hiring process',
             'Nail each interview stage',
@@ -27,7 +27,7 @@ export const sessions: Session[] = [
     {
         name: 'Strong contributor',
         price: { euros: '40', dollars: '42' },
-        link: 'https://adplist.org/mentors/leandro-nicolas-vilas?session=39278-strong-contributor-power-sessions',
+        link: 'https://tidycal.com/leanvilas/strong-contributor-power-hour',
         benefits: [
             'Learn how to express your ideas',
             'Learn positive speech patterns',
