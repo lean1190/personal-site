@@ -13,7 +13,7 @@ export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:py-32">
             <SectionHeader
-                title="90 minutes Power Sessions"
+                title="1 Hour Power Session"
                 subtitle="1:1 personalized to your needs"
             />
 
@@ -46,7 +46,7 @@ export default function Sessions() {
             <section className="mx-auto mb-20 p-6 sm:max-w-[608px] sm:px-0">
                 <h5 className="mb-12 text-center text-6xl font-light tracking-widest">FAQ&apos;s</h5>
                 <div className="w-full">
-                    {faqs.map(({ question, answer }, index) => (
+                    {faqs.map(({ question, answer, cta }, index) => (
                         <Fragment key={index}>
                             <hr className="w-full" />
                             <details className={`${styles['toggle-details']} w-full py-4 sm:py-6 [&_i]:open:-rotate-180`}>
@@ -54,7 +54,10 @@ export default function Sessions() {
                                     <span className="text-left">{question}</span>
                                     <i className="transition-all"><PiCaretDown /></i>
                                 </summary>
-                                <div className="py-4 font-thin">{answer}</div>
+                                <div className="py-4 font-thin">
+                                    <p className={cta ? 'mb-6' : ''}>{answer}</p>
+                                    {cta ? <CtaButton text={cta.text} link={cta.link} /> : null}
+                                </div>
                             </details>
                         </Fragment>
                     ))}
@@ -66,11 +69,11 @@ export default function Sessions() {
             <section className="mx-auto flex flex-col items-center justify-center gap-12 px-6 sm:max-w-[608px] sm:flex-row sm:px-0">
                 <div>
                     <p className="mb-4 text-center text-2xl font-bold">Ready to get confident?</p>
-                    <CtaButton text="Book me on ADPList" link="adplist" />
+                    <CtaButton text="Book me now" link="https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching" />
                 </div>
                 <div>
                     <p className="mb-4 text-center text-2xl font-extralight">Not sure yet?</p>
-                    <CtaButton text="Book a FREE 1:1 intro session" variant="secondary" />
+                    <CtaButton text="Book a FREE 1:1 intro session" variant="secondary" link="contact" />
                 </div>
             </section>
         </article>

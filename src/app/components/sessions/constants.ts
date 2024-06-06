@@ -44,24 +44,24 @@ export const faqs: {
         link: string;
     };
 }[] = [
+    {
+        question: 'How can I book a session?',
+        answer: 'You can book directly through my calendar here 👇',
+        cta: { text: 'Book now', link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching' }
+    },
     { question: 'How many sessions am I booking?', answer: 'Each booking includes 1 personalized session.' },
     { question: 'How long is the session?', answer: 'Each session is 60 minutes long.' },
     { question: 'Are any of the sessions free?', answer: 'The first 30 minutes session is free :)' },
-    { question: 'Can I have the session with a colleague?', answer: 'Yes! That way you can also split the costs.' },
     {
-        question: 'How can I book a session?',
-        answer: 'You can book directly through my calendar',
-        cta: { text: 'Book now', link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching' }
-    },
-    {
-        question: 'I would prefer to sign up for long term mentorship, how can I do that?',
-        answer: 'That is amazing, thank you for your trust 🙏 Additionally you get a small discount :)',
-        cta: { text: 'Book long term here', link: 'https://tidycal.com/leanvilas/long-term-mentorship' }
+        question: 'I would prefer to sign up for long-term mentorship, how can I do it?',
+        answer: 'That is amazing, thank you for your trust 🙏 Additionally, you get a small discount!',
+        cta: { text: 'Book long-term here', link: 'https://tidycal.com/leanvilas/long-term-mentorship' }
     },
     {
         question: 'How can I pay?',
         answer: 'You can pay directly in the booking page which has secure payments via Stripe. If you prefer using Paypal, let me know.'
-    }
+    },
+    { question: 'Can I have the session with a colleague?', answer: 'Yes! That way you can also split the costs.' }
 ];
 
 export const expectations: { title: string, description: string[] }[] = [
