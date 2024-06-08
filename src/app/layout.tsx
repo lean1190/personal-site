@@ -8,6 +8,8 @@ import { getVercelUrl } from '@/lib/environments/is-dev';
 
 import { roboto } from './fonts/fonts';
 
+export const revalidate = 14400; // 4 hours
+
 export const metadata: Metadata = {
     title: 'Mentor and Coach for Software Engineers',
     description: 'Become a CONFIDENT Software Engineer, learn faster, upskill your coding, and get the job you are looking for.',
