@@ -23,8 +23,8 @@ export default function Intro() {
                 <ul className="mb-16">
                     {learnings.map((learning, index) => (
                         <li key={index} className="mb-2 flex items-center gap-2">
-                            <Image priority alt="plus" src="/plus.png" width={30} height={30} />
-                            <span className="text-xl sm:text-2xl">{learning}</span>
+                            <Image priority alt="plus" src="/plus.png" width={25} height={25} />
+                            <span className="text-xl font-light sm:text-2xl">{learning}</span>
                         </li>
                     ))}
                 </ul>
