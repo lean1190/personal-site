@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { GoPlus } from 'react-icons/go';
 
 import { indigoGradient } from '../constants/gradients';
 import { biroscript } from '../fonts/fonts';
@@ -24,7 +23,7 @@ export default function Intro() {
                 <ul className="mb-16">
                     {learnings.map((learning, index) => (
                         <li key={index} className="mb-2 flex items-center gap-2">
-                            <GoPlus size={30} />
+                            <Image priority alt="plus" src="/plus.png" width={30} height={30} />
                             <span className="text-xl sm:text-2xl">{learning}</span>
                         </li>
                     ))}
