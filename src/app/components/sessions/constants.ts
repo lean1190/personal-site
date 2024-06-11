@@ -3,7 +3,7 @@ import { Session } from './types';
 export const sessions: Session[] = [
     {
         name: 'Code mentoring',
-        price: { euros: '27', dollars: '29' },
+        price: { euros: '25', dollars: '27' },
         link: 'https://tidycal.com/leanvilas/code-mentoring-power-hour',
         benefits: [
             'Professional code review',
@@ -13,7 +13,7 @@ export const sessions: Session[] = [
     },
     {
         name: 'Job preparation',
-        price: { euros: '27', dollars: '29' },
+        price: { euros: '25', dollars: '27' },
         link: 'https://tidycal.com/leanvilas/job-preparation-power-hour',
         benefits: [
             'The 5 stages of the hiring process',
@@ -26,7 +26,7 @@ export const sessions: Session[] = [
     },
     {
         name: 'Strong contributor',
-        price: { euros: '27', dollars: '29' },
+        price: { euros: '25', dollars: '27' },
         link: 'https://tidycal.com/leanvilas/strong-contributor-power-hour',
         benefits: [
             'Learn how to express your ideas',
@@ -54,7 +54,7 @@ export const faqs: {
     { question: 'Are any of the sessions free?', answer: 'The first 30 minutes session is free :)' },
     {
         question: 'I would prefer to sign up for long-term mentorship, how can I do it?',
-        answer: 'That is amazing, thank you for your trust 🙏 Additionally, you get a small discount!',
+        answer: 'That is amazing, thank you for your trust 🙏',
         cta: { text: 'Book long-term here', link: 'https://tidycal.com/leanvilas/long-term-mentorship' }
     },
     {
