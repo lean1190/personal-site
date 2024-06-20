@@ -21,7 +21,7 @@ const marqueeListStyles = clsx(
 );
 
 const userId = '112087';
-const calendlyMentees = 10;
+const directMentees = 20;
 
 export default async function Reviews() {
     const { results }: {
@@ -44,7 +44,7 @@ export default async function Reviews() {
             <section className="mx-auto flex w-fit flex-col items-center gap-12 sm:flex-row">
                 <div className="flex flex-col items-center justify-between gap-12 sm:flex-row">
                     <div className="text-center">
-                        <p className="text-7xl font-bold">{statistics.sessions_completed + calendlyMentees}+</p>
+                        <p className="text-7xl font-bold">{statistics.sessions_completed + directMentees}+</p>
                         <p className="text-2xl font-light">Mentees 💜</p>
                     </div>
                     <div className="text-center">
