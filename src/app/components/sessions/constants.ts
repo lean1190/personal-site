@@ -4,13 +4,13 @@ import { Session } from './types';
 
 export const sessions: Session[] = [
     {
-        name: 'Break into tech',
+        name: 'Breaking into tech',
         tags: [
             { name: '5 hours program', colorClass: 'bg-green-600 text-white' },
             { name: 'Bootcamp & Uni grads', colorClass: 'bg-indigo-800 text-white' }
         ],
         price: { euros: '125', dollars: '128' },
-        link: 'https://tidycal.com/leanvilas/break-into-tech',
+        link: 'https://tidycal.com/leanvilas/breaking-into-tech',
         benefits: [
             '1. How to thrive in your first job',
             '2. The hiring process',
@@ -37,13 +37,13 @@ export const sessions: Session[] = [
         isPopular: true
     },
     {
-        name: 'The way to Senior',
+        name: 'The path to Senior',
         tags: [
             { name: '5 hours program', colorClass: 'bg-green-600 text-white' },
             { name: 'Junior & Mid SWE', colorClass: 'bg-indigo-800 text-white' }
         ],
-        price: { euros: '125', dollars: '128' },
-        link: 'https://tidycal.com/leanvilas/the-way-to-senior',
+        price: { euros: '175', dollars: '178' },
+        link: 'https://tidycal.com/leanvilas/the-path-to-senior',
         benefits: [
             '1. Define where you want to go',
             '2. Adopt a Senior mindset',

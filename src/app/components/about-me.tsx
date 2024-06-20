@@ -5,11 +5,6 @@ import { biroscript } from '../fonts/fonts';
 export default function AboutMe() {
     return (
         <article className="bg-white py-20 text-slate-800">
-            {/* <SectionHeader
-                title="I'm Lean"
-                subtitle="Your software engineering mentor and coach"
-            /> */}
-
             <section className="mx-auto mb-12 px-6 sm:max-w-[1268px] sm:px-0">
                 <h2 className={`${biroscript.className} mb-2 text-6xl`}>Hi, I&apos;m Lean</h2>
             </section>
