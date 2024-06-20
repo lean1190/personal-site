@@ -1,64 +1,49 @@
 import Image from 'next/image';
-import { GoPlus } from 'react-icons/go';
 
-import SectionHeader from './ui/section-header';
-
-const reasons = [
-    'I will listen to you deeply and empathetically',
-    'I will help you spark new ideas and opportunities',
-    'I will help you reach your full potential'
-];
-
-const values: { name: string, description: string }[] = [
-    { name: 'Collaboration', description: 'I believe the best results are achieved by having different perspectives and opinions on the table, to be able to craft compelling and holistic solutions.' },
-    { name: 'Transparency', description: 'Transparent, honest, and clear communication are core to my person. In tough times, I prefer to talk about things instead of avoiding a conflict.' },
-    { name: 'Relatedness', description: 'I value relationships a lot, and it\'s important to me that we can create a meaningful relationship beyond a working transaction.' },
-    { name: 'Curiosity', description: 'There\'s always more to learn, and I\'m happy to learn from you and embrace new challenges with a growth mindset.' }
-];
+import { biroscript } from '../fonts/fonts';
+import Separator from './ui/separator';
 
 export default function AboutMe() {
     return (
-        <article className="bg-white pb-20 pt-12 text-slate-800">
-            <SectionHeader
+        <article className="bg-white py-20 text-slate-800">
+            {/* <SectionHeader
                 title="I'm Lean"
                 subtitle="Your software engineering mentor and coach"
-            />
+            /> */}
+
+            <section className="mx-auto mb-12 px-6 sm:max-w-[1268px] sm:px-0">
+                <h2 className={`${biroscript.className} mb-2 text-6xl`}>Hi, I&apos;m Lean</h2>
+                <Separator backgroundClasses="bg-slate-500" />
+            </section>
+
             <section className="mx-auto mb-20 flex w-fit flex-col items-start gap-8 px-6 sm:max-w-[1268px] sm:flex-row sm:px-0">
-                <div className="mb-32 font-light leading-loose sm:mb-0 sm:max-w-[550px]">
-                    <div className="mb-20">
-                        <h4 className="mb-6 text-6xl">This is me</h4>
-                        <p className="mb-4 font-bold leading-tight">I&apos;m a lead software engineer, mentor, coach, and communication advocate. </p>
-                        <p className="mb-2 text-sm sm:text-base">I consider myself a chilled and approachable person.</p>
-                        <p className="mb-2 text-sm sm:text-base">I laugh a lot and I don&apos;t mind making fun of myself.</p>
-                        <p className="text-sm sm:text-base">I was born in Argentina 🇦🇷 and moved to Germany 🇩🇪 for work.</p>
+                <div className="mb-12 font-light leading-loose sm:mb-0 sm:max-w-[550px]">
+                    <div className="mb-8 rounded-xl p-6 shadow-lg sm:p-12">
+                        <p className="mb-4 text-3xl leading-normal">Being a Confident Software Engineer means embracing uncertainty as a learning opportunity. It means speaking our minds while giving space to be curious about other ideas.</p>
+                        <p className="text-3xl font-bold">It means believing in ourselves.</p>
                     </div>
-                    <div>
-                        <h4 className="mb-6 text-6xl">Why learn with me</h4>
-                        <p className="mb-4 font-bold leading-tight">I&apos;m driven by helping people grow and overcome difficult situations.</p>
-                        <ul>
-                            {reasons.map((reason, index) => (
-                                <li key={index} className="mb-2 flex items-center gap-2 text-sm sm:mb-0 sm:text-base">
-                                    <GoPlus /> {reason}
-                                </li>
-                            ))}
-                        </ul>
+                    <div className="rounded-xl bg-slate-950 p-12 text-slate-100 shadow-lg">
+                        <h4 className="mb-6 text-3xl">The 3 pillars of confidence</h4>
+                        <div className="mb-4 flex flex-col sm:mb-2 sm:flex-row sm:items-center sm:gap-2">
+                            <p className="text-xl font-normal">Curiosity</p>
+                            <p className="leading-normal text-slate-300">Look for opportunities to learn</p>
+                        </div>
+                        <div className="mb-4 flex flex-col sm:mb-2 sm:flex-row sm:items-center sm:gap-2">
+                            <p className="text-xl font-normal">Assertiveness</p>
+                            <p className="leading-normal text-slate-300">Communicate your thoughts effectively</p>
+                        </div>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                            <p className="text-xl font-normal">Competence</p>
+                            <p className="leading-normal text-slate-300">Know what you know and what you don&apos;t know</p>
+                        </div>
                     </div>
                 </div>
                 <div className="relative">
-                    <Image className="rounded-xl" src="/about-me-patagonia-bg.jpg" alt="Lean Vilas" width={700} height={525} />
-                    <Image className="absolute -bottom-8 right-4 bg-white px-4 pt-4 sm:right-10" src="/about-me-patagonia.jpg" alt="Lean Vilas" width={350} height={440} />
+                    <Image className="hidden rounded-xl shadow-xl sm:block" src="/about-me-patagonia-bg.jpg" alt="Lean Vilas" width={700} height={525} />
+                    <div className="bg-white p-4 shadow-xl sm:absolute sm:right-4 sm:top-12">
+                        <Image src="/about-me-patagonia.jpg" alt="Lean Vilas" width={350} height={440} />
+                    </div>
                 </div>
-            </section>
-            <section className="mx-auto w-fit px-6 sm:w-[1268px] sm:px-0">
-                <h4 className="mb-8 text-6xl font-light">My values</h4>
-                <ul className="flex flex-col items-start justify-between gap-6 sm:flex-row">
-                    {values.map((value, index) => (
-                        <li key={index} className="min-w-0 shrink grow basis-0">
-                            <p className="mb-2 text-xl font-bold uppercase tracking-wider">{value.name}</p>
-                            <p>{value.description}</p>
-                        </li>
-                    ))}
-                </ul>
             </section>
         </article>
     );

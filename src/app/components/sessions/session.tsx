@@ -22,7 +22,7 @@ export default function Session({ session }: Props) {
             <h3 className="mb-4 text-5xl sm:text-6xl">{session.name}</h3>
             <div className="mb-8 flex flex-wrap items-center gap-2">
                 {session.tags.map(({ name, colorClass }, index) => (
-                    <span key={index} className={`rounded px-2 py-1 text-sm font-light ${colorClass}`}>{name}</span>
+                    <span key={index} className={`rounded px-2 py-1 text-xs font-light sm:text-sm ${colorClass}`}>{name}</span>
                 ))}
             </div>
             <p className="mb-8">
