@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import { biroscript } from '../fonts/fonts';
-import Separator from './ui/separator';
 
 export default function AboutMe() {
     return (
@@ -13,7 +12,6 @@ export default function AboutMe() {
 
             <section className="mx-auto mb-12 px-6 sm:max-w-[1268px] sm:px-0">
                 <h2 className={`${biroscript.className} mb-2 text-6xl`}>Hi, I&apos;m Lean</h2>
-                <Separator backgroundClasses="bg-slate-500" />
             </section>
 
             <section className="mx-auto mb-20 flex w-fit flex-col items-start gap-8 px-6 sm:max-w-[1268px] sm:flex-row sm:px-0">

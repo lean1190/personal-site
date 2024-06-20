@@ -12,7 +12,7 @@ export const sessions: Session[] = [
         price: { euros: '125', dollars: '128' },
         link: 'https://tidycal.com/leanvilas/break-into-tech',
         benefits: [
-            '1. Thrive in your first job',
+            '1. How to thrive in your first job',
             '2. The hiring process',
             '3. Prepare to apply',
             '4. Practice behavioral interviews',
