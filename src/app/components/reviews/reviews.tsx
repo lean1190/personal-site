@@ -59,7 +59,6 @@ export default async function Reviews() {
                     className="w-full text-slate-800"
                 >
                     <div className="flex w-full items-center justify-center gap-5">
-                        <div className="hidden text-3xl font-bold sm:block">Top 1% Mentor</div>
                         <Image src="/toprated.png" alt="ADPList top rated" width={100} height={115} />
                         <Image src="/adplist_logo.svg" alt="ADPList logo" width={200} height={51} />
                     </div>
