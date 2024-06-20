@@ -3,6 +3,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 import { getVercelUrl } from '@/lib/environments/is-dev';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${roboto.className} h-screen min-h-screen w-full min-w-full bg-slate-900 dark`}>
+            <Script defer src="https://cloud.umami.is/script.js" data-website-id="7287db56-469b-4969-94c7-acafbc056e0d" />
             <body className="size-full">
                 {children}
                 <Analytics />
