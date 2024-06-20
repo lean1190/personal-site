@@ -3,8 +3,8 @@ import { PiCaretDown } from 'react-icons/pi';
 
 import { indigoGradient } from '../../constants/gradients';
 import { biroscript } from '../../fonts/fonts';
-import CtaButton from '../cta-button';
-import SectionHeader from '../section-header';
+import CtaButton from '../ui/cta-button';
+import SectionHeader from '../ui/section-header';
 import { expectations, faqs, sessions } from './constants';
 import Session from './session';
 import styles from './sessions.module.css';
@@ -13,7 +13,7 @@ export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:py-32">
             <SectionHeader
-                title="1 Hour Power Session"
+                title="My sessions"
                 subtitle="1:1 personalized to your needs"
             />
 

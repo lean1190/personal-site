@@ -2,23 +2,21 @@ import Image from 'next/image';
 
 import { indigoGradient } from '../constants/gradients';
 import { biroscript } from '../fonts/fonts';
-import CtaButton from './cta-button';
+import CtaButton from './ui/cta-button';
 
 const learnings = [
-    'Get the job you deserve',
+    'Catapult your career in tech',
     'Overcome impostor syndrome',
-    'Master best coding practices',
-    'Communicate effectively'
+    'Adopt a Senior mindset'
 ];
 
 export default function Intro() {
     return (
         <article className="flex flex-col gap-12 p-6 pt-12 sm:flex-row sm:items-center sm:justify-between sm:p-36">
             <section className="mb-8 max-w-[630px] sm:mb-0">
-                <h1 className="mb-8 text-5xl leading-tight sm:mb-6 sm:text-6xl sm:leading-tight">
-                    <span>Become a</span>{' '}
-                    <mark className={`${indigoGradient} px-2 font-bold text-white`}>CONFIDENT</mark>{' '}
-                    <span className="text-4xl sm:text-6xl">Software Engineer</span>
+                <h1 className="mb-8 text-5xl font-light leading-tight sm:mb-6 sm:text-6xl sm:leading-tight">
+                    <span>Grok into tech with</span>{' '}
+                    <mark className={`${indigoGradient} px-2 font-bold text-white`}>CONFIDENCE</mark>
                 </h1>
                 <ul className="mb-16">
                     {learnings.map((learning, index) => (
@@ -28,7 +26,7 @@ export default function Intro() {
                         </li>
                     ))}
                 </ul>
-                <CtaButton text="Book a FREE 1:1 session 💪" size="lg" />
+                <CtaButton text="Book a FREE confidence session 💪" size="lg" />
             </section>
             <section className="flex items-start gap-6">
                 <div>

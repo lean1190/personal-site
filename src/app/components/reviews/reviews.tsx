@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { adplistLink } from '@/app/constants/links';
 import { shuffle } from '@/lib/arrays';
 
-import SectionHeader from '../section-header';
+import SectionHeader from '../ui/section-header';
 import ReviewItem from './review-item';
 import styles from './reviews.module.css';
 import { Review, Statistics } from './types';
@@ -22,7 +22,6 @@ const marqueeListStyles = clsx(
 
 const userId = '112087';
 const calendlyMentees = 10;
-const calendlyMinutes = calendlyMentees * 30;
 
 export default async function Reviews() {
     const { results }: {
@@ -42,15 +41,11 @@ export default async function Reviews() {
                     <ul className={marqueeListStyles} aria-hidden="true">{reviews.map((r) => <ReviewItem key={r.id} review={r} />)}</ul>
                 </div>
             </section>
-            <section className="mx-auto flex w-fit flex-col items-center gap-12">
+            <section className="mx-auto flex w-fit flex-col items-center gap-12 sm:flex-row">
                 <div className="flex flex-col items-center justify-between gap-12 sm:flex-row">
                     <div className="text-center">
                         <p className="text-7xl font-bold">{statistics.sessions_completed + calendlyMentees}+</p>
                         <p className="text-2xl font-light">Mentees 💜</p>
-                    </div>
-                    <div className="text-center">
-                        <p className="text-7xl font-bold">{statistics.minutes_learning + calendlyMinutes}+</p>
-                        <p className="text-2xl font-light">Minutes of learning</p>
                     </div>
                     <div className="text-center">
                         <p className="text-7xl font-bold">{statistics.average_attendance}%</p>

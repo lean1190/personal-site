@@ -1,7 +1,6 @@
-import clsx from 'clsx';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
-import CtaButton from '../cta-button';
+import CtaButton from '../ui/cta-button';
 import { Session as SessionModel } from './types';
 
 interface Props {
@@ -17,13 +16,15 @@ const ribbon = (text: string) => (
 export default function Session({ session }: Props) {
     return (
         <div
-            className={clsx(
-                'w-full rounded-3xl bg-black p-10 sm:w-96',
-                { 'border border-indigo-600 relative overflow-hidden': session.isPopular }
-            )}
+            className="relative w-full overflow-hidden rounded-3xl border border-indigo-600 bg-black p-10 sm:w-96"
         >
             {session.isPopular ? ribbon('Popular') : null}
-            <h3 className="mb-8 text-5xl sm:text-6xl">{session.name}</h3>
+            <h3 className="mb-4 text-5xl sm:text-6xl">{session.name}</h3>
+            <div className="mb-8 flex flex-wrap items-center gap-2">
+                {session.tags.map(({ name, colorClass }, index) => (
+                    <span key={index} className={`rounded px-2 py-1 text-sm font-light ${colorClass}`}>{name}</span>
+                ))}
+            </div>
             <p className="mb-8">
                 <span className="text-4xl font-bold">€{session.price.euros}</span>
                 <span className="text-xl font-light text-slate-300"> / ${session.price.dollars}</span>

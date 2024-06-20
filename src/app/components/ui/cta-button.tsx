@@ -1,8 +1,8 @@
 import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
-import { indigoGradient } from '../constants/gradients';
-import { adplistLink, contactLink, homeLink, linkedinLink } from '../constants/links';
+import { indigoGradient } from '../../constants/gradients';
+import { adplistLink, contactLink, homeLink, linkedinLink } from '../../constants/links';
 
 interface Props {
     link?: 'contact' | 'adplist' | 'linkedin' | 'home' | string;

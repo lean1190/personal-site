@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import { GoPlus } from 'react-icons/go';
 
-import SectionHeader from './section-header';
+import SectionHeader from './ui/section-header';
 
 const reasons = [
     'I will listen to you deeply and empathetically',
     'I will help you spark new ideas and opportunities',
-    'I will help you reach your full potential',
-    'I will share all my knowledge from 10+ years'
+    'I will help you reach your full potential'
 ];
 
 const values: { name: string, description: string }[] = [

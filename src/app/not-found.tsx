@@ -1,4 +1,4 @@
-import CtaButton from './components/cta-button';
+import CtaButton from './components/ui/cta-button';
 
 export default function NotFound() {
     return (
