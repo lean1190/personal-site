@@ -1,4 +1,4 @@
-import { contactLink } from '@/app/constants/links';
+import { contactLink, linkedinLink } from '@/app/constants/links';
 
 import { Session } from './types';
 
@@ -10,7 +10,7 @@ export const sessions: Session[] = [
             { name: 'Bootcamp & Uni grads', colorClass: 'bg-indigo-800 text-white' }
         ],
         price: { euros: '125', dollars: '128' },
-        link: 'https://tidycal.com/leanvilas/code-mentoring-power-hour',
+        link: 'https://tidycal.com/leanvilas/break-into-tech',
         benefits: [
             '1. Thrive in your first job',
             '2. The hiring process',
@@ -26,7 +26,7 @@ export const sessions: Session[] = [
             { name: 'Any level of experience', colorClass: 'bg-indigo-800 text-white' }
         ],
         price: { euros: '25', dollars: '27' },
-        link: 'https://tidycal.com/leanvilas/strong-contributor-power-hour',
+        link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching',
         benefits: [
             'Prepare for job interviews',
             'Upskill your coding practices',
@@ -43,7 +43,7 @@ export const sessions: Session[] = [
             { name: 'Junior & Mid SWE', colorClass: 'bg-indigo-800 text-white' }
         ],
         price: { euros: '125', dollars: '128' },
-        link: 'https://tidycal.com/leanvilas/job-preparation-power-hour',
+        link: 'https://tidycal.com/leanvilas/the-way-to-senior',
         benefits: [
             '1. Define where you want to go',
             '2. Adopt a Senior mindset',
@@ -90,7 +90,8 @@ export const faqs: {
     },
     {
         question: 'Do you also offer team workshops?',
-        answer: 'Yes, and I love them 💜 Contact me on LinkedIn to organize this'
+        answer: 'Yes, and I love them 💜 Contact me on LinkedIn to organize this',
+        cta: { text: 'Contact me', link: linkedinLink }
     },
     {
         question: 'How can I pay?',

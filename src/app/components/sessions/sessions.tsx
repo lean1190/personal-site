@@ -13,7 +13,7 @@ export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:py-32">
             <SectionHeader
-                title="My sessions"
+                title="Sessions"
                 subtitle="1:1 personalized to your needs"
             />
 
