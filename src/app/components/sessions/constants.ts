@@ -42,7 +42,7 @@ export const sessions: Session[] = [
             { name: '5 hours program', colorClass: 'bg-green-600 text-white' },
             { name: 'Junior & Mid SWE', colorClass: 'bg-indigo-800 text-white' }
         ],
-        price: { euros: '175', dollars: '178' },
+        price: { euros: '200', dollars: '214' },
         link: 'https://tidycal.com/leanvilas/the-path-to-senior',
         benefits: [
             '1. Define where you want to go',
