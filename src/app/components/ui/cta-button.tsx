@@ -35,10 +35,6 @@ export default function CtaButton({
             target="_blank"
             rel={rel}
             className="w-full"
-            data-umami-event="CTA Button"
-            data-umami-event-link={link}
-            data-umami-event-variant={variant}
-            data-umami-event-text={text}
         >
             <Button
                 fullWidth
@@ -52,6 +48,10 @@ export default function CtaButton({
                     'h-[52px] text-xl': size === 'md'
                 })}
                 startContent={icon}
+                data-umami-event="CTA Button"
+                data-umami-event-link={link}
+                data-umami-event-variant={variant}
+                data-umami-event-text={text}
             >
                 {text}
             </Button>
