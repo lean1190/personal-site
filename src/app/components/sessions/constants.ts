@@ -12,11 +12,11 @@ export const sessions: Session[] = [
         price: null,
         link: 'https://tidycal.com/leanvilas/breaking-into-tech',
         benefits: [
-            '1. How to thrive in your first job',
-            '2. The hiring process',
-            '3. Prepare to apply',
-            '4. Practice behavioral interviews',
-            '5. Practice technical interviews'
+            'How to thrive in your first job',
+            'The hiring process',
+            'Prepare to apply',
+            'Practice behavioral interviews',
+            'Practice technical interviews'
         ]
     },
     {
@@ -45,11 +45,11 @@ export const sessions: Session[] = [
         price: null,
         link: 'https://tidycal.com/leanvilas/the-path-to-senior',
         benefits: [
-            '1. Define where you want to go',
-            '2. Adopt a Senior mindset',
-            '3. Become the go-to person',
-            '4. Create a team vision',
-            '5. Prepare to negotiate the promotion'
+            'Define where you want to go',
+            'Adopt a Senior mindset',
+            'Become a role model',
+            'Create a team vision',
+            'Prepare to negotiate the promotion'
         ]
     }
 ];
