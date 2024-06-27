@@ -1,5 +1,7 @@
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
+import { contactLink } from '@/app/constants/links';
+
 import CtaButton from '../ui/cta-button';
 import { Session as SessionModel } from './types';
 
@@ -25,10 +27,12 @@ export default function Session({ session }: Props) {
                     <span key={index} className={`rounded px-2 py-1 text-xs font-light sm:text-sm ${colorClass}`}>{name}</span>
                 ))}
             </div>
-            <p className="mb-8">
-                <span className="text-4xl font-bold">€{session.price.euros}</span>
-                <span className="text-xl font-light text-slate-300"> / ${session.price.dollars}</span>
-            </p>
+            {session.price ? (
+                <p className="mb-8">
+                    <span className="text-4xl font-bold">€{session.price.euros}</span>
+                    <span className="text-xl font-light text-slate-300"> / ${session.price.dollars}</span>
+                </p>
+            ) : null}
             <ul className="mb-14 font-light">
                 {session.benefits.map((benefit, index) => (
                     <li key={index} className="mb-2 flex items-center gap-2">
@@ -37,7 +41,9 @@ export default function Session({ session }: Props) {
                     </li>
                 ))}
             </ul>
-            <CtaButton text="Book now" link={session.link} />
+            {session.price ?
+                <CtaButton text="Book now" link={session.link} /> :
+                <CtaButton text="Let's chat" link={contactLink} />}
         </div>
     );
 }

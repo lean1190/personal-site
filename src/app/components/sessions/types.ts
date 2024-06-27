@@ -6,7 +6,7 @@ export interface Tag {
 export interface Session {
     name: string;
     tags: Tag[];
-    price: { euros: string, dollars: string };
+    price: { euros: string, dollars: string } | null;
     benefits: string[];
     link: string;
     isPopular?: boolean;

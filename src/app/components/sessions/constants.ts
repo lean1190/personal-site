@@ -6,10 +6,10 @@ export const sessions: Session[] = [
     {
         name: 'Breaking into tech',
         tags: [
-            { name: '5 hours program', colorClass: 'bg-green-600 text-white' },
+            { name: 'Preparation', colorClass: 'bg-green-600 text-white' },
             { name: 'Bootcamp & Uni grads', colorClass: 'bg-indigo-800 text-white' }
         ],
-        price: { euros: '125', dollars: '128' },
+        price: null,
         link: 'https://tidycal.com/leanvilas/breaking-into-tech',
         benefits: [
             '1. How to thrive in your first job',
@@ -39,10 +39,10 @@ export const sessions: Session[] = [
     {
         name: 'The path to Senior',
         tags: [
-            { name: '5 hours program', colorClass: 'bg-green-600 text-white' },
+            { name: 'Growth', colorClass: 'bg-green-600 text-white' },
             { name: 'Junior & Mid SWE', colorClass: 'bg-indigo-800 text-white' }
         ],
-        price: { euros: '200', dollars: '214' },
+        price: null,
         link: 'https://tidycal.com/leanvilas/the-path-to-senior',
         benefits: [
             '1. Define where you want to go',
