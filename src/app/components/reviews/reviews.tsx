@@ -21,7 +21,7 @@ const marqueeListStyles = clsx(
 );
 
 const userId = '112087';
-const directMentees = 20;
+const directMentees = 30;
 
 export default async function Reviews() {
     const { results }: {
