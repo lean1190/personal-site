@@ -15,7 +15,7 @@ export default function AboutMe() {
                         <p className="mb-4 text-3xl leading-normal">Being a Confident Software Engineer means embracing uncertainty as a learning opportunity. It means speaking our minds while giving space to be curious about other ideas.</p>
                         <p className="text-3xl font-bold">It means believing in ourselves.</p>
                     </div>
-                    <div className="rounded-xl bg-slate-950 p-12 text-slate-100 shadow-lg">
+                    <div className="rounded-xl bg-slate-950 p-6 text-slate-100 shadow-lg sm:p-12">
                         <h4 className="mb-6 text-3xl">The 3 pillars of confidence</h4>
                         <div className="mb-4 flex flex-col sm:mb-2 sm:flex-row sm:items-center sm:gap-2">
                             <p className="text-xl font-normal">Curiosity</p>
