@@ -69,15 +69,15 @@ export const faqs: {
     },
     {
         question: 'How many sessions am I booking?',
-        answer: 'A Power Hour includes 1 session. The programs include 5 sessions'
+        answer: 'A Power Hour includes 1 session. The program length depends on your needs'
     },
     {
         question: 'How long is each session?',
-        answer: 'Each session is 60 minutes long.'
+        answer: 'Each session is 60 minutes long'
     },
     {
-        question: 'Can I book less than 5 sessions for a program?',
-        answer: 'Absolutely! I recommend completing the program, but you are welcome to book fewer sessions if you are confident with your results'
+        question: 'Is there a minimum amount of sessions I need to book for a program?',
+        answer: 'Nope. For programs, I recommend we have a chat and define your goal together'
     },
     {
         question: 'Are any of the sessions free?',
