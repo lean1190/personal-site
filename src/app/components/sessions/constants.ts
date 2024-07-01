@@ -76,7 +76,7 @@ export const faqs: {
         answer: 'Each session is 60 minutes long'
     },
     {
-        question: 'Is there a minimum amount of sessions I need to book for a program?',
+        question: 'Do I need to book a minimum amount of sessions?',
         answer: 'Nope. For programs, I recommend we have a chat and define your goal together'
     },
     {
