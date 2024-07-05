@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FaQuoteRight } from 'react-icons/fa6';
 
 import { Review } from '@/lib/reviews/types';
-import { truncate } from '@/lib/strings';
+import { truncateString } from '@/lib/strings';
 
 import { indigoGradient } from '../../constants/gradients';
 
@@ -34,8 +34,8 @@ export default function ReviewItem({ review }: Props) {
                     </div>
                 </div>
                 <div className="flex max-h-full min-w-0 max-w-full flex-col justify-between gap-2 font-light">
-                    <blockquote className="hidden text-sm sm:block">{truncate(review.review, 312)}</blockquote>
-                    <blockquote className="block text-xs sm:hidden">{truncate(review.review, 140)}</blockquote>
+                    <blockquote className="hidden text-sm sm:block">{truncateString(review.review, 312)}</blockquote>
+                    <blockquote className="block text-xs sm:hidden">{truncateString(review.review, 140)}</blockquote>
                     <figcaption className="truncate text-xs font-bold sm:text-base">{review.reviewed_by.name}, {review.reviewed_by.title}</figcaption>
                 </div>
             </figure>
