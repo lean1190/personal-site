@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { FaQuoteRight } from 'react-icons/fa6';
 
+import { Review } from '@/lib/reviews/types';
 import { truncate } from '@/lib/strings';
 
 import { indigoGradient } from '../../constants/gradients';
-import { Review } from './types';
 
 interface Props {
     review: Review;

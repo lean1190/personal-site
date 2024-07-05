@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 import { adplistLink, hcsLink } from '@/app/constants/links';
 import { shuffle } from '@/lib/arrays';
+import { Review, Statistics } from '@/lib/reviews/types';
 
 import SectionHeader from '../ui/section-header';
 import ReviewItem from './review-item';
 import styles from './reviews.module.css';
-import { Review, Statistics } from './types';
 
 const marqueeWrapperStyles = 'flex overflow-hidden gap-4 select-none';
 // Disabled because the Tailwindcss animate package is not properly recognized
