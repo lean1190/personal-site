@@ -25,7 +25,7 @@ export const sessions: Session[] = [
             { name: '60 minutes', colorClass: 'bg-green-600 text-white' },
             { name: 'Any level of experience', colorClass: 'bg-indigo-800 text-white' }
         ],
-        price: { euros: '25', dollars: '27' },
+        price: { euros: '32', dollars: '35' },
         link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching',
         benefits: [
             'Prepare for job interviews',

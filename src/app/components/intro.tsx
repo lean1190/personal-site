@@ -5,9 +5,9 @@ import { biroscript } from '../fonts/fonts';
 import CtaButton from './ui/cta-button';
 
 const learnings = [
-    'Catapult your career in tech',
-    'Overcome impostor syndrome',
-    'Adopt a Senior mindset'
+    'Land your first job',
+    'Code like a Senior',
+    'Overcome impostor syndrome'
 ];
 
 export default function Intro() {
