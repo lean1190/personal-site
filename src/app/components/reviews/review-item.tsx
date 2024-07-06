@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { FaQuoteRight } from 'react-icons/fa6';
+import { MdVerified } from 'react-icons/md';
 
 import { Review } from '@/lib/reviews/types';
 import { truncateString } from '@/lib/strings';
@@ -29,7 +30,7 @@ const quoteStyle = (isMobile: boolean) => (reviewIndex: number) => clsx(
 );
 
 const nameStyle = (reviewIndex: number) => clsx(
-    'truncate font-bold',
+    'max-w-72 truncate font-bold',
     { 'text-sm': isSelectedIndex(reviewIndex) },
     { 'text-xs': !isSelectedIndex(reviewIndex) }
 );
@@ -77,9 +78,16 @@ export default function ReviewItem({
                     ) : null}
                 </div>
                 <div className="flex max-h-full min-w-0 max-w-full flex-col justify-between gap-2 font-light">
+                    <div className="flex items-center gap-2">
+                        <figcaption className={nameStyle(index)}>{reviewed_by.name}, {reviewed_by.title}</figcaption>
+                        {isSelectedIndex(index) ? (
+                            <label className="flex w-fit items-center gap-1 rounded-full border border-green-600 px-3 py-1 font-bold text-green-600">
+                                <MdVerified size={18} /> Verified
+                            </label>
+                        ) : null}
+                    </div>
                     <blockquote className={quoteStyle(false)(index)}>{truncateReviewByIndex(review, 312, index)}</blockquote>
                     <blockquote className={quoteStyle(true)(index)}>{truncateReviewByIndex(review, 140, index)}</blockquote>
-                    <figcaption className={nameStyle(index)}>{reviewed_by.name}, {reviewed_by.title}</figcaption>
                 </div>
             </figure>
             {!isSelectedIndex(index) ? <div className="absolute left-0 top-0 size-full rounded-xl bg-black opacity-50"></div> : null}
