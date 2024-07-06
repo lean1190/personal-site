@@ -3,9 +3,10 @@ import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
 import { darkBg, darkFontColor, lightBg, lightFontColor } from '@/app/constants/colors';
 
-import { sessions } from '../sessions/constants';
-import CtaButton from '../ui/cta-button';
-import { highlightedText } from './functions';
+import { highlightedText } from './intro/functions';
+import { sessions } from './sessions/constants';
+import styles from './trust.module.css';
+import CtaButton from './ui/cta-button';
 
 interface Props {
     menteesCount: number;
@@ -27,20 +28,27 @@ export default function Trust({ menteesCount }: Props) {
                 <Image className="hidden grayscale transition hover:grayscale-0 sm:block" src="/logos/fluxit_logo.jpg" width={140} height={70} alt="FluxIt logo" />
             </div>
             <p className="text-2xl font-light sm:text-3xl">
-                    Trusted by <strong className="font-bold">{menteesCount}+</strong> Software Developers 💜
+                Trusted by <strong className="font-bold">{menteesCount}+</strong> Software Developers 💜
             </p>
-            <div className="mx-auto flex max-w-[790px] flex-col items-center gap-8 p-6 pt-16 sm:pt-32">
-                <h2 className="text-center text-4xl font-bold leading-tight sm:text-6xl sm:leading-tight">
-                    <p className="mb-2 sm:mb-0 sm:inline">Professional</p>{' '}{highlightedText('MENTORING')}
-                </h2>
-                <p className="max-w-[500px] text-center text-lg font-light sm:text-xl">
+            <div className="relative">
+                <div className={`${styles.fade} relative z-20 mx-auto flex flex-col items-center gap-8 p-6 pt-16 sm:pt-32`}>
+                    <h2 className="text-center text-4xl font-bold leading-tight sm:text-6xl sm:leading-tight">
+                        <p className="mb-2 sm:mb-0 sm:inline">Professional</p>{' '}{highlightedText('MENTORING')}
+                    </h2>
+                    <p className="max-w-[500px] text-center text-lg font-light sm:text-xl">
                         Prepare to succeed with my advice from <strong className="font-bold">10+ years</strong> of Software Engineering experience
-                </p>
+                    </p>
+                </div>
+                <div className="absolute inset-0 z-10 hidden w-full justify-around pt-16 sm:flex">
+                    {Array(14).fill(0).map((_, index) => (
+                        <div key={index} className="relative h-[200px] max-h-[200px] w-[127px] max-w-[127px] rounded-xl">
+                            <Image className="rounded-xl object-cover" priority src={`/mentees/mentee${index + 1}.webp`} fill={true} alt="Mentee" />
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="mx-auto max-w-[790px] p-6">
-                <div
-                    className={`w-full rounded-3xl border border-indigo-600 p-10 text-left text-white ${darkBg} ${darkFontColor}`}
-                >
+                <div className={`w-full rounded-3xl border border-indigo-600 p-10 text-left text-white ${darkBg} ${darkFontColor}`}>
                     <h3 className="mb-4 text-5xl font-light sm:text-6xl">{session.name}</h3>
                     <div className="mb-8 flex flex-wrap items-center gap-2">
                         {session.tags.map(({ name, colorClass }, index) => (

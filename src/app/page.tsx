@@ -3,8 +3,8 @@ import { getStatistics } from '@/lib/reviews/get';
 import AboutMe from './components/about-me';
 import Footer from './components/footer';
 import Intro from './components/intro';
-import Trust from './components/intro/trust';
 import Sessions from './components/sessions/sessions';
+import Trust from './components/trust';
 import Separator from './components/ui/separator';
 import { adpListUserId, directMentees } from './constants/me';
 
