@@ -17,9 +17,16 @@ const selectedReviewIndex = 1;
 const isSelectedIndex = (index: number) => index === selectedReviewIndex;
 
 const reviewStyle = (reviewIndex: number) => clsx(
-    'relative flex w-full min-w-0 max-w-full rounded-xl p-4 transition-all',
-    { 'bg-white h-44 text-slate-950 text-sm sm:w-[600px] sm:w-max-[600px] opacity-100 shadow-lg z-10': isSelectedIndex(reviewIndex) },
-    { 'bg-slate-700 h-24 text-slate-100 text-xs sm:w-[500px] sm:w-max-[500px] overflow-hidden -my-4': !isSelectedIndex(reviewIndex) }
+    'relative flex w-full min-w-0 max-w-full rounded-xl p-1 transition-all',
+    { 'h-44 text-slate-950 text-sm bg-gradient-to-r from-indigo-700 via-green-200 to-indigo-900 opacity-100 shadow-lg z-10': isSelectedIndex(reviewIndex) },
+    { 'sm:w-[600px] sm:w-max-[600px]': isSelectedIndex(reviewIndex) },
+    { 'bg-slate-700 h-24 text-slate-100 text-xs overflow-hidden -my-4': !isSelectedIndex(reviewIndex) },
+    { 'sm:w-[500px] sm:w-max-[500px]': !isSelectedIndex(reviewIndex) }
+);
+
+const figureStyle = (reviewIndex: number) => clsx(
+    'flex size-full items-center gap-8 rounded-xl p-3',
+    { 'bg-white': isSelectedIndex(reviewIndex) }
 );
 
 const quoteStyle = (isMobile: boolean) => (reviewIndex: number) => clsx(
@@ -61,7 +68,7 @@ export default function ReviewItem({
 }: Props) {
     return (
         <li className={reviewStyle(index)}>
-            <figure className="flex w-full items-center gap-8">
+            <figure className={figureStyle(index)}>
                 <div className="relative">
                     <Image
                         src={reviewed_by.profile_photo_url}
