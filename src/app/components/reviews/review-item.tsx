@@ -6,7 +6,7 @@ import { MdVerified } from 'react-icons/md';
 import { Review } from '@/lib/reviews/types';
 import { truncateString } from '@/lib/strings';
 
-import { indigoGradient } from '../../constants/gradients';
+import { indigoGradient } from '../../constants/colors';
 
 interface Props {
     review: Review;

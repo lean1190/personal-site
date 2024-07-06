@@ -1,21 +1,20 @@
 import AboutMe from './components/about-me';
 import Footer from './components/footer';
-import Intro from './components/intro';
-import Reviews from './components/reviews/reviews';
+import Intro2 from './components/intro2';
 import Sessions from './components/sessions/sessions';
-import Separator from './components/ui/separator';
 
 export default async function Home() {
     return (
         <main className="text-white">
-            <Intro />
+            <Intro2 />
+            {/* <Intro />
 
             <Separator />
-            <Reviews />
+            <Reviews /> */}
 
             <Sessions />
 
-            <Separator />
+            {/* <Separator /> */}
             <AboutMe />
 
             <Footer />

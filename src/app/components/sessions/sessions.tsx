@@ -1,28 +1,17 @@
 import { Fragment } from 'react';
 import { PiCaretDown } from 'react-icons/pi';
 
-import { indigoGradient } from '../../constants/gradients';
+import { indigoGradient } from '../../constants/colors';
 import { biroscript } from '../../fonts/fonts';
 import CtaButton from '../ui/cta-button';
-import SectionHeader from '../ui/section-header';
-import { expectations, faqs, sessions } from './constants';
-import Session from './session';
+import { expectations, faqs } from './constants';
 import styles from './sessions.module.css';
 
 export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:py-32">
-            <SectionHeader
-                title="Sessions"
-                subtitle="1:1 personalized to your needs"
-            />
-
-            <section className="mb-40 flex flex-col items-center justify-center gap-8 px-6 font-bold sm:flex-row sm:px-0">
-                {sessions.map((session) => <Session key={session.name} session={session} />)}
-            </section>
-
             <section className="mx-auto mb-20 p-6 sm:mb-40 sm:px-0">
-                <h5 className="mb-12 text-center text-6xl font-light">Simple and powerful</h5>
+                <h5 className="mb-12 text-center text-6xl font-bold">Simple and powerful</h5>
                 <div className="relative w-full">
                     <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:left-0 sm:top-11`}></div>
                     <ul className="mx-auto flex flex-col items-start gap-6 pt-4 sm:max-w-[805px] sm:flex-row sm:gap-4 sm:pt-0">
@@ -66,14 +55,14 @@ export default function Sessions() {
 
             <h6 className={`${biroscript.className} mb-28 text-center text-7xl uppercase`}>You got this!</h6>
 
-            <section className="mx-auto flex flex-col items-center justify-center gap-12 px-6 sm:max-w-[608px] sm:flex-row sm:px-0">
+            <section className="mx-auto flex flex-col items-center justify-between gap-12 px-6 sm:max-w-[608px] sm:flex-row sm:px-0">
                 <div>
-                    <p className="mb-4 text-center text-2xl font-bold">Ready to get confident?</p>
-                    <CtaButton text="Book me now" link="https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching" />
+                    <p className="mb-4 text-center text-2xl font-bold">Ready to launch?</p>
+                    <CtaButton text="Start now" link="https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching" />
                 </div>
                 <div>
                     <p className="mb-4 text-center text-2xl font-extralight">Not sure yet?</p>
-                    <CtaButton text="Book a FREE 1:1 intro session" variant="secondary" link="contact" />
+                    <CtaButton text="Book an intro session" variant="secondary" link="contact" />
                 </div>
             </section>
         </article>

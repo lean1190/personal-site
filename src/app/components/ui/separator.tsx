@@ -1,4 +1,4 @@
-import { indigoGradient } from '../../constants/gradients';
+import { indigoGradient } from '../../constants/colors';
 
 interface Props {
     backgroundClasses?: string;

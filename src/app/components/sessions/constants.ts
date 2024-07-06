@@ -4,53 +4,23 @@ import { Session } from './types';
 
 export const sessions: Session[] = [
     {
-        name: 'Breaking into tech',
-        tags: [
-            { name: 'Preparation', colorClass: 'bg-green-600 text-white' },
-            { name: 'Bootcamp & Uni grads', colorClass: 'bg-indigo-800 text-white' }
-        ],
-        price: null,
-        link: 'https://tidycal.com/leanvilas/breaking-into-tech',
-        benefits: [
-            'How to thrive in your first job',
-            'The hiring process',
-            'Prepare to apply',
-            'Practice behavioral interviews',
-            'Practice technical interviews'
-        ]
-    },
-    {
         name: 'Power hour',
         tags: [
             { name: '60 minutes', colorClass: 'bg-green-600 text-white' },
-            { name: 'Any level of experience', colorClass: 'bg-indigo-800 text-white' }
+            { name: 'Bootcamp grads', colorClass: 'bg-indigo-800 text-white' },
+            { name: 'Uni grads', colorClass: 'bg-indigo-800 text-white' },
+            { name: 'Self-taught devs', colorClass: 'bg-indigo-800 text-white' }
         ],
         price: { euros: '32', dollars: '35' },
         link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching',
         benefits: [
-            'Prepare for job interviews',
-            'Upskill your coding practices',
-            'Improve your communication',
-            'Get industry advice',
-            'Enhance your confidence'
+            'Set your mind for success',
+            'Find options to land your 1st job',
+            'Prepare to apply with optimized visibility',
+            'Practice with mock interviews',
+            'Learn how to thrive in your first job'
         ],
         isPopular: true
-    },
-    {
-        name: 'The path to Senior',
-        tags: [
-            { name: 'Growth', colorClass: 'bg-green-600 text-white' },
-            { name: 'Junior & Mid SWE', colorClass: 'bg-indigo-800 text-white' }
-        ],
-        price: null,
-        link: 'https://tidycal.com/leanvilas/the-path-to-senior',
-        benefits: [
-            'Define where you want to go',
-            'Adopt a Senior mindset',
-            'Become a role model',
-            'Create a team vision',
-            'Prepare to negotiate the promotion'
-        ]
     }
 ];
 
@@ -69,7 +39,7 @@ export const faqs: {
     },
     {
         question: 'How many sessions am I booking?',
-        answer: 'A Power Hour includes 1 session. The program length depends on your needs'
+        answer: 'A Power Hour includes 1 session'
     },
     {
         question: 'How long is each session?',
@@ -77,7 +47,7 @@ export const faqs: {
     },
     {
         question: 'Do I need to book a minimum amount of sessions?',
-        answer: 'Nope. For programs, I recommend we have a chat and define your goal together'
+        answer: 'Nope. You can book 1 or more'
     },
     {
         question: 'Are any of the sessions free?',

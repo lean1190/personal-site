@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { indigoGradient } from '../constants/gradients';
+import { indigoGradient } from '../constants/colors';
 import { biroscript } from '../fonts/fonts';
 import CtaButton from './ui/cta-button';
 

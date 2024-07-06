@@ -19,6 +19,6 @@ export async function getShuffledReviews({
     return shuffle(results);
 }
 
-export function getStatistics(userId: string): Promise<Statistics[]> {
+export function getStatistics(userId: string): Promise<Statistics> {
     return ky.get(`https://api2.adplist.org/core/user-community-statistics/?identity_id=${userId}`).json();
 }

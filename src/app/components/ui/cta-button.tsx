@@ -1,7 +1,7 @@
 import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
-import { indigoGradient } from '../../constants/gradients';
+import { indigoGradient } from '../../constants/colors';
 import { adplistLink, contactLink, homeLink, linkedinLink } from '../../constants/links';
 
 interface Props {
@@ -44,8 +44,8 @@ export default function CtaButton({
                 className={clsx({
                     [indigoGradient]: isPrimary,
                     'hover:text-white': isPrimary,
-                    'h-[64px] text-2xl': size === 'lg',
-                    'h-[52px] text-xl': size === 'md'
+                    'h-[64px] text-lg sm:text-2xl': size === 'lg',
+                    'h-[52px] text-lg sm:text-xl': size === 'md'
                 })}
                 startContent={icon}
                 data-umami-event="CTA Button"

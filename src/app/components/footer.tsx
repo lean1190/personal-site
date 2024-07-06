@@ -1,4 +1,4 @@
-import { indigoGradient } from '../constants/gradients';
+import { indigoGradient } from '../constants/colors';
 import { biroscript, pragmatica } from '../fonts/fonts';
 import CtaButton from './ui/cta-button';
 
