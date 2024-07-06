@@ -16,7 +16,7 @@ export const sessions: Session[] = [
         benefits: [
             'Set your mind for success',
             'Find options to land your 1st job',
-            'Prepare to apply with optimized visibility',
+            'Optimize your visibility',
             'Practice with mock interviews',
             'Learn how to thrive in your first job'
         ],

@@ -4,9 +4,9 @@ import { highlightedText } from './functions';
 
 export default function Title() {
     return (
-        <section className="relative mx-auto flex max-w-[740px] flex-col items-center gap-8 p-6 pt-32 sm:pb-24">
+        <section className="relative mx-auto flex max-w-[740px] flex-col items-center gap-8 p-6 pb-12 pt-32 sm:pb-24">
             <h1 className="text-center text-4xl font-bold leading-tight sm:text-6xl sm:leading-tight">
-                <p className="mb-2 sm:mb-0 sm:inline">Land your first dev job with</p>{' '}
+                <p className="mb-4 sm:mb-0 sm:inline">Land your first dev job with</p>{' '}
                 {highlightedText('CONFIDENCE')}
             </h1>
             <p className="max-w-[500px] text-center text-lg font-light sm:text-xl">

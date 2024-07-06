@@ -29,7 +29,7 @@ export default function Trust({ menteesCount }: Props) {
             <p className="text-2xl font-light sm:text-3xl">
                     Trusted by <strong className="font-bold">{menteesCount}+</strong> Software Developers 💜
             </p>
-            <div className="mx-auto flex max-w-[790px] flex-col items-center gap-8 p-6 pt-24 sm:pt-32">
+            <div className="mx-auto flex max-w-[790px] flex-col items-center gap-8 p-6 pt-16 sm:pt-32">
                 <h2 className="text-center text-4xl font-bold leading-tight sm:text-6xl sm:leading-tight">
                     <p className="mb-2 sm:mb-0 sm:inline">Professional</p>{' '}{highlightedText('MENTORING')}
                 </h2>

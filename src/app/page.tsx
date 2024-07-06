@@ -16,6 +16,7 @@ export default async function Home() {
         <main className="text-white">
             <Intro />
             <Separator />
+
             <Trust menteesCount={menteesCount} />
             {/*
 
@@ -23,8 +24,8 @@ export default async function Home() {
             <Reviews /> */}
 
             <Sessions />
+            <Separator />
 
-            {/* <Separator /> */}
             <AboutMe />
 
             <Footer />
