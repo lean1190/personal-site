@@ -4,7 +4,7 @@ import AboutMe from './components/about-me';
 import Footer from './components/footer';
 import Intro from './components/intro';
 import Sessions from './components/sessions/sessions';
-import Trust from './components/trust';
+import Trust from './components/trust/trust';
 import Separator from './components/ui/separator';
 import { adpListUserId, directMentees } from './constants/me';
 

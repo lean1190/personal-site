@@ -11,7 +11,7 @@ export const sessions: Session[] = [
             { name: 'Uni grads', colorClass: 'bg-indigo-800 text-white' },
             { name: 'Self-taught devs', colorClass: 'bg-indigo-800 text-white' }
         ],
-        price: { euros: '32', dollars: '35' },
+        price: null,
         link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching',
         benefits: [
             'Set your mind for success',
@@ -32,6 +32,10 @@ export const faqs: {
         link: string;
     };
 }[] = [
+    {
+        question: 'Who is this for?',
+        answer: 'If you are Bootcamp grad, Uni grad or self-taught developer, these sessions are for you'
+    },
     {
         question: 'How can I book a session?',
         answer: 'You can book directly through my calendar here 👇',
@@ -56,10 +60,10 @@ export const faqs: {
     },
     {
         question: 'I wanna book but I cannot afford it, what can I do?',
-        answer: 'I would recommend you gather some of your fellow Software Engineers and we create a group session at a discounted price 🤩'
+        answer: 'I would recommend you gather some of your fellow developers and we create a group session at a discounted price 🤩'
     },
     {
-        question: 'Do you also offer team workshops?',
+        question: 'Do you also offer workshops for Bootcamps?',
         answer: 'Yes, and I love them 💜 Contact me on LinkedIn to organize this',
         cta: { text: 'Contact me', link: linkedinLink }
     },

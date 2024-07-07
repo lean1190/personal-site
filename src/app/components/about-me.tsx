@@ -20,18 +20,18 @@ export default function AboutMe() {
                         </div>
                         <div className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
                             <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
-                            <p className="text-sm font-light sm:text-xl">Interviewed and hired 30+ people</p>
+                            <p className="text-sm font-light sm:text-xl">Interviewed and hired people for 5+ years</p>
                         </div>
                         <div className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
                             <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
                             <p className="text-sm font-light sm:text-xl">I will listen empathetically to your needs</p>
                         </div>
                     </div>
-                    <p className="basis-1/2 rounded-xl p-6 shadow-lg sm:p-12">
+                    <div className="basis-1/2 rounded-xl p-6 shadow-lg sm:p-12">
                         <span className="text-2xl leading-normal">&quot;Being confident means embracing uncertainty as a learning opportunity. It means speaking our minds while giving space to be curious about other ideas.{' '}</span>
                         <span className="text-2xl font-bold">It means believing in ourselves&quot;</span>
-                        <div className="mt-2 text-right text-xl italic text-slate-500">-- Lean Vilas</div>
-                    </p>
+                        <p className="mt-2 text-right text-xl italic text-slate-500">-- Lean Vilas</p>
+                    </div>
                 </div>
                 <div className="relative w-full sm:h-[500px]">
                     <Image className="hidden rounded-xl object-cover shadow-xl sm:block" src="/about-me-patagonia-bg.jpg" alt="Lean Vilas" fill={true} />
