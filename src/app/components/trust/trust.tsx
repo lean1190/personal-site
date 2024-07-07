@@ -1,8 +1,8 @@
 import { lightBg, lightFontColor } from '@/app/constants/colors';
 
 import { sessions } from '../sessions/constants';
+import MainSession from '../sessions/main-session';
 import Companies from './companies';
-import MainSession from './main-session';
 import Presentation from './presentation';
 
 interface Props {
