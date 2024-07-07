@@ -4,6 +4,12 @@ import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { lightBg, lightFontColor } from '../constants/colors';
 import { biroscript } from '../fonts/fonts';
 
+const reasons = [
+    'Software Engineer for 10+ years',
+    'Hired developers for 5+ years',
+    'I will listen empathetically to your needs'
+];
+
 export default function AboutMe() {
     return (
         <article className={`${lightBg} ${lightFontColor} py-20`}>
@@ -15,18 +21,12 @@ export default function AboutMe() {
                 <div className="mb-12 flex w-full flex-col gap-12 font-light leading-loose sm:mb-0 sm:flex-row">
                     <div className="basis-1/2 rounded-xl bg-slate-950 p-6 text-slate-100 shadow-lg sm:p-12">
                         <h6 className="mb-6 text-2xl sm:text-3xl">Why prepare with me?</h6>
-                        <div className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
-                            <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
-                            <p className="text-sm font-light sm:text-xl">Software Engineer for 10+ years</p>
-                        </div>
-                        <div className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
-                            <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
-                            <p className="text-sm font-light sm:text-xl">Hired developers for 5+ years</p>
-                        </div>
-                        <div className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
-                            <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
-                            <p className="text-sm font-light sm:text-xl">I will listen empathetically to your needs</p>
-                        </div>
+                        {reasons.map((reason, index) => (
+                            <div key={index} className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
+                                <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
+                                <p className="text-sm font-light sm:text-xl">{reason}</p>
+                            </div>
+                        ))}
                     </div>
                     <div className="basis-1/2 rounded-xl p-6 shadow-lg sm:p-12">
                         <span className="text-2xl leading-normal">&quot;Being confident means embracing uncertainty as a learning opportunity. It means speaking our minds while giving space to be curious about other ideas.{' '}</span>
