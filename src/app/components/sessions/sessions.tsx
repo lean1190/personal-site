@@ -11,7 +11,7 @@ export default function Sessions() {
     return (
         <article className="bg-[#0A0A28] py-16 sm:py-32">
             <section className="mx-auto mb-20 p-6 sm:mb-40 sm:px-0">
-                <h5 className="mb-12 text-center text-6xl font-bold">Simple and powerful</h5>
+                <h4 className="mb-12 text-center text-6xl font-bold">Simple and powerful</h4>
                 <div className="relative w-full">
                     <div className={`left-5 top-0 h-[380px] w-[3px] sm:h-[3px] sm:w-full ${indigoGradient} absolute z-0 sm:left-0 sm:top-11`}></div>
                     <ul className="mx-auto flex flex-col items-start gap-6 pt-4 sm:max-w-[805px] sm:flex-row sm:gap-4 sm:pt-0">
@@ -33,7 +33,7 @@ export default function Sessions() {
             </section>
 
             <section className="mx-auto mb-20 p-6 sm:max-w-[608px] sm:px-0">
-                <h5 className="mb-12 text-center text-6xl font-light tracking-widest">FAQ&apos;s</h5>
+                <h4 className="mb-12 text-center text-6xl font-light tracking-widest">FAQ&apos;s</h4>
                 <div className="w-full">
                     {faqs.map(({ question, answer, cta }, index) => (
                         <Fragment key={index}>
@@ -53,7 +53,7 @@ export default function Sessions() {
                 </div>
             </section>
 
-            <h6 className={`${biroscript.className} mb-28 text-center text-7xl uppercase`}>You got this!</h6>
+            <p className={`${biroscript.className} mb-28 text-center text-7xl uppercase`}>You got this!</p>
 
             <section className="mx-auto flex flex-col items-center justify-between gap-12 px-6 sm:max-w-[608px] sm:flex-row sm:px-0">
                 <div>
