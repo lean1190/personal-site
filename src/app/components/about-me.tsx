@@ -13,18 +13,18 @@ const reasons = [
 export default function AboutMe() {
     return (
         <article className={`${lightBg} ${lightFontColor} py-20`}>
-            <section className="mx-auto mb-12 px-6 text-center sm:max-w-[1268px] sm:px-0">
+            <section className="mx-auto mb-12 px-6 text-center sm:max-w-[1268px] lg:px-0">
                 <h5 className={`${biroscript.className} text-6xl`}>Hi, I&apos;m Lean</h5>
             </section>
 
-            <section className="mx-auto mb-20 flex flex-col items-start gap-8 px-6 sm:max-w-[1268px] sm:px-0">
+            <section className="mx-auto mb-20 flex flex-col items-start gap-8 px-6 sm:max-w-[1268px] lg:px-0">
                 <div className="mb-12 flex w-full flex-col gap-12 font-light leading-loose sm:mb-0 sm:flex-row">
                     <div className="basis-1/2 rounded-xl bg-slate-950 p-6 text-slate-100 shadow-lg sm:p-12">
-                        <h6 className="mb-6 text-2xl sm:text-3xl">Why prepare with me?</h6>
+                        <h6 className="mb-6 text-2xl lg:text-3xl">Why prepare with me?</h6>
                         {reasons.map((reason, index) => (
                             <div key={index} className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
-                                <IoIosCheckmarkCircleOutline size={20} className="text-indigo-600" />
-                                <p className="text-sm font-light sm:text-xl">{reason}</p>
+                                <IoIosCheckmarkCircleOutline size={20} className="w-5 min-w-5 max-w-5 text-indigo-600" />
+                                <p className="text-sm font-light lg:text-xl">{reason}</p>
                             </div>
                         ))}
                     </div>

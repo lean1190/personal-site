@@ -17,7 +17,7 @@ const isOddIndex = (index: number) => index % 2 !== 0;
 
 const reviewStyle = clsx(
     'w-full min-w-0 max-w-full rounded-xl p-1',
-    'h-80 bg-gradient-to-r from-indigo-700 via-green-200 to-indigo-900 text-sm text-slate-950 opacity-100 shadow-lg',
+    'h-80 bg-gradient-to-r from-indigo-700 via-green-200 to-indigo-900 text-slate-950 opacity-100 shadow-lg',
     'sm:h-96'
 );
 
@@ -40,8 +40,8 @@ export default function ReviewItem({
         <li className={reviewStyle}>
             <figure className={figureStyle(index)}>
                 <div>
-                    <blockquote className="hidden text-sm font-light leading-normal sm:block sm:text-lg">{truncateString(review, 350)}</blockquote>
-                    <blockquote className="block text-sm font-light leading-normal sm:hidden sm:text-lg">{truncateString(review, 320)}</blockquote>
+                    <blockquote className="hidden text-sm font-light leading-normal sm:block sm:text-xl lg:text-lg">{truncateString(review, 350)}</blockquote>
+                    <blockquote className="block text-sm font-light leading-normal sm:hidden sm:text-xl lg:text-lg">{truncateString(review, 320)}</blockquote>
                 </div>
                 <div className="flex items-center justify-start gap-x-6">
                     <div className="relative">
