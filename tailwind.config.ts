@@ -20,6 +20,9 @@ const config: Config = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
             },
+            backgroundSize: {
+                '400%': '400%'
+            },
             keyframes: {
                 rotate: {
                     '0%': { opacity: '0', transform: 'translateY(-50px)' },
@@ -41,13 +44,19 @@ const config: Config = {
                 marquee: {
                     from: { transform: 'translateX(0)' },
                     to: { transform: 'translateX(calc(-100% - 1rem))' }
+                },
+                'bg-move': {
+                    '0%': { 'background-position': '0% 50%' },
+                    '50%': { 'background-position': '100% 50%' },
+                    '100%': { 'background-position': '0% 50%' }
                 }
             },
             animation: {
                 rotate: 'rotate 10s linear infinite',
                 up: 'up 3s linear infinite',
                 scale: 'scale 3s linear infinite',
-                marquee: 'marquee 400s linear infinite'
+                marquee: 'marquee 400s linear infinite',
+                'bg-move': 'bg-move 10s ease infinite'
             },
             animationDuration: {
                 '150s': '150s',
@@ -59,3 +68,7 @@ const config: Config = {
     plugins: [nextui(), animate]
 };
 export default config;
+
+// .animated-background {
+//     background-size: 400%;
+// }
