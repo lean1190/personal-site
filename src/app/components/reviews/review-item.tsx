@@ -17,7 +17,7 @@ const isOddIndex = (index: number) => index % 2 !== 0;
 
 const reviewStyle = clsx(
     'w-full min-w-0 max-w-full rounded-xl p-1',
-    'h-80 bg-gradient-to-r from-indigo-700 via-green-200 to-indigo-900 text-slate-950 opacity-100 shadow-lg',
+    'h-80 bg-gradient-to-r from-indigo-700 via-pink-200 to-indigo-900 text-slate-950 opacity-100 shadow-lg',
     'sm:h-96'
 );
 
