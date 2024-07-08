@@ -1,12 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import { FaQuoteRight } from 'react-icons/fa6';
 import { MdVerified } from 'react-icons/md';
 
 import { Review } from '@/lib/reviews/types';
 import { truncateString } from '@/lib/strings';
-
-import { indigoGradient } from '../../constants/colors';
 
 interface Props {
     review: Review;
@@ -52,10 +49,6 @@ export default function ReviewItem({
                             height={128}
                             className={imageStyle}
                         />
-                        <div className={`absolute right-0 top-0 rounded-full p-2 text-white ${indigoGradient}`}>
-                            <FaQuoteRight size={30} className="hidden sm:block" />
-                            <FaQuoteRight size={15} className="block sm:hidden" />
-                        </div>
                     </div>
                     <div className="flex min-w-0 max-w-full flex-col items-start gap-1 font-light">
                         <div className="flex items-center gap-2">
