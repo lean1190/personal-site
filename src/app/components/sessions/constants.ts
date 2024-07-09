@@ -6,10 +6,10 @@ export const sessions: Session[] = [
     {
         name: 'Power hour',
         tags: [
-            { name: '60 minutes', colorClass: 'bg-green-600 text-white' },
-            { name: 'Bootcamp grads', colorClass: 'bg-indigo-800 text-white' },
-            { name: 'Uni grads', colorClass: 'bg-indigo-800 text-white' },
-            { name: 'Self-taught devs', colorClass: 'bg-indigo-800 text-white' }
+            { name: '60 minutes', colorClass: 'rounded-xl border border-pink-400 text-white' },
+            { name: 'Bootcamp grads', colorClass: 'rounded-xl border border-indigo-400 text-white' },
+            { name: 'Uni grads', colorClass: 'rounded-xl border border-indigo-400 text-white' },
+            { name: 'Self-taught devs', colorClass: 'rounded-xl border border-indigo-400 text-white' }
         ],
         price: null,
         link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching',
