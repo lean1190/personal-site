@@ -50,8 +50,6 @@ export default function CtaButton({
                 startContent={icon}
                 data-umami-event="CTA Button"
                 data-umami-event-link={link}
-                data-umami-event-variant={variant}
-                data-umami-event-text={text}
             >
                 {text}
             </Button>
