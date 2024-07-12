@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import Auth from './components/auth';
 
+
 export const metadata: Metadata = {
     title: 'Portfolio - Lean Vilas',
     description: 'My personal work'
