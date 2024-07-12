@@ -13,28 +13,28 @@ export type Database = {
         Row: {
           content: string
           created_at: string
-          creator: string
           id: string
           updated_at: string
+          user_id: string
         }
         Insert: {
           content?: string
           created_at?: string
-          creator?: string
           id?: string
           updated_at?: string
+          user_id?: string
         }
         Update: {
           content?: string
           created_at?: string
-          creator?: string
           id?: string
           updated_at?: string
+          user_id?: string
         }
         Relationships: [
           {
             foreignKeyName: 'messages_creator_fkey'
-            columns: ['creator']
+            columns: ['user_id']
             isOneToOne: false
             referencedRelation: 'users'
             referencedColumns: ['id']

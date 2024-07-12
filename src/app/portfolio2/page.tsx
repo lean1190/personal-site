@@ -1,16 +1,14 @@
+import { getMessages } from '@/lib/messages/get';
 import { supabaseServerClient } from '@/lib/supabase/server';
-import { Tables } from '@/lib/supabase/types';
 
 import Messages from './components/messages';
 
 
 export default async function PortfolioPage() {
-    const { data: messages }: { data: Tables<'messages'>[] | null } = await supabaseServerClient
-        .from('messages')
-        .select()
-        .order('created_at', { ascending: true });
+    const messages = await getMessages() ?? [];
+    const { data: { user } } = await supabaseServerClient.auth.getUser();
 
     return (
-        <Messages messages={messages ?? []} />
+        <Messages messages={messages} user={user} />
     );
 }
