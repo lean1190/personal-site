@@ -1,16 +1,21 @@
 'use client';
 
-import { loadGoogleMaps } from '@/lib/maps/client';
+import { loadGoogleMaps } from '@/lib/maps/loader';
 
+const mapId = 'map';
 export default function MapView() {
-    loadGoogleMaps().load().then(async () => {
-        const { Map } = await google.maps.importLibrary('maps') as google.maps.MapsLibrary;
+    loadGoogleMaps().then(async ({ library }) => {
+        if (!library) {
+            return;
+        }
 
-        new Map(document.getElementById('map') as HTMLElement, {
-            center: { lat: 53.594484, lng: 9.998724 },
-            zoom: 20
+        const { Map } = library;
+        new Map(document.getElementById(mapId) as HTMLElement, {
+            center: { lat: 0, lng: 0 },
+            zoom: 3,
+            mapTypeId: 'roadmap'
         });
     });
 
-    return <section id="map" className="grow"></section>;
+    return <section id={mapId} className="h-full grow"></section>;
 }
