@@ -16,8 +16,6 @@ interface Props {
     messages: Tables<'messages'>[];
 }
 
-// For avatars https://www.dicebear.com/
-
 export default function Messages({ messages, user }: Props) {
     const [newMessage, setNewMessage] = useState('');
 
