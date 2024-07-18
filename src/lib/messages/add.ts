@@ -5,7 +5,7 @@ import { z } from 'zod';
 
 import { actionClient } from '@/lib/server-actions/client';
 
-import { supabaseServerClient } from '../supabase/server';
+// import { supabaseServerClient } from '../supabase/server';
 
 const schema = z.object({
     id: z.string(),
@@ -20,7 +20,7 @@ export type NewMessage = z.infer<typeof schema>;
 export const addMessageAction = actionClient
     .metadata({ actionName: 'Add message' })
     .schema(schema)
-    .action(async ({ parsedInput }: { parsedInput: NewMessage }) => {
-        await supabaseServerClient.from('messages').insert({ ...parsedInput, id: undefined });
+    .action(async ({}: { parsedInput: NewMessage }) => {
+        // await supabaseServerClient.from('messages').insert({ ...parsedInput, id: undefined });
         revalidatePath('/portfolio2');
     });
