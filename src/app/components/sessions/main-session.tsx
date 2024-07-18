@@ -14,7 +14,8 @@ export default function MainSession({ session }: Props) {
         <div className="mx-auto max-w-[790px] p-6">
             <div className="animate-bg-move rounded-3xl bg-gradient-to-r from-indigo-700 via-pink-200 to-indigo-900 bg-400% p-1">
                 <div className={`w-full rounded-3xl p-10 text-left text-white ${darkBg} ${darkFontColor}`}>
-                    <h3 className="mb-4 text-5xl font-light sm:text-6xl">{session.name}</h3>
+                    <h3 className="mb-4 text-4xl font-light sm:text-6xl">{session.name}</h3>
+                    {session.description ? <p className="mb-4 text-lg font-light text-slate-300 sm:text-xl">{session.description}</p> : null}
                     <div className="mb-8 flex flex-wrap items-center gap-2">
                         {session.tags.map(({ name, colorClass }, index) => (
                             <span key={index} className={`rounded px-2 py-1 text-xs font-light sm:text-sm ${colorClass}`}>{name}</span>

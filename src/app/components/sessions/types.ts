@@ -5,6 +5,7 @@ export interface Tag {
 
 export interface Session {
     name: string;
+    description?: string;
     tags: Tag[];
     price: { euros: string, dollars: string } | null;
     benefits: string[];

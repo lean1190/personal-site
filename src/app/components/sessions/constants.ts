@@ -5,14 +5,13 @@ import { Session } from './types';
 export const sessions: Session[] = [
     {
         name: 'Power hour',
+        description: 'Uncover the missing piece',
         tags: [
             { name: '60 minutes', colorClass: 'rounded-xl border border-pink-400 text-white' },
-            { name: 'Bootcamp grads', colorClass: 'rounded-xl border border-indigo-400 text-white' },
-            { name: 'Uni grads', colorClass: 'rounded-xl border border-indigo-400 text-white' },
-            { name: 'Self-taught devs', colorClass: 'rounded-xl border border-indigo-400 text-white' }
+            { name: 'Ideal for Bootcamp devs', colorClass: 'rounded-xl border border-indigo-400 text-white' }
         ],
         price: null,
-        link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching',
+        link: 'https://tidycal.com/leanvilas/the-missing-piece',
         benefits: [
             'Set your mind for success',
             'Find options to land your 1st job',
@@ -34,12 +33,12 @@ export const faqs: {
 }[] = [
     {
         question: 'Who is this for?',
-        answer: 'If you are Bootcamp grad, Uni grad or self-taught developer, these sessions are for you'
+        answer: 'If you are Bootcamp grad developer, these sessions are for you'
     },
     {
         question: 'How can I book a session?',
         answer: 'You can book directly through my calendar here 👇',
-        cta: { text: 'Get confident', link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching' }
+        cta: { text: 'Let\'s meet', link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching' }
     },
     {
         question: 'How many sessions am I booking?',
@@ -56,7 +55,7 @@ export const faqs: {
     {
         question: 'Are any of the sessions free?',
         answer: 'The first 30-minute session is free 😁',
-        cta: { text: 'Book a free session here', link: contactLink }
+        cta: { text: 'Start for free here 🚀', link: contactLink }
     },
     {
         question: 'I wanna book but I cannot afford it, what can I do?',
@@ -74,7 +73,7 @@ export const faqs: {
 ];
 
 export const expectations: { title: string, description: string[] }[] = [
-    { title: 'We meet each other', description: ['Let\'s have a chat and get to know each other no strings attached.', 'If we click, we continue 😄'] },
-    { title: 'We make a plan', description: ['What do you want to learn?', 'We will make sure we fulfill your expectations.'] },
-    { title: 'You get confident', description: ['You feel more secure of your skills and ready to face your professional challenges 💪'] }
+    { title: 'We meet each other', description: ['Let\'s chat and get to know each other no strings attached.', 'If we click, we continue 😄'] },
+    { title: 'We make a plan', description: ['What\'s stopping you from breaking into tech?', 'Uncover the missing piece'] },
+    { title: 'You get a job', description: ['You learn what\'s required to succeed and you are ready to get hired 💪'] }
 ];
