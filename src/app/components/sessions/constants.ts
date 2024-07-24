@@ -74,6 +74,6 @@ export const faqs: {
 
 export const expectations: { title: string, description: string[] }[] = [
     { title: 'We meet each other', description: ['Let\'s chat and get to know each other no strings attached.', 'If we click, we continue 😄'] },
-    { title: 'We make a plan', description: ['What\'s stopping you from breaking into tech?', 'Uncover the missing piece'] },
+    { title: 'We make a plan', description: ['What\'s blocking you from breaking into tech?', 'Uncover the missing piece'] },
     { title: 'You get a job', description: ['You learn what\'s required to succeed and you are ready to get hired 💪'] }
 ];

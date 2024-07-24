@@ -11,9 +11,10 @@ export default function Presentation() {
                 <h2 className="text-center text-4xl font-bold leading-tight sm:max-w-[365px] sm:text-6xl sm:leading-tight lg:max-w-full">
                     <p className="mb-2 sm:mb-0 sm:inline">Professional</p>{' '}{highlightText('MENTORING')}
                 </h2>
-                <p className="max-w-[500px] text-center text-lg font-light sm:text-xl">
-                    Prepare to succeed with my advice from <strong className="font-bold">10+ years</strong> of Software Engineering experience
-                </p>
+                <div className="max-w-[500px] text-center text-lg font-light sm:text-xl">
+                    <p className="inline md:block">Where do you start when you are just getting started?</p>{' '}
+                    <p className="inline md:block"><strong className="font-bold">Let me guide you</strong> through your journey</p>
+                </div>
             </div>
             <div className="absolute inset-0 z-10 hidden w-full justify-around gap-2 pt-16 sm:flex">
                 {Array(14).fill(0).map((_, index) => (

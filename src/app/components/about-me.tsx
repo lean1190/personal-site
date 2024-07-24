@@ -5,9 +5,9 @@ import { lightBg, lightFontColor } from '../constants/colors';
 import { biroscript } from '../fonts/fonts';
 
 const reasons = [
-    'Software Engineer for 10+ years',
-    'Hired developers for 5+ years',
-    'I will listen empathetically to your needs'
+    'Radical Candor = Care + Challenge',
+    '10+ years of SWE experience',
+    '5+ years hiring developers'
 ];
 
 export default function AboutMe() {
