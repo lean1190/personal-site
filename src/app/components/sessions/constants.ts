@@ -1,4 +1,4 @@
-import { contactLink, linkedinLink } from '@/app/constants/links';
+import { contactLink, linkedinLink, powerHour } from '@/app/constants/links';
 
 import { Session } from './types';
 
@@ -11,7 +11,7 @@ export const sessions: Session[] = [
             { name: 'Ideal for Bootcamp devs', colorClass: 'rounded-xl border border-indigo-400 text-white' }
         ],
         price: null,
-        link: 'https://tidycal.com/leanvilas/the-missing-piece',
+        link: powerHour,
         benefits: [
             'Set your mind for success',
             'Find options to land your 1st job',
@@ -38,7 +38,7 @@ export const faqs: {
     {
         question: 'How can I book a session?',
         answer: 'You can book directly through my calendar here 👇',
-        cta: { text: 'Let\'s meet', link: 'https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching' }
+        cta: { text: 'Let\'s meet', link: powerHour }
     },
     {
         question: 'How many sessions am I booking?',
