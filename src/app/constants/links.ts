@@ -1,6 +1,6 @@
 import { isDevEnvironment } from '@/lib/environments/is-dev';
 
-export const contactLink = 'https://tidycal.com/leanvilas/free';
+export const contactLink = 'https://tidycal.com/leanvilas/meet';
 export const powerHour = 'https://tidycal.com/leanvilas/hour';
 export const adplistLink = 'https://adplist.org/mentors/leandro-nicolas-vilas';
 export const linkedinLink = 'https://www.linkedin.com/in/leanvilas/';
