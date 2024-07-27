@@ -5,19 +5,19 @@ import { Session } from './types';
 export const sessions: Session[] = [
     {
         name: 'Power hour',
-        description: 'Uncover the missing piece',
+        description: 'Get ready for the tech market',
         tags: [
             { name: '60 minutes', colorClass: 'rounded-xl border border-pink-400 text-white' },
-            { name: 'Ideal for Bootcamp devs', colorClass: 'rounded-xl border border-indigo-400 text-white' }
+            { name: 'Ideal for Bootcamp grads', colorClass: 'rounded-xl border border-indigo-400 text-white' }
         ],
         price: null,
         link: powerHour,
         benefits: [
-            'Set your mind for success',
-            'Find options to land your 1st job',
+            'Solidify your skills',
             'Optimize your visibility',
             'Practice with mock interviews',
-            'Learn how to thrive in your first job'
+            'Find options to land your 1st job',
+            'Learn how to thrive in your 1st job'
         ],
         isPopular: true
     }
@@ -36,6 +36,10 @@ export const faqs: {
         answer: 'If you are Bootcamp grad developer, these sessions are for you'
     },
     {
+        question: 'Why should I buy a session?',
+        answer: 'If you feel doubtful about yourself, your skills, and what the industry needs from you, I can show you exactly what you need to thrive and how to practice it. Most Bootcamp grad developers struggle with self-confidence competing in a crowded market with many other talented developers. On top of this, not every Bootcamp teaches all the essentials to be part of a real software development team. That\'s where I come in. I will help you fill the gaps with knowledge from 10+ years of industry experience, solidify your skills, boost your confidence, and be prepared for your first job as a developer.'
+    },
+    {
         question: 'How can I book a session?',
         answer: 'You can book directly through my calendar here 👇',
         cta: { text: 'Let\'s meet', link: powerHour }
@@ -49,8 +53,8 @@ export const faqs: {
         answer: 'Each session is 60 minutes long'
     },
     {
-        question: 'Do I need to book a minimum amount of sessions?',
-        answer: 'Nope. You can book 1 or more'
+        question: 'Do I need to book more than 1 session?',
+        answer: 'Nope, it\'s up to you how far you want to go. If after 1 session you are confident and prepared for your first job in tech, my job here is done 😁'
     },
     {
         question: 'Are any of the sessions free?',
@@ -74,6 +78,6 @@ export const faqs: {
 
 export const expectations: { title: string, description: string[] }[] = [
     { title: 'We meet each other', description: ['Let\'s chat and get to know each other no strings attached.', 'If we click, we continue 😄'] },
-    { title: 'We make a plan', description: ['What\'s blocking you from breaking into tech?', 'Uncover the missing piece'] },
+    { title: 'We make a plan', description: ['What\'s blocking you from breaking into tech?', 'Let\'s find the missing pieces'] },
     { title: 'You get a job', description: ['You learn what\'s required to succeed and you are ready to get hired 💪'] }
 ];

@@ -11,9 +11,9 @@ interface Props {
 
 export default function MainSession({ session }: Props) {
     return (
-        <div className="mx-auto max-w-[790px] p-6">
-            <div className="animate-bg-move rounded-3xl bg-gradient-to-r from-indigo-700 via-pink-200 to-indigo-900 bg-400% p-1">
-                <div className={`w-full rounded-3xl p-10 text-left text-white ${darkBg} ${darkFontColor}`}>
+        <div className="mx-auto max-w-[500px] p-6">
+            <div className="animate-bg-move rounded-3xl bg-gradient-to-r from-indigo-700 via-pink-400 to-indigo-900 bg-400% p-2">
+                <div className={`w-full rounded-2xl p-8 text-left text-white sm:p-10 ${darkBg} ${darkFontColor}`}>
                     <h3 className="mb-4 text-4xl font-light sm:text-6xl">{session.name}</h3>
                     {session.description ? <p className="mb-4 text-lg font-light text-slate-300 sm:text-xl">{session.description}</p> : null}
                     <div className="mb-8 flex flex-wrap items-center gap-2">
@@ -31,7 +31,7 @@ export default function MainSession({ session }: Props) {
                     </ul>
                     <div>
                         <div className="hidden sm:block">
-                            <CtaButton text="Begin your guided journey to success 💪" link={session.link} size="md" />
+                            <CtaButton text="Begin your guided journey 💪" link={session.link} size="md" />
                         </div>
                         <div className="block sm:hidden">
                             <CtaButton text="Begin your journey 💪" link={session.link} size="md" />

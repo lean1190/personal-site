@@ -9,7 +9,7 @@ export default function Title() {
                 <p className="mb-4 sm:mb-0 sm:inline">Get your first job in tech with</p>{' '}{highlightText('CONFIDENCE')}
             </h1>
             <p className="max-w-[500px] text-center text-lg font-light sm:text-xl">
-                Leverage your experience to stand out in the market and find <strong className="font-bold">your path to a successful career</strong>
+                Leverage your experience to stand out in the market, solidify your knowledge, and build <strong className="font-bold">your path to a successful career</strong>
             </p>
             <div className="w-full sm:max-w-96">
                 <CtaButton text="Start for free 🚀" size="md" />
