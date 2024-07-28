@@ -13,11 +13,11 @@ export const sessions: Session[] = [
         price: null,
         link: powerHour,
         benefits: [
-            'Solidify your skills',
-            'Optimize your visibility',
-            'Practice with mock interviews',
+            'Optimize CV, LinkedIn and Portfolio',
+            'Learn how to thrive in your 1st job',
             'Find options to land your 1st job',
-            'Learn how to thrive in your 1st job'
+            'Practice with mock interviews',
+            'Solidify your skills'
         ],
         isPopular: true
     }
