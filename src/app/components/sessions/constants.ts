@@ -57,6 +57,10 @@ export const faqs: {
         answer: 'Nope, it\'s up to you how far you want to go. If after 1 session you are confident and prepared for your first job in tech, my job here is done 😁'
     },
     {
+        question: 'How many sessions do you recommend?',
+        answer: 'The average amount of sessions a person books is 4-5. The sweet spot is around 3'
+    },
+    {
         question: 'Are any of the sessions free?',
         answer: 'The first 30-minute session is free 😁',
         cta: { text: 'Start for free here 🚀', link: contactLink }
