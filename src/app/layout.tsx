@@ -13,8 +13,8 @@ import { roboto } from './fonts/fonts';
 export const revalidate = 14400; // 4 hours
 
 export const metadata: Metadata = {
-    title: 'Mentor and Coach for Software Developers',
-    description: 'Break into tech with CONFIDENCE. Learn faster, upskill your coding, and get the job you are looking for.',
+    title: 'Mentor for Software Developers',
+    description: 'Get job-ready fast. Stand out in the market, improve your skills, and build your path to a successful career.',
     icons: { icon: '/favicon.ico' },
     metadataBase: new URL(getVercelUrl()),
     openGraph: {
