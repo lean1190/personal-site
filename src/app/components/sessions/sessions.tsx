@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
 import { PiCaretDown } from 'react-icons/pi';
 
+import { meetLink, powerHour } from '@/app/constants/links';
+
 import { indigoGradient } from '../../constants/colors';
 import { biroscript } from '../../fonts/fonts';
 import CtaButton from '../ui/cta-button';
@@ -58,11 +60,11 @@ export default function Sessions() {
             <section className="mx-auto flex flex-col items-center justify-between gap-12 px-6 sm:max-w-[608px] sm:flex-row sm:px-0">
                 <div>
                     <p className="mb-4 text-center text-2xl font-bold">Ready to launch?</p>
-                    <CtaButton text="Start now" link="https://tidycal.com/leanvilas/confidence-hour-mentoring-coaching" />
+                    <CtaButton text="Start now" link={powerHour} />
                 </div>
                 <div>
                     <p className="mb-4 text-center text-2xl font-extralight">Not sure yet?</p>
-                    <CtaButton text="Book an intro session" variant="secondary" link="contact" />
+                    <CtaButton text="Book an intro session" variant="secondary" link={meetLink} />
                 </div>
             </section>
         </article>

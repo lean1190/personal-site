@@ -1,4 +1,5 @@
 import { indigoGradient } from '../constants/colors';
+import { linkedinLink } from '../constants/links';
 import { biroscript, pragmatica } from '../fonts/fonts';
 import CtaButton from './ui/cta-button';
 
@@ -14,7 +15,7 @@ export default function Footer() {
                 <div className="rounded-3xl border border-indigo-600 bg-black p-14">
                     <p className={`${biroscript.className} mb-2 text-5xl`}>Lean Vilas</p>
                     <p className="mb-8 text-sm font-light text-slate-400">Mentor and Coach for Software Engineers</p>
-                    <CtaButton text="Get in touch" link="linkedin" />
+                    <CtaButton text="Get in touch" link={linkedinLink} />
                 </div>
             </section>
         </footer>

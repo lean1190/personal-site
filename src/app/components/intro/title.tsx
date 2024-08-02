@@ -1,3 +1,5 @@
+import { meetLink } from '@/app/constants/links';
+
 import CtaButton from '../ui/cta-button';
 
 export default function Title() {
@@ -11,7 +13,7 @@ export default function Title() {
                 Leverage your experience to stand out in the market, solidify your knowledge, and build <strong className="font-bold">your path to a successful career</strong>
             </p>
             <div className="w-full sm:max-w-96">
-                <CtaButton text="Start for free 🚀" size="md" />
+                <CtaButton text="Start for free 🚀" size="md" link={meetLink} />
             </div>
         </section>
     );
