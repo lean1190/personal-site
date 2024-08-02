@@ -1,4 +1,4 @@
-import { contactLink, linkedinLink, powerHour } from '@/app/constants/links';
+import { linkedinLink, meetLink, powerHour } from '@/app/constants/links';
 
 import { Session } from './types';
 
@@ -63,7 +63,7 @@ export const faqs: {
     {
         question: 'Are any of the sessions free?',
         answer: 'The first 30-minute session is free 😁',
-        cta: { text: 'Start for free here 🚀', link: contactLink }
+        cta: { text: 'Start for free here 🚀', link: meetLink }
     },
     {
         question: 'I wanna book but I cannot afford it, what can I do?',

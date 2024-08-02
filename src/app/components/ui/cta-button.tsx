@@ -2,7 +2,7 @@ import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
 import { indigoGradient } from '../../constants/colors';
-import { adplistLink, contactLink, homeLink, linkedinLink } from '../../constants/links';
+import { adplistLink, homeLink, linkedinLink, meetLink } from '../../constants/links';
 
 interface Props {
     link?: 'contact' | 'adplist' | 'linkedin' | 'home' | string;
@@ -23,7 +23,7 @@ export default function CtaButton({
 }: Props) {
     const isPrimary = variant === 'primary';
     const urlLink =
-        link === 'contact' ? contactLink :
+        link === 'contact' ? meetLink :
         link === 'adplist' ? adplistLink :
         link === 'home' ? homeLink :
         link === 'linkedin' ? linkedinLink :

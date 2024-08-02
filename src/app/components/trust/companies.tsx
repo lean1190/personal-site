@@ -1,10 +1,6 @@
 import Image from 'next/image';
 
-interface Props {
-    menteesCount: number;
-}
-
-export default function Companies({ menteesCount }: Props) {
+export default function Companies() {
     return (
         <>
             <div className="mb-8 flex flex-col flex-wrap items-center justify-center gap-12 sm:flex-row">
@@ -18,7 +14,7 @@ export default function Companies({ menteesCount }: Props) {
                 <Image className="hidden grayscale transition hover:grayscale-0 sm:block" src="/logos/fluxit_logo.jpg" width={140} height={70} alt="FluxIt logo" />
             </div>
             <p className="text-2xl font-light sm:text-3xl">
-                Trusted by <strong className="font-bold">{menteesCount}+</strong> Software Developers 💜
+                Trusted by <strong className="font-bold">120+</strong> Software Developers 💜
             </p>
         </>
     );
