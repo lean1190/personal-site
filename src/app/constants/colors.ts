@@ -1,6 +1,11 @@
 export const indigoGradient = 'bg-gradient-to-r from-indigo-700 to-indigo-900';
-export const sectionDarkGradient = 'bg-gradient-to-b from-[#0A0A28] to-indigo-950';
+export const sectionDarkGradient = 'bg-gradient-to-b from-[#0A0A28] to-slate-800';
 export const lightBg = 'bg-white';
 export const lightFontColor = 'text-slate-800';
 export const darkBg = 'bg-[#0A0A28]';
 export const darkFontColor = 'text-white';
+export const pinkBg = 'bg-[#f472b5]';
+export const pinkFontColor = 'text-[#f472b5]';
+export const pinkDecoration = 'decoration-[#f472b5]';
+export const pinkBorder = 'border-[#f472b5]';
+export const pinkGradient = 'bg-gradient-to-r from-pink-500 to-[#f472b5]';

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { MdVerified } from 'react-icons/md';
 
+import { pinkBg } from '@/app/constants/colors';
 import { Review } from '@/lib/reviews/types';
 import { truncateString } from '@/lib/strings';
 
@@ -14,7 +15,7 @@ const isOddIndex = (index: number) => index % 2 !== 0;
 
 const reviewStyle = clsx(
     'w-full min-w-0 max-w-full rounded-xl p-1',
-    'h-80 bg-gradient-to-r from-indigo-700 via-pink-200 to-indigo-900 text-slate-950 opacity-100 shadow-lg',
+    `h-80 ${pinkBg} text-slate-950 opacity-100 shadow-lg`,
     'sm:h-96'
 );
 
@@ -34,7 +35,7 @@ export default function ReviewItem({
     index
 }: Props) {
     return (
-        <li className={reviewStyle}>
+        <div className={reviewStyle}>
             <figure className={figureStyle(index)}>
                 <div>
                     <blockquote className="hidden text-sm font-light leading-normal sm:block sm:text-xl lg:text-lg">{truncateString(review, 350)}</blockquote>
@@ -61,6 +62,6 @@ export default function ReviewItem({
                     </div>
                 </div>
             </figure>
-        </li>
+        </div>
     );
 }

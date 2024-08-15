@@ -1,7 +1,7 @@
 import { Button, Link } from '@nextui-org/react';
 import clsx from 'clsx';
 
-import { indigoGradient } from '../../constants/colors';
+import { pinkBg, pinkBorder } from '../../constants/colors';
 import { meetLink } from '../../constants/links';
 
 interface Props {
@@ -32,12 +32,11 @@ export default function CtaButton({
         >
             <Button
                 fullWidth
-                variant={isPrimary ? 'solid' : 'ghost'}
                 color="secondary"
                 radius="sm"
                 className={clsx({
-                    [indigoGradient]: isPrimary,
-                    'hover:text-white': isPrimary,
+                    [pinkBg]: isPrimary,
+                    [`${pinkBorder} text-white border bg-transparent`]: !isPrimary,
                     'h-[64px] text-lg sm:text-2xl': size === 'lg',
                     'h-[52px] text-lg sm:text-xl': size === 'md'
                 })}

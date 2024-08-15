@@ -8,7 +8,7 @@ export const sessions: Session[] = [
         description: 'Get ready for the tech market',
         tags: [
             { name: '60 minutes', colorClass: 'rounded-xl border border-pink-400 text-white' },
-            { name: 'Ideal for Bootcamp grads', colorClass: 'rounded-xl border border-indigo-400 text-white' }
+            { name: 'Ideal for Junior Developers', colorClass: 'rounded-xl border border-indigo-400 text-white' }
         ],
         price: null,
         link: powerHour,
@@ -33,11 +33,11 @@ export const faqs: {
 }[] = [
     {
         question: 'Who is this for?',
-        answer: 'If you are Bootcamp grad developer, these sessions are for you'
+        answer: 'If you are a Junior Developer looking for your first job, these sessions are for you'
     },
     {
         question: 'Why should I buy a session?',
-        answer: 'If you feel doubtful about yourself, your skills, and what the industry needs from you, I can show you exactly what you need to thrive and how to practice it. Most Bootcamp grad developers struggle with self-confidence competing in a crowded market with many other talented developers. On top of this, not every Bootcamp teaches all the essentials to be part of a real software development team. That\'s where I come in. I will help you fill the gaps with knowledge from 10+ years of industry experience, solidify your skills, boost your confidence, and be prepared for your first job as a developer.'
+        answer: 'If you feel doubtful about yourself, your skills, and what the industry needs from you, I can show you exactly what you need to thrive and how to practice it. Most developers struggle with self-confidence competing in a crowded market with many other talented developers. On top of this, few studies teach all the essentials to be part of a real software development team. That\'s where I come in. I will help you fill the gaps with knowledge from 10+ years of industry experience, solidify your skills, boost your confidence, and be prepared for your first job as a developer.'
     },
     {
         question: 'How can I book a session?',
@@ -71,7 +71,7 @@ export const faqs: {
     },
     {
         question: 'Do you also offer workshops for Bootcamps?',
-        answer: 'Yes, and I love them 💜 Contact me on LinkedIn to organize this',
+        answer: 'Yes, and I love them 🩷 Contact me on LinkedIn to organize this',
         cta: { text: 'Contact me', link: linkedinLink }
     },
     {

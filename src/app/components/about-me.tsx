@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 
-import { lightBg, lightFontColor } from '../constants/colors';
+import { lightBg, lightFontColor, pinkFontColor } from '../constants/colors';
 import { biroscript } from '../fonts/fonts';
 
 const reasons = [
@@ -23,7 +23,7 @@ export default function AboutMe() {
                         <h6 className="mb-6 text-2xl lg:text-3xl">Why prepare with me?</h6>
                         {reasons.map((reason, index) => (
                             <div key={index} className="mb-4 flex gap-2 sm:mb-2 sm:items-center">
-                                <IoIosCheckmarkCircleOutline size={20} className="w-5 min-w-5 max-w-5 text-indigo-600" />
+                                <IoIosCheckmarkCircleOutline size={20} className={`w-5 min-w-5 max-w-5 ${pinkFontColor}`} />
                                 <p className="text-sm font-light lg:text-xl">{reason}</p>
                             </div>
                         ))}
