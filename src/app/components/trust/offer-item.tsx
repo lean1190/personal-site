@@ -21,6 +21,7 @@ export default function OfferItem({ offer, className }: Props) {
     return (
         <Link
             href={offer.link}
+            target="_blank"
             onClick={() => tracking.track(offer.id)}
             className={clsx(
                 className,
