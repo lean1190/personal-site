@@ -19,7 +19,14 @@ export default function Presentation() {
             <div className="absolute inset-0 z-10 hidden w-full justify-around gap-2 pt-16 sm:flex">
                 {Array(14).fill(0).map((_, index) => (
                     <div key={index} className="relative h-[200px] max-h-[200px] w-[127px] max-w-[127px] rounded-xl">
-                        <Image className="rounded-xl object-cover" priority src={`/mentees/mentee${index + 1}.webp`} fill={true} alt="Mentee" />
+                        <Image
+                            className="rounded-xl object-cover"
+                            priority
+                            src={`/mentees/mentee${index + 1}.webp`}
+                            fill={true}
+                            alt="Mentee"
+                            sizes="auto"
+                        />
                     </div>
                 ))}
             </div>

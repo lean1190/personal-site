@@ -5,5 +5,5 @@ export function truncateString(text: string, length: number): string {
 }
 
 export function highlightText(text: string) {
-    return <span className={`${pinkFontColor} text-5xl font-bold text-white sm:text-6xl`}>{text}</span>;
+    return <span className={`${pinkFontColor} text-5xl font-bold sm:text-6xl`}>{text}</span>;
 }

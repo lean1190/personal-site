@@ -1,10 +1,11 @@
-import { linkedinLink, meetLink, powerHour } from '@/app/constants/links';
+import { cohortLink, linkedinLink, meetLink, powerHour, reviewLink } from '@/app/constants/links';
 
-import { Session } from './types';
+import { Offer } from './types';
 
-export const sessions: Session[] = [
+export const offers: Offer[] = [
     {
-        name: 'Power hour',
+        id: 'power-hour',
+        name: 'Power Hour',
         description: 'Get ready for the tech market',
         tags: [
             { name: '60 minutes', colorClass: 'rounded-xl border border-pink-400 text-white' },
@@ -13,13 +14,53 @@ export const sessions: Session[] = [
         price: null,
         link: powerHour,
         benefits: [
-            'Optimize CV, LinkedIn and Portfolio',
-            'Learn how to thrive in your 1st job',
-            'Find options to land your 1st job',
+            'Learn to stand out in the market',
             'Practice with mock interviews',
             'Solidify your skills'
         ],
-        isPopular: true
+        isHighlight: true
+    },
+    {
+        id: 'program',
+        name: 'From Junior to PRO',
+        description: 'Join the next cohort!',
+        tags: [],
+        price: null,
+        link: cohortLink,
+        benefits: [
+            'The ultimate Junior roadmap',
+            'Learn with a community',
+            'Get live support'
+        ],
+        isHighlight: false
+    },
+    {
+        id: 'free-session',
+        name: 'FREE Session',
+        description: 'Get 30 minutes of advice',
+        tags: [],
+        price: null,
+        link: meetLink,
+        benefits: [
+            'Make progress toward your goals',
+            'Ask as many questions as you want',
+            'Get advice from 10+ years of experience'
+        ],
+        isHighlight: false
+    },
+    {
+        id: 'review',
+        name: 'Get a review',
+        description: 'And increase your chances',
+        tags: [],
+        price: null,
+        link: reviewLink,
+        benefits: [
+            'Optimize CV, LinkedIn and Portfolio',
+            'Land your CV in the "YES" pile',
+            'Learn best coding practices'
+        ],
+        isHighlight: true
     }
 ];
 

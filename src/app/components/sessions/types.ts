@@ -3,12 +3,13 @@ export interface Tag {
     colorClass: string;
 }
 
-export interface Session {
+export interface Offer {
+    id: string;
     name: string;
     description?: string;
     tags: Tag[];
     price: { euros: string, dollars: string } | null;
     benefits: string[];
     link: string;
-    isPopular?: boolean;
+    isHighlight?: boolean;
 }

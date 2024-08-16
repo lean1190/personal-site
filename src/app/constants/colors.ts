@@ -8,4 +8,4 @@ export const pinkBg = 'bg-[#f472b5]';
 export const pinkFontColor = 'text-[#f472b5]';
 export const pinkDecoration = 'decoration-[#f472b5]';
 export const pinkBorder = 'border-[#f472b5]';
-export const pinkGradient = 'bg-gradient-to-r from-pink-500 to-[#f472b5]';
+export const pinkGradient = 'bg-gradient-to-r from-pink-500 to-pink-700';

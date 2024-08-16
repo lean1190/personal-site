@@ -3,10 +3,10 @@ import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { darkBg, darkFontColor } from '@/app/constants/colors';
 
 import CtaButton from '../ui/cta-button';
-import { Session } from './types';
+import { Offer } from './types';
 
 interface Props {
-    session: Session;
+    session: Offer;
 }
 
 export default function MainSession({ session }: Props) {

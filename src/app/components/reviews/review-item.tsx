@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { MdVerified } from 'react-icons/md';
 
-import { pinkBg } from '@/app/constants/colors';
+import { darkBg, pinkGradient } from '@/app/constants/colors';
 import { Review } from '@/lib/reviews/types';
 import { truncateString } from '@/lib/strings';
 
@@ -15,14 +15,14 @@ const isOddIndex = (index: number) => index % 2 !== 0;
 
 const reviewStyle = clsx(
     'w-full min-w-0 max-w-full rounded-xl p-1',
-    `h-80 ${pinkBg} text-slate-950 opacity-100 shadow-lg`,
+    `h-80 ${pinkGradient} text-slate-950 opacity-100 shadow-lg`,
     'sm:h-96'
 );
 
 const figureStyle = (index: number) => clsx(
     'flex size-full flex-col justify-between rounded-xl p-6 text-left sm:p-10',
     { 'bg-white text-slate-800': isOddIndex(index) },
-    { 'bg-[#0A0A28] text-white': !isOddIndex(index) }
+    { [`${darkBg} text-white`]: !isOddIndex(index) }
 );
 
 const imageStyle = clsx(

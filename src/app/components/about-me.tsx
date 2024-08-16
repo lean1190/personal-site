@@ -37,7 +37,7 @@ export default function AboutMe() {
                 <div className="relative w-full sm:h-[500px]">
                     <Image className="hidden rounded-xl object-cover shadow-xl sm:block" src="/about-me-patagonia-bg.jpg" alt="Lean Vilas" fill={true} />
                     <div className="bg-white p-4 shadow-xl sm:absolute sm:left-1/2 sm:top-12">
-                        <Image src="/about-me-patagonia.jpg" alt="Lean Vilas" width={350} height={440} />
+                        <Image src="/about-me-patagonia.jpg" alt="Lean Vilas" width={350} height={467} />
                     </div>
                 </div>
             </section>
