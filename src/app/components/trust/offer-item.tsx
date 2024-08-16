@@ -8,6 +8,7 @@ import { darkBg, darkFontColor, pinkFontColor } from '@/app/constants/colors';
 import useTracking from '@/lib/tracking/use-tracking';
 
 import { Offer } from '../sessions/types';
+import styles from './offer-item.module.css';
 
 interface Props {
     offer: Offer;
@@ -23,7 +24,8 @@ export default function OfferItem({ offer, className }: Props) {
             onClick={() => tracking.track(offer.id)}
             className={clsx(
                 className,
-                'cursor-pointer rounded-3xl bg-pink-700 p-1',
+                'cursor-pointer rounded-3xl p-1',
+                styles.glow,
                 {
                     'bg-black': !offer.isHighlight,
                     'animate-bg-move bg-gradient-to-r from-indigo-700 via-pink-400 to-indigo-900 bg-400%': offer.isHighlight

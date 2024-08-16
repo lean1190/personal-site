@@ -9,7 +9,7 @@ export default function Presentation() {
         <div className="relative">
             <div className={`${styles.fade} relative z-20 mx-auto flex flex-col items-center gap-8 p-6 pt-16 sm:pt-24 lg:pt-32`}>
                 <h2 className="text-center text-4xl font-bold leading-tight sm:max-w-[365px] sm:text-6xl sm:leading-tight lg:max-w-full">
-                    <p className="mb-2 sm:mb-0 sm:inline">Professional</p>{' '}{highlightText('MENTORING')}
+                    <p className="mb-2 tracking-tight sm:mb-0 sm:inline">Professional</p>{' '}{highlightText('MENTORING')}
                 </h2>
                 <div className="max-w-[500px] text-center text-lg font-light sm:text-xl">
                     <p className="inline md:block">Where do you start when you are just getting started?</p>{' '}
