@@ -19,15 +19,6 @@ const nextConfig = {
                 hostname: 'loremflickr.com'
             }
         ]
-    },
-    async redirects() {
-        return [
-            {
-                source: '/:page*.html',
-                destination: '/',
-                permanent: true
-            }
-        ];
     }
 };
 
