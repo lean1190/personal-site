@@ -21,7 +21,7 @@ export default function Presentation() {
                     <div key={index} className="relative h-[200px] max-h-[200px] w-[127px] max-w-[127px] rounded-xl">
                         <Image
                             className="rounded-xl object-cover"
-                            priority
+                            priority={false}
                             src={`/mentees/mentee${index + 1}.webp`}
                             fill={true}
                             alt="Mentee"
