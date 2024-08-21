@@ -25,15 +25,11 @@ export default function OfferItem({ offer, className }: Props) {
             onClick={() => tracking.track(offer.id)}
             className={clsx(
                 className,
-                'cursor-pointer rounded-3xl p-1',
-                styles.glow,
-                {
-                    'bg-black': !offer.isHighlight,
-                    'animate-bg-move bg-gradient-to-r from-indigo-700 via-pink-400 to-indigo-900 bg-400%': offer.isHighlight
-                }
+                'relative h-fit cursor-pointer rounded-3xl p-1',
+                { 'bg-black': !offer.isHighlight }
             )}
         >
-            <div className={`w-full rounded-3xl p-6 text-left text-white sm:px-6 sm:py-4 ${darkBg} ${darkFontColor}`}>
+            <div className={`relative z-10 w-full rounded-3xl p-6 text-left text-white sm:px-6 sm:py-4 ${darkBg} ${darkFontColor}`}>
                 <h3 className="text-2xl font-bold">{offer.name}</h3>
                 <p className="mb-6 font-light text-slate-300">{offer.description}</p>
                 <ul className="font-light">
@@ -45,6 +41,7 @@ export default function OfferItem({ offer, className }: Props) {
                     ))}
                 </ul>
             </div>
+            {offer.isHighlight ? <span className={`${styles['glow-vercel']} z-0`}></span> : null}
         </Link>
     );
 }

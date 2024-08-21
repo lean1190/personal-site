@@ -49,6 +49,14 @@ const config: Config = {
                     '0%': { 'background-position': '0% 50%' },
                     '50%': { 'background-position': '100% 50%' },
                     '100%': { 'background-position': '0% 50%' }
+                },
+                glow: {
+                    '0%': { 'background-position': '0 0' },
+                    '50%': { 'background-position': '400% 0' },
+                    '100%': { 'background-position': '0 0' }
+                },
+                'moving-glow': {
+                    '50%': { 'background-position': '140% 50%', transform: 'skew(-2deg)' }
                 }
             },
             animation: {

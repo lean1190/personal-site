@@ -36,3 +36,36 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+.glow-vercel {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
+    background-size: 400% 100%;
+    border: none;
+    padding: 0;
+    margin: 5px;
+    animation: glow-vercel 8s ease-in-out infinite;
+    z-index: 0;
+    @apply rounded-3xl;
+}
+
+.glow-vercel:after {
+    content: "";
+    position: absolute;
+    background-size: inherit;
+    background-image: inherit;
+    animation: inherit;
+    left: 0;
+    right: 0;
+    top: 0px;
+    height: 100%;
+    filter: blur(.5rem);
+}
+
+@keyframes glow-vercel {
+    50% { background-position: 140% 50%; transform: skew(-2deg); }
+}
