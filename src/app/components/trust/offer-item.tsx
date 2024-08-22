@@ -8,12 +8,16 @@ import { darkBg, darkFontColor, pinkFontColor } from '@/app/constants/colors';
 import useTracking from '@/lib/tracking/use-tracking';
 
 import { Offer } from '../sessions/types';
-import styles from './offer-item.module.css';
 
 interface Props {
     offer: Offer;
     className?: string;
 }
+
+const glow = clsx(
+    'absolute inset-0 z-0 m-2 animate-moving-glow rounded-3xl border-0 bg-gradient-vercel bg-400100 p-0',
+    'after:absolute after:inset-x-0 after:top-0 after:h-full after:animate-inherit after:bg-inherit after:bg-size-inherit after:blur-md after:content-[""] after:bg-img-inherit'
+);
 
 export default function OfferItem({ offer, className }: Props) {
     const tracking = useTracking();
@@ -41,7 +45,7 @@ export default function OfferItem({ offer, className }: Props) {
                     ))}
                 </ul>
             </div>
-            {offer.isHighlight ? <span className={`${styles['glow-vercel']} z-0`}></span> : null}
+            {offer.isHighlight ? <span className={glow}></span> : null}
         </Link>
     );
 }
