@@ -12,7 +12,6 @@
     "dependencies:check": "ncu",
     "dependencies:update": "ncu -u && npm install && npm run lint:fix",
     "dependencies:interactive": "ncu --interactive",
-    "supabase:types": "source .env.local && supabase gen types --lang=typescript --project-id $SUPABASE_ID > ./src/lib/supabase/types.ts",
     "analyze": "cross-env ANALYZE=true next build",
     "prepare": "husky"
   },
